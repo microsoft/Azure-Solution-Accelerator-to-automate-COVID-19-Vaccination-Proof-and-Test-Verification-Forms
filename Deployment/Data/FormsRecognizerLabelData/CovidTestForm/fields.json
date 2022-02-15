@@ -1,0 +1,96 @@
+{
+	"$schema": "https://schema.cognitiveservices.azure.com/formrecognizer/2021-03-01/fields.json",
+	"fields": [
+		{
+			"fieldKey": "Emp ID",
+			"fieldType": "number",
+			"fieldFormat": "not-specified"
+		},
+		{
+			"fieldKey": "Firstname",
+			"fieldType": "string",
+			"fieldFormat": "not-specified"
+		},
+		{
+			"fieldKey": "Lastname",
+			"fieldType": "string",
+			"fieldFormat": "not-specified"
+		},
+		{
+			"fieldKey": "Title",
+			"fieldType": "string",
+			"fieldFormat": "not-specified"
+		},
+		{
+			"fieldKey": "Worklocation",
+			"fieldType": "string",
+			"fieldFormat": "not-specified"
+		},
+		{
+			"fieldKey": "Testinglocation-ContosoPharmaceuticals",
+			"fieldType": "selectionMark",
+			"fieldFormat": "not-specified"
+		},
+		{
+			"fieldKey": "Testinglocation-LamnaHealthcareCompany",
+			"fieldType": "selectionMark",
+			"fieldFormat": "not-specified"
+		},
+		{
+			"fieldKey": "Testinglocation-AdatumCorporation",
+			"fieldType": "selectionMark",
+			"fieldFormat": "not-specified"
+		},
+		{
+			"fieldKey": "Testinglocation-Other",
+			"fieldType": "selectionMark",
+			"fieldFormat": "not-specified"
+		},
+		{
+			"fieldKey": "AddressOfTestingLocation",
+			"fieldType": "string",
+			"fieldFormat": "not-specified"
+		},
+		{
+			"fieldKey": "Testtype-PCR",
+			"fieldType": "selectionMark",
+			"fieldFormat": "not-specified"
+		},
+		{
+			"fieldKey": "Testtype-Serology",
+			"fieldType": "selectionMark",
+			"fieldFormat": "not-specified"
+		},
+		{
+			"fieldKey": "Testtype-Rapid",
+			"fieldType": "selectionMark",
+			"fieldFormat": "not-specified"
+		},
+		{
+			"fieldKey": "Testype-Other",
+			"fieldType": "selectionMark",
+			"fieldFormat": "not-specified"
+		},
+		{
+			"fieldKey": "EmployeeSignature",
+			"fieldType": "signature",
+			"fieldFormat": "not-specified"
+		},
+		{
+			"fieldKey": "SignedDate",
+			"fieldType": "date",
+			"fieldFormat": "not-specified"
+		},
+		{
+			"fieldKey": "Testdate",
+			"fieldType": "date",
+			"fieldFormat": "not-specified"
+		},
+		{
+			"fieldKey": "EmployeeCertified",
+			"fieldType": "selectionMark",
+			"fieldFormat": "not-specified"
+		}
+	],
+	"definitions": {}
+}

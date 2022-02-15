@@ -1,0 +1,3060 @@
+{
+	"status": "succeeded",
+	"createdDateTime": "2022-01-05T16:07:34Z",
+	"lastUpdatedDateTime": "2022-01-05T16:07:37Z",
+	"analyzeResult": {
+		"apiVersion": "2021-09-30-preview",
+		"modelId": "prebuilt-layout",
+		"stringIndexType": "textElements",
+		"content": "Contoso\nCONTOSO, LTD - EMPLOYEE COVID-19 PCR TESTING\nSECTION 1: Employee Information\nEmp ID:\n465234\nEx: 1234567\nFirst name:\nTitle:\nFatos\nArchitect\nTest Date:\n12-21-2021\nEx: MM-DD-YYYY\nLast name:\nZenali\nWork Location:\nCalifornia\nSECTION 2: Test Provider Information\n(Must be completed by authorized COVID-19 testing provider)\nName of Testing Location:\nContoso Pharmaceuticals\nUZ Lamna Healthcare Company\nAdatum Corporation\nOther\nAddress of Testing Location:\n12345 main Street\nHayward, CA, 94545\nType of test performed:\nPCR\nSerology\nNZRapid\nDOther\nI certify that testing was performed at this location and the information on\nthis form is correct to the best of my knowledge.\nEmployee Signature:\nFalos\nDate:\n12-21-2021\n:unselected:\n:selected:\n:unselected:\n:unselected:\n:unselected:\n:unselected:\n:selected:\n:unselected:\n:selected:",
+		"pages": [
+			{
+				"pageNumber": 1,
+				"angle": 0.1186,
+				"width": 8.5,
+				"height": 11,
+				"unit": "inch",
+				"words": [
+					{
+						"content": "Contoso",
+						"boundingBox": [
+							1.1031,
+							1.1315,
+							2.0629,
+							1.1506,
+							2.0677,
+							1.3893,
+							1.0983,
+							1.4084
+						],
+						"confidence": 0.915,
+						"span": {
+							"offset": 0,
+							"length": 7
+						}
+					},
+					{
+						"content": "CONTOSO,",
+						"boundingBox": [
+							1.9388,
+							1.7617,
+							2.9034,
+							1.7569,
+							2.9034,
+							1.924,
+							1.9435,
+							1.924
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 8,
+							"length": 8
+						}
+					},
+					{
+						"content": "LTD",
+						"boundingBox": [
+							2.9368,
+							1.7522,
+							3.252,
+							1.7522,
+							3.252,
+							1.924,
+							2.9368,
+							1.924
+						],
+						"confidence": 0.998,
+						"span": {
+							"offset": 17,
+							"length": 3
+						}
+					},
+					{
+						"content": "-",
+						"boundingBox": [
+							3.3284,
+							1.7522,
+							3.4287,
+							1.7522,
+							3.4287,
+							1.924,
+							3.3284,
+							1.924
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 21,
+							"length": 1
+						}
+					},
+					{
+						"content": "EMPLOYEE",
+						"boundingBox": [
+							3.486,
+							1.7522,
+							4.484,
+							1.7522,
+							4.484,
+							1.924,
+							3.486,
+							1.924
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 23,
+							"length": 8
+						}
+					},
+					{
+						"content": "COVID-19",
+						"boundingBox": [
+							4.527,
+							1.7522,
+							5.4152,
+							1.7522,
+							5.4104,
+							1.924,
+							4.527,
+							1.924
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 32,
+							"length": 8
+						}
+					},
+					{
+						"content": "PCR",
+						"boundingBox": [
+							5.4581,
+							1.7522,
+							5.8163,
+							1.7522,
+							5.8163,
+							1.924,
+							5.4581,
+							1.924
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 41,
+							"length": 3
+						}
+					},
+					{
+						"content": "TESTING",
+						"boundingBox": [
+							5.8736,
+							1.7522,
+							6.6233,
+							1.7569,
+							6.6185,
+							1.924,
+							5.8688,
+							1.924
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 45,
+							"length": 7
+						}
+					},
+					{
+						"content": "SECTION",
+						"boundingBox": [
+							3.2185,
+							2.115,
+							3.7295,
+							2.1102,
+							3.7343,
+							2.2487,
+							3.2233,
+							2.2344
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 53,
+							"length": 7
+						}
+					},
+					{
+						"content": "1:",
+						"boundingBox": [
+							3.7868,
+							2.1102,
+							3.9062,
+							2.1055,
+							3.9062,
+							2.2487,
+							3.7868,
+							2.2487
+						],
+						"confidence": 0.998,
+						"span": {
+							"offset": 61,
+							"length": 2
+						}
+					},
+					{
+						"content": "Employee",
+						"boundingBox": [
+							3.9348,
+							2.1055,
+							4.5843,
+							2.1055,
+							4.5843,
+							2.2535,
+							3.9348,
+							2.2487
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 64,
+							"length": 8
+						}
+					},
+					{
+						"content": "Information",
+						"boundingBox": [
+							4.6081,
+							2.1055,
+							5.3865,
+							2.1102,
+							5.3913,
+							2.2439,
+							4.6129,
+							2.2535
+						],
+						"confidence": 0.963,
+						"span": {
+							"offset": 73,
+							"length": 11
+						}
+					},
+					{
+						"content": "Emp",
+						"boundingBox": [
+							1.9435,
+							2.6975,
+							2.2014,
+							2.6975,
+							2.2014,
+							2.8312,
+							1.9483,
+							2.8359
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 85,
+							"length": 3
+						}
+					},
+					{
+						"content": "ID:",
+						"boundingBox": [
+							2.2396,
+							2.6975,
+							2.4497,
+							2.6927,
+							2.4449,
+							2.8312,
+							2.2348,
+							2.8312
+						],
+						"confidence": 0.96,
+						"span": {
+							"offset": 89,
+							"length": 3
+						}
+					},
+					{
+						"content": "465234",
+						"boundingBox": [
+							2.7124,
+							2.6211,
+							3.8298,
+							2.6402,
+							3.825,
+							2.8359,
+							2.7076,
+							2.8168
+						],
+						"confidence": 0.988,
+						"span": {
+							"offset": 93,
+							"length": 6
+						}
+					},
+					{
+						"content": "Ex:",
+						"boundingBox": [
+							2.8508,
+							2.8455,
+							2.9177,
+							2.8407,
+							2.9177,
+							2.9123,
+							2.8556,
+							2.9123
+						],
+						"confidence": 0.998,
+						"span": {
+							"offset": 100,
+							"length": 3
+						}
+					},
+					{
+						"content": "1234567",
+						"boundingBox": [
+							2.932,
+							2.8407,
+							3.1851,
+							2.8407,
+							3.1803,
+							2.9123,
+							2.932,
+							2.9123
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 104,
+							"length": 7
+						}
+					},
+					{
+						"content": "First",
+						"boundingBox": [
+							1.743,
+							2.9839,
+							1.9913,
+							2.9935,
+							1.9913,
+							3.1081,
+							1.7382,
+							3.1081
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 112,
+							"length": 5
+						}
+					},
+					{
+						"content": "name:",
+						"boundingBox": [
+							2.0152,
+							2.9935,
+							2.4449,
+							2.9935,
+							2.4449,
+							3.1128,
+							2.0152,
+							3.1081
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 118,
+							"length": 5
+						}
+					},
+					{
+						"content": "Title:",
+						"boundingBox": [
+							2.1298,
+							3.2752,
+							2.4545,
+							3.2752,
+							2.4497,
+							3.3993,
+							2.1298,
+							3.3945
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 124,
+							"length": 6
+						}
+					},
+					{
+						"content": "Fatos",
+						"boundingBox": [
+							2.8079,
+							2.9601,
+							3.3666,
+							2.9648,
+							3.3618,
+							3.1558,
+							2.8079,
+							3.1463
+						],
+						"confidence": 0.983,
+						"span": {
+							"offset": 131,
+							"length": 5
+						}
+					},
+					{
+						"content": "Architect",
+						"boundingBox": [
+							2.8079,
+							3.2322,
+							3.8632,
+							3.237,
+							3.8632,
+							3.4566,
+							2.8079,
+							3.4375
+						],
+						"confidence": 0.795,
+						"span": {
+							"offset": 137,
+							"length": 9
+						}
+					},
+					{
+						"content": "Test",
+						"boundingBox": [
+							1.8003,
+							3.5664,
+							2.0486,
+							3.5712,
+							2.0486,
+							3.6953,
+							1.8003,
+							3.6905
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 147,
+							"length": 4
+						}
+					},
+					{
+						"content": "Date:",
+						"boundingBox": [
+							2.0725,
+							3.5712,
+							2.4449,
+							3.5712,
+							2.4449,
+							3.6953,
+							2.0725,
+							3.6953
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 152,
+							"length": 5
+						}
+					},
+					{
+						"content": "12-21-2021",
+						"boundingBox": [
+							2.8079,
+							3.5569,
+							4.1115,
+							3.5282,
+							4.1163,
+							3.724,
+							2.8079,
+							3.7192
+						],
+						"confidence": 0.986,
+						"span": {
+							"offset": 158,
+							"length": 10
+						}
+					},
+					{
+						"content": "Ex:",
+						"boundingBox": [
+							3.1421,
+							3.7669,
+							3.2138,
+							3.7669,
+							3.2138,
+							3.8385,
+							3.1421,
+							3.8385
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 169,
+							"length": 3
+						}
+					},
+					{
+						"content": "MM-DD-YYYY",
+						"boundingBox": [
+							3.2281,
+							3.7669,
+							3.6101,
+							3.7669,
+							3.6053,
+							3.8338,
+							3.2281,
+							3.8385
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 173,
+							"length": 10
+						}
+					},
+					{
+						"content": "Last",
+						"boundingBox": [
+							4.7753,
+							2.9935,
+							5.0236,
+							2.9935,
+							5.0284,
+							3.1081,
+							4.7801,
+							3.1081
+						],
+						"confidence": 0.991,
+						"span": {
+							"offset": 184,
+							"length": 4
+						}
+					},
+					{
+						"content": "name:",
+						"boundingBox": [
+							5.0475,
+							2.9935,
+							5.482,
+							2.9839,
+							5.482,
+							3.1176,
+							5.0522,
+							3.1081
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 189,
+							"length": 5
+						}
+					},
+					{
+						"content": "Zenali",
+						"boundingBox": [
+							5.6253,
+							2.9505,
+							6.5135,
+							2.9553,
+							6.5135,
+							3.1463,
+							5.6253,
+							3.1367
+						],
+						"confidence": 0.765,
+						"span": {
+							"offset": 195,
+							"length": 6
+						}
+					},
+					{
+						"content": "Work",
+						"boundingBox": [
+							4.5126,
+							3.2752,
+							4.8374,
+							3.2752,
+							4.8374,
+							3.4041,
+							4.5174,
+							3.4041
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 202,
+							"length": 4
+						}
+					},
+					{
+						"content": "Location:",
+						"boundingBox": [
+							4.8612,
+							3.2752,
+							5.4868,
+							3.2752,
+							5.4868,
+							3.4136,
+							4.8612,
+							3.4041
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 207,
+							"length": 9
+						}
+					},
+					{
+						"content": "California",
+						"boundingBox": [
+							5.5489,
+							3.2274,
+							6.7522,
+							3.2656,
+							6.7618,
+							3.4757,
+							5.5489,
+							3.4566
+						],
+						"confidence": 0.342,
+						"span": {
+							"offset": 217,
+							"length": 10
+						}
+					},
+					{
+						"content": "SECTION",
+						"boundingBox": [
+							3.1135,
+							4.1298,
+							3.6244,
+							4.1202,
+							3.6244,
+							4.2539,
+							3.1135,
+							4.2491
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 228,
+							"length": 7
+						}
+					},
+					{
+						"content": "2:",
+						"boundingBox": [
+							3.677,
+							4.1202,
+							3.8011,
+							4.1202,
+							3.7963,
+							4.2539,
+							3.677,
+							4.2539
+						],
+						"confidence": 0.998,
+						"span": {
+							"offset": 236,
+							"length": 2
+						}
+					},
+					{
+						"content": "Test",
+						"boundingBox": [
+							3.825,
+							4.1202,
+							4.1115,
+							4.1202,
+							4.1067,
+							4.2587,
+							3.825,
+							4.2539
+						],
+						"confidence": 0.989,
+						"span": {
+							"offset": 239,
+							"length": 4
+						}
+					},
+					{
+						"content": "Provider",
+						"boundingBox": [
+							4.1354,
+							4.1202,
+							4.6893,
+							4.1202,
+							4.6893,
+							4.2587,
+							4.1354,
+							4.2587
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 244,
+							"length": 8
+						}
+					},
+					{
+						"content": "Information",
+						"boundingBox": [
+							4.718,
+							4.1202,
+							5.4868,
+							4.1298,
+							5.4868,
+							4.2539,
+							4.7132,
+							4.2587
+						],
+						"confidence": 0.983,
+						"span": {
+							"offset": 253,
+							"length": 11
+						}
+					},
+					{
+						"content": "(Must",
+						"boundingBox": [
+							2.7506,
+							4.3112,
+							3.0275,
+							4.3112,
+							3.0323,
+							4.4353,
+							2.7553,
+							4.4353
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 265,
+							"length": 5
+						}
+					},
+					{
+						"content": "be",
+						"boundingBox": [
+							3.0514,
+							4.3112,
+							3.1803,
+							4.3112,
+							3.1851,
+							4.4353,
+							3.0562,
+							4.4353
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 271,
+							"length": 2
+						}
+					},
+					{
+						"content": "completed",
+						"boundingBox": [
+							3.2042,
+							4.3112,
+							3.7486,
+							4.3112,
+							3.7534,
+							4.4306,
+							3.209,
+							4.4353
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 274,
+							"length": 9
+						}
+					},
+					{
+						"content": "by",
+						"boundingBox": [
+							3.7725,
+							4.3112,
+							3.8919,
+							4.3112,
+							3.8966,
+							4.4306,
+							3.7772,
+							4.4306
+						],
+						"confidence": 0.999,
+						"span": {
+							"offset": 284,
+							"length": 2
+						}
+					},
+					{
+						"content": "authorized",
+						"boundingBox": [
+							3.9157,
+							4.3112,
+							4.4697,
+							4.3112,
+							4.4744,
+							4.4306,
+							3.9205,
+							4.4306
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 287,
+							"length": 10
+						}
+					},
+					{
+						"content": "COVID-19",
+						"boundingBox": [
+							4.4935,
+							4.3112,
+							4.9806,
+							4.3064,
+							4.9806,
+							4.4306,
+							4.4983,
+							4.4306
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 298,
+							"length": 8
+						}
+					},
+					{
+						"content": "testing",
+						"boundingBox": [
+							5.0045,
+							4.3064,
+							5.3531,
+							4.3064,
+							5.3531,
+							4.4306,
+							5.0093,
+							4.4306
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 307,
+							"length": 7
+						}
+					},
+					{
+						"content": "provider)",
+						"boundingBox": [
+							5.377,
+							4.3064,
+							5.8784,
+							4.3064,
+							5.8831,
+							4.4353,
+							5.3817,
+							4.4306
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 315,
+							"length": 9
+						}
+					},
+					{
+						"content": "Name",
+						"boundingBox": [
+							1.7239,
+							4.8173,
+							2.082,
+							4.8173,
+							2.0868,
+							4.951,
+							1.7287,
+							4.9462
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 325,
+							"length": 4
+						}
+					},
+					{
+						"content": "of",
+						"boundingBox": [
+							2.1107,
+							4.8173,
+							2.2587,
+							4.8173,
+							2.2587,
+							4.9557,
+							2.1107,
+							4.951
+						],
+						"confidence": 0.999,
+						"span": {
+							"offset": 330,
+							"length": 2
+						}
+					},
+					{
+						"content": "Testing",
+						"boundingBox": [
+							2.2826,
+							4.8173,
+							2.7362,
+							4.822,
+							2.741,
+							4.9605,
+							2.2874,
+							4.9557
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 333,
+							"length": 7
+						}
+					},
+					{
+						"content": "Location:",
+						"boundingBox": [
+							2.7649,
+							4.822,
+							3.3761,
+							4.8268,
+							3.3761,
+							4.951,
+							2.7649,
+							4.9605
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 341,
+							"length": 9
+						}
+					},
+					{
+						"content": "Contoso",
+						"boundingBox": [
+							3.6865,
+							5.013,
+							4.1975,
+							5.013,
+							4.1879,
+							5.1801,
+							3.6817,
+							5.1801
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 351,
+							"length": 7
+						}
+					},
+					{
+						"content": "Pharmaceuticals",
+						"boundingBox": [
+							4.2309,
+							5.013,
+							5.3244,
+							5.0082,
+							5.3197,
+							5.1801,
+							4.2213,
+							5.1801
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 359,
+							"length": 15
+						}
+					},
+					{
+						"content": "UZ",
+						"boundingBox": [
+							3.4716,
+							5.2231,
+							3.6244,
+							5.2279,
+							3.6292,
+							5.3759,
+							3.4764,
+							5.3759
+						],
+						"confidence": 0.053,
+						"span": {
+							"offset": 375,
+							"length": 2
+						}
+					},
+					{
+						"content": "Lamna",
+						"boundingBox": [
+							3.6722,
+							5.2279,
+							4.0972,
+							5.2326,
+							4.102,
+							5.3806,
+							3.677,
+							5.3759
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 378,
+							"length": 5
+						}
+					},
+					{
+						"content": "Healthcare",
+						"boundingBox": [
+							4.1258,
+							5.2326,
+							4.8183,
+							5.247,
+							4.823,
+							5.3902,
+							4.1306,
+							5.3854
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 384,
+							"length": 10
+						}
+					},
+					{
+						"content": "Company",
+						"boundingBox": [
+							4.8469,
+							5.247,
+							5.4725,
+							5.2661,
+							5.4772,
+							5.3997,
+							4.8517,
+							5.3902
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 395,
+							"length": 7
+						}
+					},
+					{
+						"content": "Adatum",
+						"boundingBox": [
+							3.6961,
+							5.4666,
+							4.1497,
+							5.4666,
+							4.1497,
+							5.605,
+							3.6961,
+							5.5955
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 403,
+							"length": 6
+						}
+					},
+					{
+						"content": "Corporation",
+						"boundingBox": [
+							4.2118,
+							5.4666,
+							4.9902,
+							5.4714,
+							4.9902,
+							5.6098,
+							4.2118,
+							5.605
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 410,
+							"length": 11
+						}
+					},
+					{
+						"content": "Other",
+						"boundingBox": [
+							3.6961,
+							5.6814,
+							4.0781,
+							5.6814,
+							4.0781,
+							5.8056,
+							3.6961,
+							5.8008
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 422,
+							"length": 5
+						}
+					},
+					{
+						"content": "Address",
+						"boundingBox": [
+							1.7382,
+							5.8867,
+							2.2157,
+							5.8867,
+							2.2157,
+							6.0252,
+							1.7334,
+							6.0156
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 428,
+							"length": 7
+						}
+					},
+					{
+						"content": "of",
+						"boundingBox": [
+							2.2444,
+							5.8867,
+							2.3876,
+							5.8867,
+							2.3829,
+							6.0252,
+							2.2444,
+							6.0252
+						],
+						"confidence": 0.999,
+						"span": {
+							"offset": 436,
+							"length": 2
+						}
+					},
+					{
+						"content": "Testing",
+						"boundingBox": [
+							2.4115,
+							5.8867,
+							2.8747,
+							5.8867,
+							2.8747,
+							6.0299,
+							2.4115,
+							6.0252
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 439,
+							"length": 7
+						}
+					},
+					{
+						"content": "Location:",
+						"boundingBox": [
+							2.9034,
+							5.8867,
+							3.5051,
+							5.8915,
+							3.5051,
+							6.0204,
+							2.9034,
+							6.0299
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 447,
+							"length": 9
+						}
+					},
+					{
+						"content": "12345",
+						"boundingBox": [
+							3.8154,
+							5.8772,
+							4.441,
+							5.8963,
+							4.4458,
+							6.0825,
+							3.8202,
+							6.0777
+						],
+						"confidence": 0.958,
+						"span": {
+							"offset": 457,
+							"length": 5
+						}
+					},
+					{
+						"content": "main",
+						"boundingBox": [
+							4.6607,
+							5.901,
+							5.1907,
+							5.9058,
+							5.1955,
+							6.0825,
+							4.6654,
+							6.0825
+						],
+						"confidence": 0.772,
+						"span": {
+							"offset": 463,
+							"length": 4
+						}
+					},
+					{
+						"content": "Street",
+						"boundingBox": [
+							5.3913,
+							5.9058,
+							6.0407,
+							5.8915,
+							6.0455,
+							6.0729,
+							5.3961,
+							6.0825
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 468,
+							"length": 6
+						}
+					},
+					{
+						"content": "Hayward,",
+						"boundingBox": [
+							3.9253,
+							6.135,
+							5.1382,
+							6.1684,
+							5.1334,
+							6.3976,
+							3.9205,
+							6.388
+						],
+						"confidence": 0.634,
+						"span": {
+							"offset": 475,
+							"length": 8
+						}
+					},
+					{
+						"content": "CA,",
+						"boundingBox": [
+							5.1812,
+							6.1684,
+							5.7351,
+							6.178,
+							5.7351,
+							6.3976,
+							5.1764,
+							6.3976
+						],
+						"confidence": 0.931,
+						"span": {
+							"offset": 484,
+							"length": 3
+						}
+					},
+					{
+						"content": "94545",
+						"boundingBox": [
+							5.7829,
+							6.178,
+							6.6185,
+							6.1923,
+							6.6138,
+							6.4023,
+							5.7781,
+							6.3976
+						],
+						"confidence": 0.967,
+						"span": {
+							"offset": 488,
+							"length": 5
+						}
+					},
+					{
+						"content": "Type",
+						"boundingBox": [
+							1.7382,
+							6.4596,
+							2.0104,
+							6.4596,
+							2.0104,
+							6.6315,
+							1.743,
+							6.6315
+						],
+						"confidence": 0.988,
+						"span": {
+							"offset": 494,
+							"length": 4
+						}
+					},
+					{
+						"content": "of",
+						"boundingBox": [
+							2.0438,
+							6.4596,
+							2.1775,
+							6.4596,
+							2.1775,
+							6.6267,
+							2.0438,
+							6.6315
+						],
+						"confidence": 0.999,
+						"span": {
+							"offset": 499,
+							"length": 2
+						}
+					},
+					{
+						"content": "test",
+						"boundingBox": [
+							2.211,
+							6.4596,
+							2.4545,
+							6.4549,
+							2.4593,
+							6.6267,
+							2.211,
+							6.6267
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 502,
+							"length": 4
+						}
+					},
+					{
+						"content": "performed:",
+						"boundingBox": [
+							2.4879,
+							6.4549,
+							3.2424,
+							6.4549,
+							3.2376,
+							6.6267,
+							2.4927,
+							6.6267
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 507,
+							"length": 10
+						}
+					},
+					{
+						"content": "PCR",
+						"boundingBox": [
+							2.698,
+							6.77,
+							2.9416,
+							6.77,
+							2.9416,
+							6.8893,
+							2.6933,
+							6.8845
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 518,
+							"length": 3
+						}
+					},
+					{
+						"content": "Serology",
+						"boundingBox": [
+							3.5051,
+							6.7747,
+							4.0494,
+							6.7843,
+							4.0447,
+							6.9227,
+							3.5051,
+							6.8989
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 522,
+							"length": 8
+						}
+					},
+					{
+						"content": "NZRapid",
+						"boundingBox": [
+							4.4315,
+							6.727,
+							5.0331,
+							6.7318,
+							5.0284,
+							6.9132,
+							4.4219,
+							6.9132
+						],
+						"confidence": 0.405,
+						"span": {
+							"offset": 531,
+							"length": 7
+						}
+					},
+					{
+						"content": "DOther",
+						"boundingBox": [
+							5.7208,
+							6.7652,
+							6.227,
+							6.7747,
+							6.2222,
+							6.8989,
+							5.716,
+							6.8941
+						],
+						"confidence": 0.926,
+						"span": {
+							"offset": 539,
+							"length": 6
+						}
+					},
+					{
+						"content": "I",
+						"boundingBox": [
+							1.9101,
+							7.2522,
+							1.9722,
+							7.2522,
+							1.9674,
+							7.4193,
+							1.9053,
+							7.4193
+						],
+						"confidence": 0.323,
+						"span": {
+							"offset": 546,
+							"length": 1
+						}
+					},
+					{
+						"content": "certify",
+						"boundingBox": [
+							2.0008,
+							7.2522,
+							2.4258,
+							7.2617,
+							2.4211,
+							7.4193,
+							1.9961,
+							7.4193
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 548,
+							"length": 7
+						}
+					},
+					{
+						"content": "that",
+						"boundingBox": [
+							2.4497,
+							7.2617,
+							2.7028,
+							7.2665,
+							2.7028,
+							7.4193,
+							2.4497,
+							7.4193
+						],
+						"confidence": 0.998,
+						"span": {
+							"offset": 556,
+							"length": 4
+						}
+					},
+					{
+						"content": "testing",
+						"boundingBox": [
+							2.7315,
+							7.2665,
+							3.1756,
+							7.2713,
+							3.1708,
+							7.4193,
+							2.7267,
+							7.4193
+						],
+						"confidence": 0.988,
+						"span": {
+							"offset": 561,
+							"length": 7
+						}
+					},
+					{
+						"content": "was",
+						"boundingBox": [
+							3.2042,
+							7.2713,
+							3.4573,
+							7.276,
+							3.4525,
+							7.4193,
+							3.1994,
+							7.4193
+						],
+						"confidence": 0.999,
+						"span": {
+							"offset": 569,
+							"length": 3
+						}
+					},
+					{
+						"content": "performed",
+						"boundingBox": [
+							3.4812,
+							7.276,
+							4.1688,
+							7.2808,
+							4.164,
+							7.4145,
+							3.4812,
+							7.4193
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 573,
+							"length": 9
+						}
+					},
+					{
+						"content": "at",
+						"boundingBox": [
+							4.1975,
+							7.2808,
+							4.3169,
+							7.2808,
+							4.3169,
+							7.4145,
+							4.1927,
+							7.4145
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 583,
+							"length": 2
+						}
+					},
+					{
+						"content": "this",
+						"boundingBox": [
+							4.3455,
+							7.2808,
+							4.5795,
+							7.2808,
+							4.5795,
+							7.4145,
+							4.3455,
+							7.4145
+						],
+						"confidence": 0.998,
+						"span": {
+							"offset": 586,
+							"length": 4
+						}
+					},
+					{
+						"content": "location",
+						"boundingBox": [
+							4.6081,
+							7.2808,
+							5.1239,
+							7.2808,
+							5.1239,
+							7.4145,
+							4.6081,
+							7.4145
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 591,
+							"length": 8
+						}
+					},
+					{
+						"content": "and",
+						"boundingBox": [
+							5.1525,
+							7.2808,
+							5.4056,
+							7.2808,
+							5.4056,
+							7.4145,
+							5.1525,
+							7.4145
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 600,
+							"length": 3
+						}
+					},
+					{
+						"content": "the",
+						"boundingBox": [
+							5.4343,
+							7.2808,
+							5.6301,
+							7.2808,
+							5.6301,
+							7.4097,
+							5.4343,
+							7.4145
+						],
+						"confidence": 0.999,
+						"span": {
+							"offset": 604,
+							"length": 3
+						}
+					},
+					{
+						"content": "information",
+						"boundingBox": [
+							5.6587,
+							7.2808,
+							6.418,
+							7.276,
+							6.418,
+							7.4097,
+							5.6587,
+							7.4097
+						],
+						"confidence": 0.991,
+						"span": {
+							"offset": 608,
+							"length": 11
+						}
+					},
+					{
+						"content": "on",
+						"boundingBox": [
+							6.4466,
+							7.276,
+							6.6138,
+							7.2713,
+							6.6138,
+							7.4049,
+							6.4466,
+							7.4097
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 620,
+							"length": 2
+						}
+					},
+					{
+						"content": "this",
+						"boundingBox": [
+							1.7287,
+							7.4861,
+							1.934,
+							7.4861,
+							1.9388,
+							7.6198,
+							1.7334,
+							7.615
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 623,
+							"length": 4
+						}
+					},
+					{
+						"content": "form",
+						"boundingBox": [
+							1.9626,
+							7.4861,
+							2.2444,
+							7.4813,
+							2.2444,
+							7.6198,
+							1.9674,
+							7.6198
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 628,
+							"length": 4
+						}
+					},
+					{
+						"content": "is",
+						"boundingBox": [
+							2.3112,
+							7.4813,
+							2.4115,
+							7.4813,
+							2.4163,
+							7.6198,
+							2.3112,
+							7.6198
+						],
+						"confidence": 0.999,
+						"span": {
+							"offset": 633,
+							"length": 2
+						}
+					},
+					{
+						"content": "correct",
+						"boundingBox": [
+							2.4402,
+							7.4813,
+							2.8986,
+							7.4813,
+							2.8986,
+							7.6246,
+							2.4402,
+							7.6198
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 636,
+							"length": 7
+						}
+					},
+					{
+						"content": "to",
+						"boundingBox": [
+							2.9225,
+							7.4813,
+							3.0562,
+							7.4813,
+							3.0562,
+							7.6246,
+							2.9272,
+							7.6246
+						],
+						"confidence": 0.999,
+						"span": {
+							"offset": 644,
+							"length": 2
+						}
+					},
+					{
+						"content": "the",
+						"boundingBox": [
+							3.0848,
+							7.4813,
+							3.3045,
+							7.4813,
+							3.3093,
+							7.6246,
+							3.0848,
+							7.6246
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 647,
+							"length": 3
+						}
+					},
+					{
+						"content": "best",
+						"boundingBox": [
+							3.3331,
+							7.4813,
+							3.6149,
+							7.4813,
+							3.6149,
+							7.6293,
+							3.3379,
+							7.6246
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 651,
+							"length": 4
+						}
+					},
+					{
+						"content": "of",
+						"boundingBox": [
+							3.6435,
+							7.4813,
+							3.782,
+							7.4813,
+							3.782,
+							7.6293,
+							3.6435,
+							7.6293
+						],
+						"confidence": 0.998,
+						"span": {
+							"offset": 656,
+							"length": 2
+						}
+					},
+					{
+						"content": "my",
+						"boundingBox": [
+							3.8107,
+							7.4813,
+							4.0065,
+							7.4813,
+							4.0065,
+							7.6293,
+							3.8107,
+							7.6293
+						],
+						"confidence": 0.999,
+						"span": {
+							"offset": 659,
+							"length": 2
+						}
+					},
+					{
+						"content": "knowledge.",
+						"boundingBox": [
+							4.0351,
+							7.4813,
+							4.7896,
+							7.4813,
+							4.7896,
+							7.6293,
+							4.0351,
+							7.6293
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 662,
+							"length": 10
+						}
+					},
+					{
+						"content": "Employee",
+						"boundingBox": [
+							1.7382,
+							8.3598,
+							2.3351,
+							8.3598,
+							2.3303,
+							8.503,
+							1.7382,
+							8.503
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 673,
+							"length": 8
+						}
+					},
+					{
+						"content": "Signature:",
+						"boundingBox": [
+							2.3638,
+							8.3598,
+							3.0323,
+							8.3646,
+							3.0275,
+							8.4983,
+							2.359,
+							8.503
+						],
+						"confidence": 0.988,
+						"span": {
+							"offset": 682,
+							"length": 10
+						}
+					},
+					{
+						"content": "Falos",
+						"boundingBox": [
+							3.8298,
+							8.0686,
+							4.8326,
+							8.0686,
+							4.8374,
+							8.4935,
+							3.8298,
+							8.4935
+						],
+						"confidence": 0.436,
+						"span": {
+							"offset": 693,
+							"length": 5
+						}
+					},
+					{
+						"content": "Date:",
+						"boundingBox": [
+							2.6742,
+							8.6558,
+							3.0084,
+							8.6558,
+							3.0084,
+							8.7704,
+							2.6742,
+							8.7704
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 699,
+							"length": 5
+						}
+					},
+					{
+						"content": "12-21-2021",
+						"boundingBox": [
+							3.3809,
+							8.6463,
+							4.7514,
+							8.6654,
+							4.7562,
+							8.8659,
+							3.3761,
+							8.8468
+						],
+						"confidence": 0.989,
+						"span": {
+							"offset": 705,
+							"length": 10
+						}
+					}
+				],
+				"selectionMarks": [
+					{
+						"state": "unselected",
+						"boundingBox": [
+							3.5367,
+							5.0179,
+							3.6682,
+							5.0179,
+							3.6682,
+							5.1484,
+							3.5367,
+							5.1484
+						],
+						"confidence": 0.999,
+						"span": {
+							"offset": 716,
+							"length": 12
+						}
+					},
+					{
+						"state": "selected",
+						"boundingBox": [
+							3.5304,
+							5.2378,
+							3.6596,
+							5.2378,
+							3.6596,
+							5.3676,
+							3.5304,
+							5.3676
+						],
+						"confidence": 0.999,
+						"span": {
+							"offset": 729,
+							"length": 10
+						}
+					},
+					{
+						"state": "unselected",
+						"boundingBox": [
+							3.538,
+							5.4577,
+							3.6645,
+							5.4577,
+							3.6645,
+							5.5818,
+							3.538,
+							5.5818
+						],
+						"confidence": 0.999,
+						"span": {
+							"offset": 740,
+							"length": 12
+						}
+					},
+					{
+						"state": "unselected",
+						"boundingBox": [
+							3.5364,
+							5.67,
+							3.6668,
+							5.67,
+							3.6668,
+							5.7983,
+							3.5364,
+							5.7983
+						],
+						"confidence": 0.999,
+						"span": {
+							"offset": 753,
+							"length": 12
+						}
+					},
+					{
+						"state": "unselected",
+						"boundingBox": [
+							2.5447,
+							6.764,
+							2.6706,
+							6.764,
+							2.6706,
+							6.8891,
+							2.5447,
+							6.8891
+						],
+						"confidence": 0.999,
+						"span": {
+							"offset": 766,
+							"length": 12
+						}
+					},
+					{
+						"state": "unselected",
+						"boundingBox": [
+							3.3347,
+							6.7602,
+							3.4679,
+							6.7602,
+							3.4679,
+							6.8893,
+							3.3347,
+							6.8893
+						],
+						"confidence": 0.999,
+						"span": {
+							"offset": 779,
+							"length": 12
+						}
+					},
+					{
+						"state": "selected",
+						"boundingBox": [
+							4.5268,
+							6.7626,
+							4.6526,
+							6.7626,
+							4.6526,
+							6.8936,
+							4.5268,
+							6.8936
+						],
+						"confidence": 0.999,
+						"span": {
+							"offset": 792,
+							"length": 10
+						}
+					},
+					{
+						"state": "unselected",
+						"boundingBox": [
+							5.7159,
+							6.7624,
+							5.8451,
+							6.7624,
+							5.8451,
+							6.8913,
+							5.7159,
+							6.8913
+						],
+						"confidence": 0.999,
+						"span": {
+							"offset": 803,
+							"length": 12
+						}
+					},
+					{
+						"state": "selected",
+						"boundingBox": [
+							1.7442,
+							7.2664,
+							1.8803,
+							7.2664,
+							1.8803,
+							7.4024,
+							1.7442,
+							7.4024
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 816,
+							"length": 10
+						}
+					}
+				],
+				"lines": [
+					{
+						"content": "Contoso",
+						"boundingBox": [
+							1.0935,
+							1.1315,
+							2.0963,
+							1.1315,
+							2.0963,
+							1.3989,
+							1.0935,
+							1.4036
+						],
+						"spans": [
+							{
+								"offset": 0,
+								"length": 7
+							}
+						]
+					},
+					{
+						"content": "CONTOSO, LTD - EMPLOYEE COVID-19 PCR TESTING",
+						"boundingBox": [
+							1.9388,
+							1.7474,
+							6.6854,
+							1.7474,
+							6.6854,
+							1.9193,
+							1.9388,
+							1.9193
+						],
+						"spans": [
+							{
+								"offset": 8,
+								"length": 44
+							}
+						]
+					},
+					{
+						"content": "SECTION 1: Employee Information",
+						"boundingBox": [
+							3.2185,
+							2.1007,
+							5.4056,
+							2.1007,
+							5.4056,
+							2.2487,
+							3.2185,
+							2.2487
+						],
+						"spans": [
+							{
+								"offset": 53,
+								"length": 31
+							}
+						]
+					},
+					{
+						"content": "Emp ID:",
+						"boundingBox": [
+							1.9435,
+							2.6975,
+							2.4449,
+							2.6927,
+							2.4497,
+							2.8264,
+							1.9435,
+							2.8312
+						],
+						"spans": [
+							{
+								"offset": 85,
+								"length": 7
+							}
+						]
+					},
+					{
+						"content": "465234",
+						"boundingBox": [
+							2.7076,
+							2.6163,
+							3.9348,
+							2.6354,
+							3.9301,
+							2.8359,
+							2.7076,
+							2.8216
+						],
+						"spans": [
+							{
+								"offset": 93,
+								"length": 6
+							}
+						]
+					},
+					{
+						"content": "Ex: 1234567",
+						"boundingBox": [
+							2.8508,
+							2.8407,
+							3.1851,
+							2.8359,
+							3.1899,
+							2.9076,
+							2.8508,
+							2.9123
+						],
+						"spans": [
+							{
+								"offset": 100,
+								"length": 11
+							}
+						]
+					},
+					{
+						"content": "First name:",
+						"boundingBox": [
+							1.7334,
+							2.9839,
+							2.4497,
+							2.9887,
+							2.4497,
+							3.1081,
+							1.7334,
+							3.1033
+						],
+						"spans": [
+							{
+								"offset": 112,
+								"length": 11
+							}
+						]
+					},
+					{
+						"content": "Title:",
+						"boundingBox": [
+							2.1298,
+							3.2752,
+							2.4593,
+							3.2752,
+							2.4545,
+							3.3993,
+							2.1298,
+							3.3945
+						],
+						"spans": [
+							{
+								"offset": 124,
+								"length": 6
+							}
+						]
+					},
+					{
+						"content": "Fatos",
+						"boundingBox": [
+							2.8031,
+							2.9553,
+							3.4382,
+							2.9601,
+							3.4334,
+							3.151,
+							2.8031,
+							3.1463
+						],
+						"spans": [
+							{
+								"offset": 131,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "Architect",
+						"boundingBox": [
+							2.8079,
+							3.2274,
+							3.973,
+							3.237,
+							3.9683,
+							3.4518,
+							2.8031,
+							3.4375
+						],
+						"spans": [
+							{
+								"offset": 137,
+								"length": 9
+							}
+						]
+					},
+					{
+						"content": "Test Date:",
+						"boundingBox": [
+							1.7955,
+							3.5664,
+							2.4497,
+							3.5712,
+							2.4497,
+							3.6953,
+							1.7955,
+							3.6905
+						],
+						"spans": [
+							{
+								"offset": 147,
+								"length": 10
+							}
+						]
+					},
+					{
+						"content": "12-21-2021",
+						"boundingBox": [
+							2.8079,
+							3.5378,
+							4.1354,
+							3.5234,
+							4.1354,
+							3.724,
+							2.8079,
+							3.7335
+						],
+						"spans": [
+							{
+								"offset": 158,
+								"length": 10
+							}
+						]
+					},
+					{
+						"content": "Ex: MM-DD-YYYY",
+						"boundingBox": [
+							3.1421,
+							3.7669,
+							3.6101,
+							3.7669,
+							3.6149,
+							3.8338,
+							3.1421,
+							3.8338
+						],
+						"spans": [
+							{
+								"offset": 169,
+								"length": 14
+							}
+						]
+					},
+					{
+						"content": "Last name:",
+						"boundingBox": [
+							4.7705,
+							2.9839,
+							5.482,
+							2.9839,
+							5.482,
+							3.1128,
+							4.7705,
+							3.1128
+						],
+						"spans": [
+							{
+								"offset": 184,
+								"length": 10
+							}
+						]
+					},
+					{
+						"content": "Zenali",
+						"boundingBox": [
+							5.5537,
+							2.9457,
+							6.5183,
+							2.9505,
+							6.5135,
+							3.1415,
+							5.5489,
+							3.1319
+						],
+						"spans": [
+							{
+								"offset": 195,
+								"length": 6
+							}
+						]
+					},
+					{
+						"content": "Work Location:",
+						"boundingBox": [
+							4.5126,
+							3.2704,
+							5.4868,
+							3.2704,
+							5.4868,
+							3.4089,
+							4.5126,
+							3.4041
+						],
+						"spans": [
+							{
+								"offset": 202,
+								"length": 14
+							}
+						]
+					},
+					{
+						"content": "California",
+						"boundingBox": [
+							5.5441,
+							3.2227,
+							6.8048,
+							3.2609,
+							6.8,
+							3.4757,
+							5.5441,
+							3.447
+						],
+						"spans": [
+							{
+								"offset": 217,
+								"length": 10
+							}
+						]
+					},
+					{
+						"content": "SECTION 2: Test Provider Information",
+						"boundingBox": [
+							3.1087,
+							4.1155,
+							5.5154,
+							4.1155,
+							5.5154,
+							4.2539,
+							3.1087,
+							4.2539
+						],
+						"spans": [
+							{
+								"offset": 228,
+								"length": 36
+							}
+						]
+					},
+					{
+						"content": "(Must be completed by authorized COVID-19 testing provider)",
+						"boundingBox": [
+							2.7458,
+							4.3064,
+							5.8831,
+							4.3064,
+							5.8831,
+							4.4306,
+							2.7458,
+							4.4306
+						],
+						"spans": [
+							{
+								"offset": 265,
+								"length": 59
+							}
+						]
+					},
+					{
+						"content": "Name of Testing Location:",
+						"boundingBox": [
+							1.7239,
+							4.8173,
+							3.3761,
+							4.822,
+							3.3761,
+							4.9557,
+							1.7239,
+							4.951
+						],
+						"spans": [
+							{
+								"offset": 325,
+								"length": 25
+							}
+						]
+					},
+					{
+						"content": "Contoso Pharmaceuticals",
+						"boundingBox": [
+							3.6674,
+							5.013,
+							5.3197,
+							5.0082,
+							5.3197,
+							5.1753,
+							3.6674,
+							5.1801
+						],
+						"spans": [
+							{
+								"offset": 351,
+								"length": 23
+							}
+						]
+					},
+					{
+						"content": "UZ Lamna Healthcare Company",
+						"boundingBox": [
+							3.4669,
+							5.2231,
+							5.4868,
+							5.2565,
+							5.482,
+							5.3997,
+							3.4669,
+							5.3711
+						],
+						"spans": [
+							{
+								"offset": 375,
+								"length": 27
+							}
+						]
+					},
+					{
+						"content": "Adatum Corporation",
+						"boundingBox": [
+							3.6961,
+							5.4618,
+							5.0093,
+							5.4666,
+							5.0045,
+							5.6098,
+							3.6961,
+							5.6003
+						],
+						"spans": [
+							{
+								"offset": 403,
+								"length": 18
+							}
+						]
+					},
+					{
+						"content": "Other",
+						"boundingBox": [
+							3.6961,
+							5.6814,
+							4.0829,
+							5.6814,
+							4.0781,
+							5.8008,
+							3.6961,
+							5.8008
+						],
+						"spans": [
+							{
+								"offset": 422,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "Address of Testing Location:",
+						"boundingBox": [
+							1.7334,
+							5.8819,
+							3.5098,
+							5.8867,
+							3.5098,
+							6.0299,
+							1.7334,
+							6.0204
+						],
+						"spans": [
+							{
+								"offset": 428,
+								"length": 28
+							}
+						]
+					},
+					{
+						"content": "12345 main Street",
+						"boundingBox": [
+							3.8154,
+							5.8724,
+							6.1219,
+							5.8772,
+							6.1219,
+							6.0825,
+							3.8154,
+							6.0777
+						],
+						"spans": [
+							{
+								"offset": 457,
+								"length": 17
+							}
+						]
+					},
+					{
+						"content": "Hayward, CA, 94545",
+						"boundingBox": [
+							3.9205,
+							6.135,
+							6.652,
+							6.1684,
+							6.6472,
+							6.4023,
+							3.9205,
+							6.3832
+						],
+						"spans": [
+							{
+								"offset": 475,
+								"length": 18
+							}
+						]
+					},
+					{
+						"content": "Type of test performed:",
+						"boundingBox": [
+							1.7382,
+							6.4549,
+							3.2376,
+							6.4501,
+							3.2376,
+							6.622,
+							1.7382,
+							6.6267
+						],
+						"spans": [
+							{
+								"offset": 494,
+								"length": 23
+							}
+						]
+					},
+					{
+						"content": "PCR",
+						"boundingBox": [
+							2.6885,
+							6.77,
+							2.975,
+							6.77,
+							2.975,
+							6.8893,
+							2.6933,
+							6.8798
+						],
+						"spans": [
+							{
+								"offset": 518,
+								"length": 3
+							}
+						]
+					},
+					{
+						"content": "Serology",
+						"boundingBox": [
+							3.5003,
+							6.77,
+							4.0781,
+							6.7843,
+							4.0733,
+							6.9227,
+							3.5003,
+							6.8989
+						],
+						"spans": [
+							{
+								"offset": 522,
+								"length": 8
+							}
+						]
+					},
+					{
+						"content": "NZRapid",
+						"boundingBox": [
+							4.4219,
+							6.7174,
+							5.0331,
+							6.7174,
+							5.0331,
+							6.9084,
+							4.4219,
+							6.9084
+						],
+						"spans": [
+							{
+								"offset": 531,
+								"length": 7
+							}
+						]
+					},
+					{
+						"content": "DOther",
+						"boundingBox": [
+							5.716,
+							6.7652,
+							6.227,
+							6.77,
+							6.227,
+							6.8941,
+							5.7112,
+							6.8893
+						],
+						"spans": [
+							{
+								"offset": 539,
+								"length": 6
+							}
+						]
+					},
+					{
+						"content": "I certify that testing was performed at this location and the information on",
+						"boundingBox": [
+							1.6236,
+							7.2426,
+							6.6472,
+							7.2522,
+							6.6472,
+							7.4193,
+							1.6236,
+							7.4145
+						],
+						"spans": [
+							{
+								"offset": 546,
+								"length": 76
+							}
+						]
+					},
+					{
+						"content": "this form is correct to the best of my knowledge.",
+						"boundingBox": [
+							1.7287,
+							7.4813,
+							4.7896,
+							7.4813,
+							4.7896,
+							7.6246,
+							1.7287,
+							7.6198
+						],
+						"spans": [
+							{
+								"offset": 623,
+								"length": 49
+							}
+						]
+					},
+					{
+						"content": "Employee Signature:",
+						"boundingBox": [
+							1.7334,
+							8.3598,
+							3.0371,
+							8.355,
+							3.0371,
+							8.4983,
+							1.7334,
+							8.503
+						],
+						"spans": [
+							{
+								"offset": 673,
+								"length": 19
+							}
+						]
+					},
+					{
+						"content": "Falos",
+						"boundingBox": [
+							3.8298,
+							8.0781,
+							4.9854,
+							8.0686,
+							4.9997,
+							8.4935,
+							3.8537,
+							8.4887
+						],
+						"spans": [
+							{
+								"offset": 693,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "Date:",
+						"boundingBox": [
+							2.6742,
+							8.6558,
+							3.0132,
+							8.6558,
+							3.0132,
+							8.7704,
+							2.6742,
+							8.7704
+						],
+						"spans": [
+							{
+								"offset": 699,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "12-21-2021",
+						"boundingBox": [
+							3.3761,
+							8.6415,
+							4.761,
+							8.6558,
+							4.761,
+							8.8611,
+							3.3761,
+							8.842
+						],
+						"spans": [
+							{
+								"offset": 705,
+								"length": 10
+							}
+						]
+					}
+				],
+				"spans": [
+					{
+						"offset": 0,
+						"length": 826
+					}
+				]
+			}
+		],
+		"tables": [
+			{
+				"rowCount": 7,
+				"columnCount": 2,
+				"cells": [
+					{
+						"rowIndex": 0,
+						"columnIndex": 0,
+						"rowSpan": 2,
+						"columnSpan": 1,
+						"content": "Emp ID:",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									1.6934,
+									2.6065,
+									2.5327,
+									2.6065,
+									2.5327,
+									2.9395,
+									1.6934,
+									2.9395
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 85,
+								"length": 7
+							}
+						]
+					},
+					{
+						"rowIndex": 0,
+						"columnIndex": 1,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "465234",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									2.5327,
+									2.6065,
+									4.4096,
+									2.6203,
+									4.4096,
+									2.8331,
+									2.5327,
+									2.8331
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 93,
+								"length": 6
+							}
+						]
+					},
+					{
+						"rowIndex": 1,
+						"columnIndex": 1,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "Ex: 1234567",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									2.5327,
+									2.8331,
+									4.4096,
+									2.8331,
+									4.4048,
+									2.9487,
+									2.5327,
+									2.9395
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 100,
+								"length": 11
+							}
+						]
+					},
+					{
+						"rowIndex": 2,
+						"columnIndex": 0,
+						"rowSpan": 4,
+						"columnSpan": 1,
+						"content": "First name: Title:",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									1.6934,
+									2.9395,
+									2.5327,
+									2.9395,
+									2.5327,
+									3.5176,
+									1.6934,
+									3.5176
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 112,
+								"length": 18
+							}
+						]
+					},
+					{
+						"rowIndex": 2,
+						"columnIndex": 1,
+						"rowSpan": 2,
+						"columnSpan": 1,
+						"content": "Fatos",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									2.5327,
+									2.9395,
+									4.4048,
+									2.9487,
+									4.4001,
+									3.2401,
+									2.5327,
+									3.2447
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 131,
+								"length": 5
+							}
+						]
+					},
+					{
+						"rowIndex": 4,
+						"columnIndex": 1,
+						"rowSpan": 2,
+						"columnSpan": 1,
+						"content": "Architect",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									2.5327,
+									3.2447,
+									4.4001,
+									3.2401,
+									4.4001,
+									3.5315,
+									2.5327,
+									3.5176
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 137,
+								"length": 9
+							}
+						]
+					},
+					{
+						"rowIndex": 6,
+						"columnIndex": 0,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "Test Date:",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									1.6934,
+									3.5176,
+									2.5327,
+									3.5176,
+									2.5327,
+									3.7396,
+									1.6934,
+									3.7396
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 147,
+								"length": 10
+							}
+						]
+					},
+					{
+						"rowIndex": 6,
+						"columnIndex": 1,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "12-21-2021",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									2.5327,
+									3.5176,
+									4.4001,
+									3.5315,
+									4.3954,
+									3.7489,
+									2.5327,
+									3.7396
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 158,
+								"length": 10
+							}
+						]
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"boundingBox": [
+							1.7017,
+							2.6044,
+							4.4134,
+							2.6081,
+							4.4123,
+							3.7771,
+							1.7006,
+							3.7744
+						]
+					}
+				],
+				"spans": [
+					{
+						"offset": 85,
+						"length": 83
+					}
+				]
+			}
+		],
+		"styles": []
+	}
+}

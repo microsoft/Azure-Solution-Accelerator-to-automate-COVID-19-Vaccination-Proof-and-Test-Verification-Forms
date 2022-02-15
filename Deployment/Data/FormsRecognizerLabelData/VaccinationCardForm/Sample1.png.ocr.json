@@ -1,0 +1,3881 @@
+{
+	"status": "succeeded",
+	"createdDateTime": "2022-02-01T21:56:41Z",
+	"lastUpdatedDateTime": "2022-02-01T21:56:45Z",
+	"analyzeResult": {
+		"apiVersion": "2021-09-30-preview",
+		"modelId": "prebuilt-layout",
+		"stringIndexType": "textElements",
+		"content": "COVID-19 Vaccination Record Card\nPlease keep this record card, which includes medical information\nCDE\nabout the vaccines you have received.\nPor favor, guarde esta tarjeta de registro, que incluye información\nmédica sobre las vacunas que ha recibido.\nCheng\nKim\nP.\nLast Name\nFirst Name\nMI\nDate of birth\n07/04/1993\n3478\nPatient number (medical record or IIS record number)\nVaccine\nProduct Name/Manufacturer\nLot Number\nDate\nHealthcare Professional or\nClinic Site\n1\" Dose\nCOVID-19\nModerna\n06/05/2021\nContoso Pharma.\nAB1234\nmm/ dd\nyy\n2nd Dose\nCOVID-19\nModerna\n07/04/2021\nmml\ndd\nyy\nContoso Pharma.\nC74689\nOther\nBooster Modena\n12378\n01\n/28/2022\nmm\n3\ndd\nyy\nContoso Pharm.\nOther\nmm dd\nyy\n$25\n2500\n:unselected:\n:unselected:\n:unselected:\n:unselected:\n:unselected:\n:unselected:\n:selected:",
+		"pages": [
+			{
+				"pageNumber": 1,
+				"angle": 89.034,
+				"width": 2448,
+				"height": 3264,
+				"unit": "pixel",
+				"words": [
+					{
+						"content": "COVID-19",
+						"boundingBox": [
+							1856,
+							489,
+							1860,
+							876,
+							1784,
+							879,
+							1779,
+							493
+						],
+						"confidence": 0.988,
+						"span": {
+							"offset": 0,
+							"length": 8
+						}
+					},
+					{
+						"content": "Vaccination",
+						"boundingBox": [
+							1860,
+							891,
+							1868,
+							1359,
+							1791,
+							1363,
+							1784,
+							895
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 9,
+							"length": 11
+						}
+					},
+					{
+						"content": "Record",
+						"boundingBox": [
+							1868,
+							1384,
+							1874,
+							1664,
+							1795,
+							1668,
+							1791,
+							1388
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 21,
+							"length": 6
+						}
+					},
+					{
+						"content": "Card",
+						"boundingBox": [
+							1874,
+							1684,
+							1878,
+							1868,
+							1798,
+							1872,
+							1795,
+							1688
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 28,
+							"length": 4
+						}
+					},
+					{
+						"content": "Please",
+						"boundingBox": [
+							1733,
+							488,
+							1736,
+							613,
+							1690,
+							613,
+							1689,
+							488
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 33,
+							"length": 6
+						}
+					},
+					{
+						"content": "keep",
+						"boundingBox": [
+							1736,
+							622,
+							1738,
+							725,
+							1692,
+							726,
+							1690,
+							622
+						],
+						"confidence": 0.991,
+						"span": {
+							"offset": 40,
+							"length": 4
+						}
+					},
+					{
+						"content": "this",
+						"boundingBox": [
+							1738,
+							735,
+							1740,
+							814,
+							1693,
+							814,
+							1692,
+							735
+						],
+						"confidence": 0.991,
+						"span": {
+							"offset": 45,
+							"length": 4
+						}
+					},
+					{
+						"content": "record",
+						"boundingBox": [
+							1740,
+							823,
+							1742,
+							956,
+							1695,
+							958,
+							1693,
+							824
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 50,
+							"length": 6
+						}
+					},
+					{
+						"content": "card,",
+						"boundingBox": [
+							1743,
+							966,
+							1744,
+							1066,
+							1697,
+							1068,
+							1695,
+							967
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 57,
+							"length": 5
+						}
+					},
+					{
+						"content": "which",
+						"boundingBox": [
+							1744,
+							1075,
+							1746,
+							1200,
+							1699,
+							1202,
+							1697,
+							1077
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 63,
+							"length": 5
+						}
+					},
+					{
+						"content": "includes",
+						"boundingBox": [
+							1747,
+							1209,
+							1749,
+							1379,
+							1702,
+							1382,
+							1699,
+							1211
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 69,
+							"length": 8
+						}
+					},
+					{
+						"content": "medical",
+						"boundingBox": [
+							1749,
+							1388,
+							1751,
+							1549,
+							1705,
+							1553,
+							1702,
+							1391
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 78,
+							"length": 7
+						}
+					},
+					{
+						"content": "information",
+						"boundingBox": [
+							1752,
+							1558,
+							1755,
+							1798,
+							1710,
+							1803,
+							1705,
+							1562
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 86,
+							"length": 11
+						}
+					},
+					{
+						"content": "CDE",
+						"boundingBox": [
+							1811,
+							2298,
+							1813,
+							2444,
+							1750,
+							2445,
+							1749,
+							2298
+						],
+						"confidence": 0.666,
+						"span": {
+							"offset": 98,
+							"length": 3
+						}
+					},
+					{
+						"content": "about",
+						"boundingBox": [
+							1677,
+							485,
+							1679,
+							603,
+							1633,
+							604,
+							1633,
+							486
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 102,
+							"length": 5
+						}
+					},
+					{
+						"content": "the",
+						"boundingBox": [
+							1679,
+							612,
+							1679,
+							684,
+							1633,
+							685,
+							1633,
+							613
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 108,
+							"length": 3
+						}
+					},
+					{
+						"content": "vaccines",
+						"boundingBox": [
+							1680,
+							693,
+							1682,
+							873,
+							1634,
+							875,
+							1633,
+							694
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 112,
+							"length": 8
+						}
+					},
+					{
+						"content": "you",
+						"boundingBox": [
+							1682,
+							882,
+							1683,
+							961,
+							1636,
+							962,
+							1634,
+							884
+						],
+						"confidence": 0.998,
+						"span": {
+							"offset": 121,
+							"length": 3
+						}
+					},
+					{
+						"content": "have",
+						"boundingBox": [
+							1683,
+							970,
+							1685,
+							1069,
+							1638,
+							1071,
+							1636,
+							971
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 125,
+							"length": 4
+						}
+					},
+					{
+						"content": "received.",
+						"boundingBox": [
+							1685,
+							1078,
+							1688,
+							1267,
+							1645,
+							1269,
+							1639,
+							1080
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 130,
+							"length": 9
+						}
+					},
+					{
+						"content": "Por",
+						"boundingBox": [
+							1589,
+							485,
+							1590,
+							547,
+							1543,
+							547,
+							1543,
+							485
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 140,
+							"length": 3
+						}
+					},
+					{
+						"content": "favor,",
+						"boundingBox": [
+							1590,
+							557,
+							1592,
+							675,
+							1544,
+							675,
+							1543,
+							557
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 144,
+							"length": 6
+						}
+					},
+					{
+						"content": "guarde",
+						"boundingBox": [
+							1592,
+							684,
+							1594,
+							834,
+							1545,
+							834,
+							1544,
+							685
+						],
+						"confidence": 0.976,
+						"span": {
+							"offset": 151,
+							"length": 6
+						}
+					},
+					{
+						"content": "esta",
+						"boundingBox": [
+							1594,
+							843,
+							1596,
+							927,
+							1547,
+							928,
+							1546,
+							844
+						],
+						"confidence": 0.99,
+						"span": {
+							"offset": 158,
+							"length": 4
+						}
+					},
+					{
+						"content": "tarjeta",
+						"boundingBox": [
+							1596,
+							937,
+							1598,
+							1074,
+							1549,
+							1075,
+							1547,
+							937
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 163,
+							"length": 7
+						}
+					},
+					{
+						"content": "de",
+						"boundingBox": [
+							1599,
+							1083,
+							1600,
+							1136,
+							1550,
+							1137,
+							1549,
+							1084
+						],
+						"confidence": 0.998,
+						"span": {
+							"offset": 171,
+							"length": 2
+						}
+					},
+					{
+						"content": "registro,",
+						"boundingBox": [
+							1600,
+							1145,
+							1603,
+							1313,
+							1554,
+							1315,
+							1550,
+							1146
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 174,
+							"length": 9
+						}
+					},
+					{
+						"content": "que",
+						"boundingBox": [
+							1603,
+							1323,
+							1604,
+							1400,
+							1556,
+							1402,
+							1554,
+							1324
+						],
+						"confidence": 0.998,
+						"span": {
+							"offset": 184,
+							"length": 3
+						}
+					},
+					{
+						"content": "incluye",
+						"boundingBox": [
+							1604,
+							1410,
+							1607,
+							1556,
+							1560,
+							1558,
+							1556,
+							1412
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 188,
+							"length": 7
+						}
+					},
+					{
+						"content": "información",
+						"boundingBox": [
+							1607,
+							1565,
+							1612,
+							1814,
+							1568,
+							1817,
+							1561,
+							1568
+						],
+						"confidence": 0.988,
+						"span": {
+							"offset": 196,
+							"length": 11
+						}
+					},
+					{
+						"content": "médica",
+						"boundingBox": [
+							1529,
+							483,
+							1531,
+							631,
+							1486,
+							633,
+							1486,
+							485
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 208,
+							"length": 6
+						}
+					},
+					{
+						"content": "sobre",
+						"boundingBox": [
+							1532,
+							640,
+							1534,
+							761,
+							1487,
+							763,
+							1486,
+							642
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 215,
+							"length": 5
+						}
+					},
+					{
+						"content": "las",
+						"boundingBox": [
+							1534,
+							770,
+							1535,
+							827,
+							1488,
+							829,
+							1487,
+							772
+						],
+						"confidence": 0.998,
+						"span": {
+							"offset": 221,
+							"length": 3
+						}
+					},
+					{
+						"content": "vacunas",
+						"boundingBox": [
+							1535,
+							836,
+							1538,
+							1008,
+							1491,
+							1010,
+							1488,
+							838
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 225,
+							"length": 7
+						}
+					},
+					{
+						"content": "que",
+						"boundingBox": [
+							1539,
+							1017,
+							1540,
+							1098,
+							1493,
+							1101,
+							1491,
+							1019
+						],
+						"confidence": 0.998,
+						"span": {
+							"offset": 233,
+							"length": 3
+						}
+					},
+					{
+						"content": "ha",
+						"boundingBox": [
+							1540,
+							1107,
+							1542,
+							1158,
+							1495,
+							1161,
+							1494,
+							1110
+						],
+						"confidence": 0.998,
+						"span": {
+							"offset": 237,
+							"length": 2
+						}
+					},
+					{
+						"content": "recibido.",
+						"boundingBox": [
+							1542,
+							1167,
+							1546,
+							1354,
+							1502,
+							1358,
+							1495,
+							1170
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 240,
+							"length": 9
+						}
+					},
+					{
+						"content": "Cheng",
+						"boundingBox": [
+							1415,
+							656,
+							1414,
+							875,
+							1345,
+							880,
+							1344,
+							660
+						],
+						"confidence": 0.786,
+						"span": {
+							"offset": 250,
+							"length": 5
+						}
+					},
+					{
+						"content": "Kim",
+						"boundingBox": [
+							1446,
+							1499,
+							1444,
+							1607,
+							1385,
+							1606,
+							1387,
+							1499
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 256,
+							"length": 3
+						}
+					},
+					{
+						"content": "P.",
+						"boundingBox": [
+							1472,
+							2246,
+							1471,
+							2295,
+							1380,
+							2294,
+							1381,
+							2246
+						],
+						"confidence": 0.976,
+						"span": {
+							"offset": 260,
+							"length": 2
+						}
+					},
+					{
+						"content": "Last",
+						"boundingBox": [
+							1314,
+							480,
+							1316,
+							555,
+							1278,
+							555,
+							1276,
+							480
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 263,
+							"length": 4
+						}
+					},
+					{
+						"content": "Name",
+						"boundingBox": [
+							1316,
+							562,
+							1317,
+							683,
+							1282,
+							683,
+							1279,
+							562
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 268,
+							"length": 4
+						}
+					},
+					{
+						"content": "First",
+						"boundingBox": [
+							1337,
+							1450,
+							1339,
+							1523,
+							1301,
+							1523,
+							1300,
+							1449
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 273,
+							"length": 5
+						}
+					},
+					{
+						"content": "Name",
+						"boundingBox": [
+							1339,
+							1531,
+							1337,
+							1646,
+							1300,
+							1647,
+							1301,
+							1531
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 279,
+							"length": 4
+						}
+					},
+					{
+						"content": "MI",
+						"boundingBox": [
+							1358,
+							2326,
+							1357,
+							2374,
+							1319,
+							2373,
+							1320,
+							2326
+						],
+						"confidence": 0.955,
+						"span": {
+							"offset": 284,
+							"length": 2
+						}
+					},
+					{
+						"content": "Date",
+						"boundingBox": [
+							1134,
+							475,
+							1137,
+							564,
+							1096,
+							565,
+							1092,
+							476
+						],
+						"confidence": 0.991,
+						"span": {
+							"offset": 287,
+							"length": 4
+						}
+					},
+					{
+						"content": "of",
+						"boundingBox": [
+							1137,
+							572,
+							1139,
+							614,
+							1098,
+							616,
+							1096,
+							573
+						],
+						"confidence": 0.998,
+						"span": {
+							"offset": 292,
+							"length": 2
+						}
+					},
+					{
+						"content": "birth",
+						"boundingBox": [
+							1139,
+							622,
+							1142,
+							721,
+							1102,
+							724,
+							1098,
+							624
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 295,
+							"length": 5
+						}
+					},
+					{
+						"content": "07/04/1993",
+						"boundingBox": [
+							1235,
+							760,
+							1246,
+							1133,
+							1171,
+							1134,
+							1153,
+							759
+						],
+						"confidence": 0.983,
+						"span": {
+							"offset": 301,
+							"length": 10
+						}
+					},
+					{
+						"content": "3478",
+						"boundingBox": [
+							1239,
+							1517,
+							1247,
+							1685,
+							1185,
+							1687,
+							1179,
+							1519
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 312,
+							"length": 4
+						}
+					},
+					{
+						"content": "Patient",
+						"boundingBox": [
+							1158,
+							1455,
+							1162,
+							1580,
+							1122,
+							1581,
+							1120,
+							1455
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 317,
+							"length": 7
+						}
+					},
+					{
+						"content": "number",
+						"boundingBox": [
+							1162,
+							1588,
+							1167,
+							1743,
+							1126,
+							1744,
+							1122,
+							1589
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 325,
+							"length": 6
+						}
+					},
+					{
+						"content": "(medical",
+						"boundingBox": [
+							1167,
+							1751,
+							1171,
+							1909,
+							1129,
+							1910,
+							1126,
+							1752
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 332,
+							"length": 8
+						}
+					},
+					{
+						"content": "record",
+						"boundingBox": [
+							1172,
+							1917,
+							1175,
+							2031,
+							1132,
+							2032,
+							1130,
+							1918
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 341,
+							"length": 6
+						}
+					},
+					{
+						"content": "or",
+						"boundingBox": [
+							1175,
+							2039,
+							1176,
+							2080,
+							1133,
+							2081,
+							1132,
+							2040
+						],
+						"confidence": 0.998,
+						"span": {
+							"offset": 348,
+							"length": 2
+						}
+					},
+					{
+						"content": "IIS",
+						"boundingBox": [
+							1176,
+							2088,
+							1177,
+							2129,
+							1134,
+							2130,
+							1133,
+							2089
+						],
+						"confidence": 0.835,
+						"span": {
+							"offset": 351,
+							"length": 3
+						}
+					},
+					{
+						"content": "record",
+						"boundingBox": [
+							1177,
+							2137,
+							1179,
+							2253,
+							1137,
+							2255,
+							1134,
+							2138
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 355,
+							"length": 6
+						}
+					},
+					{
+						"content": "number)",
+						"boundingBox": [
+							1180,
+							2262,
+							1183,
+							2427,
+							1140,
+							2429,
+							1137,
+							2263
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 362,
+							"length": 7
+						}
+					},
+					{
+						"content": "Vaccine",
+						"boundingBox": [
+							967,
+							494,
+							972,
+							664,
+							930,
+							667,
+							924,
+							495
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 370,
+							"length": 7
+						}
+					},
+					{
+						"content": "Product",
+						"boundingBox": [
+							1018,
+							762,
+							1026,
+							935,
+							980,
+							938,
+							975,
+							765
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 378,
+							"length": 7
+						}
+					},
+					{
+						"content": "Name/Manufacturer",
+						"boundingBox": [
+							1026,
+							944,
+							1034,
+							1411,
+							995,
+							1413,
+							980,
+							946
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 386,
+							"length": 17
+						}
+					},
+					{
+						"content": "Lot",
+						"boundingBox": [
+							931,
+							761,
+							934,
+							830,
+							890,
+							831,
+							888,
+							761
+						],
+						"confidence": 0.988,
+						"span": {
+							"offset": 404,
+							"length": 3
+						}
+					},
+					{
+						"content": "Number",
+						"boundingBox": [
+							934,
+							839,
+							939,
+							1034,
+							896,
+							1036,
+							890,
+							839
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 408,
+							"length": 6
+						}
+					},
+					{
+						"content": "Date",
+						"boundingBox": [
+							998,
+							1579,
+							998,
+							1675,
+							959,
+							1675,
+							959,
+							1579
+						],
+						"confidence": 0.988,
+						"span": {
+							"offset": 415,
+							"length": 4
+						}
+					},
+					{
+						"content": "Healthcare",
+						"boundingBox": [
+							1035,
+							1848,
+							1044,
+							2079,
+							996,
+							2081,
+							994,
+							1849
+						],
+						"confidence": 0.988,
+						"span": {
+							"offset": 420,
+							"length": 10
+						}
+					},
+					{
+						"content": "Professional",
+						"boundingBox": [
+							1044,
+							2088,
+							1049,
+							2362,
+							1002,
+							2365,
+							996,
+							2090
+						],
+						"confidence": 0.989,
+						"span": {
+							"offset": 431,
+							"length": 12
+						}
+					},
+					{
+						"content": "or",
+						"boundingBox": [
+							1050,
+							2371,
+							1050,
+							2426,
+							1004,
+							2429,
+							1003,
+							2374
+						],
+						"confidence": 0.999,
+						"span": {
+							"offset": 444,
+							"length": 2
+						}
+					},
+					{
+						"content": "Clinic",
+						"boundingBox": [
+							979,
+							1851,
+							981,
+							1963,
+							936,
+							1964,
+							934,
+							1851
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 447,
+							"length": 6
+						}
+					},
+					{
+						"content": "Site",
+						"boundingBox": [
+							981,
+							1972,
+							982,
+							2064,
+							938,
+							2066,
+							936,
+							1973
+						],
+						"confidence": 0.983,
+						"span": {
+							"offset": 454,
+							"length": 4
+						}
+					},
+					{
+						"content": "1\"",
+						"boundingBox": [
+							819,
+							496,
+							821,
+							536,
+							780,
+							537,
+							778,
+							496
+						],
+						"confidence": 0.645,
+						"span": {
+							"offset": 459,
+							"length": 2
+						}
+					},
+					{
+						"content": "Dose",
+						"boundingBox": [
+							822,
+							544,
+							823,
+							657,
+							783,
+							659,
+							780,
+							545
+						],
+						"confidence": 0.99,
+						"span": {
+							"offset": 462,
+							"length": 4
+						}
+					},
+					{
+						"content": "COVID-19",
+						"boundingBox": [
+							764,
+							484,
+							772,
+							700,
+							721,
+							701,
+							713,
+							485
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 467,
+							"length": 8
+						}
+					},
+					{
+						"content": "Moderna",
+						"boundingBox": [
+							871,
+							823,
+							859,
+							1104,
+							813,
+							1105,
+							814,
+							823
+						],
+						"confidence": 0.857,
+						"span": {
+							"offset": 476,
+							"length": 7
+						}
+					},
+					{
+						"content": "06/05/2021",
+						"boundingBox": [
+							877,
+							1485,
+							869,
+							1817,
+							813,
+							1815,
+							813,
+							1484
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 484,
+							"length": 10
+						}
+					},
+					{
+						"content": "Contoso",
+						"boundingBox": [
+							868,
+							1917,
+							883,
+							2154,
+							772,
+							2157,
+							755,
+							1920
+						],
+						"confidence": 0.901,
+						"span": {
+							"offset": 495,
+							"length": 7
+						}
+					},
+					{
+						"content": "Pharma.",
+						"boundingBox": [
+							885,
+							2176,
+							901,
+							2481,
+							795,
+							2484,
+							774,
+							2179
+						],
+						"confidence": 0.451,
+						"span": {
+							"offset": 503,
+							"length": 7
+						}
+					},
+					{
+						"content": "AB1234",
+						"boundingBox": [
+							768,
+							831,
+							774,
+							1059,
+							716,
+							1060,
+							712,
+							832
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 511,
+							"length": 6
+						}
+					},
+					{
+						"content": "mm/",
+						"boundingBox": [
+							791,
+							1484,
+							799,
+							1577,
+							755,
+							1574,
+							754,
+							1482
+						],
+						"confidence": 0.774,
+						"span": {
+							"offset": 518,
+							"length": 3
+						}
+					},
+					{
+						"content": "dd",
+						"boundingBox": [
+							800,
+							1589,
+							801,
+							1655,
+							757,
+							1650,
+							755,
+							1586
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 522,
+							"length": 2
+						}
+					},
+					{
+						"content": "yy",
+						"boundingBox": [
+							801,
+							1715,
+							800,
+							1767,
+							748,
+							1766,
+							749,
+							1714
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 525,
+							"length": 2
+						}
+					},
+					{
+						"content": "2nd",
+						"boundingBox": [
+							645,
+							481,
+							646,
+							542,
+							602,
+							544,
+							599,
+							483
+						],
+						"confidence": 0.74,
+						"span": {
+							"offset": 528,
+							"length": 3
+						}
+					},
+					{
+						"content": "Dose",
+						"boundingBox": [
+							646,
+							551,
+							648,
+							664,
+							605,
+							666,
+							602,
+							552
+						],
+						"confidence": 0.99,
+						"span": {
+							"offset": 532,
+							"length": 4
+						}
+					},
+					{
+						"content": "COVID-19",
+						"boundingBox": [
+							581,
+							482,
+							590,
+							692,
+							545,
+							693,
+							536,
+							487
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 537,
+							"length": 8
+						}
+					},
+					{
+						"content": "Moderna",
+						"boundingBox": [
+							682,
+							844,
+							681,
+							1117,
+							631,
+							1121,
+							625,
+							844
+						],
+						"confidence": 0.826,
+						"span": {
+							"offset": 546,
+							"length": 7
+						}
+					},
+					{
+						"content": "07/04/2021",
+						"boundingBox": [
+							702,
+							1492,
+							696,
+							1825,
+							632,
+							1822,
+							638,
+							1492
+						],
+						"confidence": 0.906,
+						"span": {
+							"offset": 554,
+							"length": 10
+						}
+					},
+					{
+						"content": "mml",
+						"boundingBox": [
+							613,
+							1484,
+							620,
+							1576,
+							578,
+							1579,
+							578,
+							1486
+						],
+						"confidence": 0.967,
+						"span": {
+							"offset": 565,
+							"length": 3
+						}
+					},
+					{
+						"content": "dd",
+						"boundingBox": [
+							630,
+							1608,
+							628,
+							1660,
+							578,
+							1658,
+							580,
+							1607
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 569,
+							"length": 2
+						}
+					},
+					{
+						"content": "yy",
+						"boundingBox": [
+							620,
+							1732,
+							617,
+							1778,
+							576,
+							1776,
+							579,
+							1732
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 572,
+							"length": 2
+						}
+					},
+					{
+						"content": "Contoso",
+						"boundingBox": [
+							668,
+							1927,
+							693,
+							2182,
+							611,
+							2188,
+							591,
+							1933
+						],
+						"confidence": 0.943,
+						"span": {
+							"offset": 575,
+							"length": 7
+						}
+					},
+					{
+						"content": "Pharma.",
+						"boundingBox": [
+							694,
+							2198,
+							704,
+							2462,
+							625,
+							2468,
+							612,
+							2204
+						],
+						"confidence": 0.403,
+						"span": {
+							"offset": 583,
+							"length": 7
+						}
+					},
+					{
+						"content": "C74689",
+						"boundingBox": [
+							592,
+							842,
+							600,
+							1097,
+							540,
+							1101,
+							533,
+							843
+						],
+						"confidence": 0.968,
+						"span": {
+							"offset": 591,
+							"length": 6
+						}
+					},
+					{
+						"content": "Other",
+						"boundingBox": [
+							451,
+							478,
+							455,
+							610,
+							411,
+							611,
+							407,
+							479
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 598,
+							"length": 5
+						}
+					},
+					{
+						"content": "Booster",
+						"boundingBox": [
+							507,
+							781,
+							520,
+							1039,
+							460,
+							1043,
+							441,
+							787
+						],
+						"confidence": 0.764,
+						"span": {
+							"offset": 604,
+							"length": 7
+						}
+					},
+					{
+						"content": "Modena",
+						"boundingBox": [
+							520,
+							1056,
+							529,
+							1323,
+							472,
+							1325,
+							461,
+							1060
+						],
+						"confidence": 0.684,
+						"span": {
+							"offset": 612,
+							"length": 6
+						}
+					},
+					{
+						"content": "12378",
+						"boundingBox": [
+							433,
+							901,
+							449,
+							1087,
+							394,
+							1089,
+							379,
+							904
+						],
+						"confidence": 0.93,
+						"span": {
+							"offset": 619,
+							"length": 5
+						}
+					},
+					{
+						"content": "01",
+						"boundingBox": [
+							533,
+							1509,
+							537,
+							1566,
+							475,
+							1570,
+							471,
+							1512
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 625,
+							"length": 2
+						}
+					},
+					{
+						"content": "/28/2022",
+						"boundingBox": [
+							534,
+							1582,
+							527,
+							1826,
+							488,
+							1827,
+							480,
+							1585
+						],
+						"confidence": 0.836,
+						"span": {
+							"offset": 628,
+							"length": 8
+						}
+					},
+					{
+						"content": "mm",
+						"boundingBox": [
+							456,
+							1490,
+							459,
+							1557,
+							420,
+							1559,
+							418,
+							1492
+						],
+						"confidence": 0.818,
+						"span": {
+							"offset": 637,
+							"length": 2
+						}
+					},
+					{
+						"content": "3",
+						"boundingBox": [
+							425,
+							1486,
+							445,
+							1489,
+							440,
+							1521,
+							422,
+							1517
+						],
+						"confidence": 0.985,
+						"span": {
+							"offset": 640,
+							"length": 1
+						}
+					},
+					{
+						"content": "dd",
+						"boundingBox": [
+							469,
+							1614,
+							467,
+							1663,
+							418,
+							1661,
+							420,
+							1613
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 642,
+							"length": 2
+						}
+					},
+					{
+						"content": "yy",
+						"boundingBox": [
+							462,
+							1739,
+							461,
+							1787,
+							413,
+							1786,
+							414,
+							1739
+						],
+						"confidence": 0.989,
+						"span": {
+							"offset": 645,
+							"length": 2
+						}
+					},
+					{
+						"content": "Contoso",
+						"boundingBox": [
+							514,
+							1928,
+							529,
+							2149,
+							445,
+							2151,
+							438,
+							1930
+						],
+						"confidence": 0.868,
+						"span": {
+							"offset": 648,
+							"length": 7
+						}
+					},
+					{
+						"content": "Pharm.",
+						"boundingBox": [
+							530,
+							2165,
+							539,
+							2427,
+							454,
+							2430,
+							446,
+							2167
+						],
+						"confidence": 0.654,
+						"span": {
+							"offset": 656,
+							"length": 6
+						}
+					},
+					{
+						"content": "Other",
+						"boundingBox": [
+							304,
+							472,
+							310,
+							604,
+							266,
+							607,
+							261,
+							474
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 663,
+							"length": 5
+						}
+					},
+					{
+						"content": "mm",
+						"boundingBox": [
+							307,
+							1485,
+							312,
+							1543,
+							273,
+							1545,
+							272,
+							1486
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 669,
+							"length": 2
+						}
+					},
+					{
+						"content": "dd",
+						"boundingBox": [
+							317,
+							1607,
+							322,
+							1663,
+							277,
+							1665,
+							275,
+							1609
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 672,
+							"length": 2
+						}
+					},
+					{
+						"content": "yy",
+						"boundingBox": [
+							317,
+							1739,
+							314,
+							1791,
+							265,
+							1788,
+							268,
+							1737
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 675,
+							"length": 2
+						}
+					},
+					{
+						"content": "$25",
+						"boundingBox": [
+							418,
+							2906,
+							525,
+							2848,
+							550,
+							2894,
+							441,
+							2952
+						],
+						"confidence": 0.501,
+						"span": {
+							"offset": 678,
+							"length": 3
+						}
+					},
+					{
+						"content": "2500",
+						"boundingBox": [
+							228,
+							2890,
+							419,
+							2809,
+							442,
+							2859,
+							254,
+							2940
+						],
+						"confidence": 0.998,
+						"span": {
+							"offset": 682,
+							"length": 4
+						}
+					}
+				],
+				"selectionMarks": [
+					{
+						"state": "unselected",
+						"boundingBox": [
+							1784,
+							703,
+							1858,
+							703,
+							1858,
+							759,
+							1784,
+							759
+						],
+						"confidence": 0.347,
+						"span": {
+							"offset": 687,
+							"length": 12
+						}
+					},
+					{
+						"state": "unselected",
+						"boundingBox": [
+							1778,
+							554,
+							1852,
+							554,
+							1852,
+							614,
+							1778,
+							614
+						],
+						"confidence": 0.5,
+						"span": {
+							"offset": 700,
+							"length": 12
+						}
+					},
+					{
+						"state": "unselected",
+						"boundingBox": [
+							1315,
+							2376,
+							1373,
+							2376,
+							1373,
+							2525,
+							1315,
+							2525
+						],
+						"confidence": 0.5,
+						"span": {
+							"offset": 713,
+							"length": 12
+						}
+					},
+					{
+						"state": "unselected",
+						"boundingBox": [
+							1140,
+							2427,
+							1186,
+							2427,
+							1186,
+							2528,
+							1140,
+							2528
+						],
+						"confidence": 0.301,
+						"span": {
+							"offset": 726,
+							"length": 12
+						}
+					},
+					{
+						"state": "unselected",
+						"boundingBox": [
+							608,
+							563,
+							642,
+							563,
+							642,
+							595,
+							608,
+							595
+						],
+						"confidence": 0.347,
+						"span": {
+							"offset": 739,
+							"length": 12
+						}
+					},
+					{
+						"state": "unselected",
+						"boundingBox": [
+							544,
+							591,
+							585,
+							591,
+							585,
+							628,
+							544,
+							628
+						],
+						"confidence": 0.367,
+						"span": {
+							"offset": 752,
+							"length": 12
+						}
+					},
+					{
+						"state": "selected",
+						"boundingBox": [
+							257,
+							1703,
+							335,
+							1703,
+							335,
+							1830,
+							257,
+							1830
+						],
+						"confidence": 0.223,
+						"span": {
+							"offset": 765,
+							"length": 10
+						}
+					}
+				],
+				"lines": [
+					{
+						"content": "COVID-19 Vaccination Record Card",
+						"boundingBox": [
+							1857,
+							488,
+							1878,
+							1888,
+							1799,
+							1889,
+							1779,
+							489
+						],
+						"spans": [
+							{
+								"offset": 0,
+								"length": 32
+							}
+						]
+					},
+					{
+						"content": "Please keep this record card, which includes medical information",
+						"boundingBox": [
+							1734,
+							488,
+							1755,
+							1804,
+							1709,
+							1805,
+							1689,
+							488
+						],
+						"spans": [
+							{
+								"offset": 33,
+								"length": 64
+							}
+						]
+					},
+					{
+						"content": "CDE",
+						"boundingBox": [
+							1810,
+							2298,
+							1813,
+							2477,
+							1750,
+							2477,
+							1749,
+							2301
+						],
+						"spans": [
+							{
+								"offset": 98,
+								"length": 3
+							}
+						]
+					},
+					{
+						"content": "about the vaccines you have received.",
+						"boundingBox": [
+							1677,
+							485,
+							1688,
+							1270,
+							1640,
+							1271,
+							1633,
+							486
+						],
+						"spans": [
+							{
+								"offset": 102,
+								"length": 37
+							}
+						]
+					},
+					{
+						"content": "Por favor, guarde esta tarjeta de registro, que incluye información",
+						"boundingBox": [
+							1588,
+							485,
+							1613,
+							1819,
+							1563,
+							1820,
+							1543,
+							485
+						],
+						"spans": [
+							{
+								"offset": 140,
+								"length": 67
+							}
+						]
+					},
+					{
+						"content": "médica sobre las vacunas que ha recibido.",
+						"boundingBox": [
+							1529,
+							483,
+							1546,
+							1357,
+							1498,
+							1358,
+							1486,
+							484
+						],
+						"spans": [
+							{
+								"offset": 208,
+								"length": 41
+							}
+						]
+					},
+					{
+						"content": "Cheng",
+						"boundingBox": [
+							1417,
+							656,
+							1415,
+							889,
+							1344,
+							888,
+							1344,
+							656
+						],
+						"spans": [
+							{
+								"offset": 250,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "Kim",
+						"boundingBox": [
+							1446,
+							1499,
+							1444,
+							1614,
+							1385,
+							1617,
+							1387,
+							1499
+						],
+						"spans": [
+							{
+								"offset": 256,
+								"length": 3
+							}
+						]
+					},
+					{
+						"content": "P.",
+						"boundingBox": [
+							1471,
+							2252,
+							1470,
+							2300,
+							1380,
+							2304,
+							1380,
+							2246
+						],
+						"spans": [
+							{
+								"offset": 260,
+								"length": 2
+							}
+						]
+					},
+					{
+						"content": "Last Name",
+						"boundingBox": [
+							1314,
+							479,
+							1318,
+							691,
+							1281,
+							692,
+							1276,
+							480
+						],
+						"spans": [
+							{
+								"offset": 263,
+								"length": 9
+							}
+						]
+					},
+					{
+						"content": "First Name",
+						"boundingBox": [
+							1339,
+							1449,
+							1338,
+							1651,
+							1300,
+							1651,
+							1301,
+							1449
+						],
+						"spans": [
+							{
+								"offset": 273,
+								"length": 10
+							}
+						]
+					},
+					{
+						"content": "MI",
+						"boundingBox": [
+							1358,
+							2326,
+							1357,
+							2374,
+							1319,
+							2376,
+							1320,
+							2327
+						],
+						"spans": [
+							{
+								"offset": 284,
+								"length": 2
+							}
+						]
+					},
+					{
+						"content": "Date of birth",
+						"boundingBox": [
+							1133,
+							475,
+							1143,
+							728,
+							1102,
+							729,
+							1092,
+							476
+						],
+						"spans": [
+							{
+								"offset": 287,
+								"length": 13
+							}
+						]
+					},
+					{
+						"content": "07/04/1993",
+						"boundingBox": [
+							1234,
+							759,
+							1247,
+							1135,
+							1170,
+							1138,
+							1153,
+							759
+						],
+						"spans": [
+							{
+								"offset": 301,
+								"length": 10
+							}
+						]
+					},
+					{
+						"content": "3478",
+						"boundingBox": [
+							1239,
+							1517,
+							1247,
+							1702,
+							1186,
+							1705,
+							1179,
+							1518
+						],
+						"spans": [
+							{
+								"offset": 312,
+								"length": 4
+							}
+						]
+					},
+					{
+						"content": "Patient number (medical record or IIS record number)",
+						"boundingBox": [
+							1160,
+							1455,
+							1183,
+							2429,
+							1140,
+							2430,
+							1120,
+							1455
+						],
+						"spans": [
+							{
+								"offset": 317,
+								"length": 52
+							}
+						]
+					},
+					{
+						"content": "Vaccine",
+						"boundingBox": [
+							967,
+							493,
+							972,
+							676,
+							929,
+							677,
+							924,
+							494
+						],
+						"spans": [
+							{
+								"offset": 370,
+								"length": 7
+							}
+						]
+					},
+					{
+						"content": "Product Name/Manufacturer",
+						"boundingBox": [
+							1021,
+							762,
+							1034,
+							1412,
+							993,
+							1414,
+							975,
+							763
+						],
+						"spans": [
+							{
+								"offset": 378,
+								"length": 25
+							}
+						]
+					},
+					{
+						"content": "Lot Number",
+						"boundingBox": [
+							932,
+							761,
+							940,
+							1035,
+							896,
+							1036,
+							888,
+							761
+						],
+						"spans": [
+							{
+								"offset": 404,
+								"length": 10
+							}
+						]
+					},
+					{
+						"content": "Date",
+						"boundingBox": [
+							998,
+							1580,
+							997,
+							1688,
+							960,
+							1688,
+							959,
+							1579
+						],
+						"spans": [
+							{
+								"offset": 415,
+								"length": 4
+							}
+						]
+					},
+					{
+						"content": "Healthcare Professional or",
+						"boundingBox": [
+							1039,
+							1847,
+							1051,
+							2429,
+							1003,
+							2431,
+							994,
+							1848
+						],
+						"spans": [
+							{
+								"offset": 420,
+								"length": 26
+							}
+						]
+					},
+					{
+						"content": "Clinic Site",
+						"boundingBox": [
+							979,
+							1851,
+							982,
+							2070,
+							937,
+							2071,
+							934,
+							1851
+						],
+						"spans": [
+							{
+								"offset": 447,
+								"length": 11
+							}
+						]
+					},
+					{
+						"content": "1\" Dose",
+						"boundingBox": [
+							820,
+							495,
+							824,
+							664,
+							783,
+							665,
+							778,
+							496
+						],
+						"spans": [
+							{
+								"offset": 459,
+								"length": 7
+							}
+						]
+					},
+					{
+						"content": "COVID-19",
+						"boundingBox": [
+							764,
+							483,
+							772,
+							704,
+							722,
+							706,
+							713,
+							484
+						],
+						"spans": [
+							{
+								"offset": 467,
+								"length": 8
+							}
+						]
+					},
+					{
+						"content": "Moderna",
+						"boundingBox": [
+							871,
+							822,
+							864,
+							1114,
+							809,
+							1113,
+							812,
+							822
+						],
+						"spans": [
+							{
+								"offset": 476,
+								"length": 7
+							}
+						]
+					},
+					{
+						"content": "06/05/2021",
+						"boundingBox": [
+							878,
+							1484,
+							874,
+							1823,
+							813,
+							1822,
+							813,
+							1484
+						],
+						"spans": [
+							{
+								"offset": 484,
+								"length": 10
+							}
+						]
+					},
+					{
+						"content": "Contoso Pharma.",
+						"boundingBox": [
+							867,
+							1917,
+							902,
+							2479,
+							794,
+							2484,
+							755,
+							1919
+						],
+						"spans": [
+							{
+								"offset": 495,
+								"length": 15
+							}
+						]
+					},
+					{
+						"content": "AB1234",
+						"boundingBox": [
+							768,
+							831,
+							774,
+							1073,
+							717,
+							1075,
+							712,
+							832
+						],
+						"spans": [
+							{
+								"offset": 511,
+								"length": 6
+							}
+						]
+					},
+					{
+						"content": "mm/ dd",
+						"boundingBox": [
+							794,
+							1477,
+							801,
+							1675,
+							758,
+							1676,
+							754,
+							1478
+						],
+						"spans": [
+							{
+								"offset": 518,
+								"length": 6
+							}
+						]
+					},
+					{
+						"content": "yy",
+						"boundingBox": [
+							801,
+							1712,
+							799,
+							1767,
+							748,
+							1767,
+							749,
+							1712
+						],
+						"spans": [
+							{
+								"offset": 525,
+								"length": 2
+							}
+						]
+					},
+					{
+						"content": "2nd Dose",
+						"boundingBox": [
+							645,
+							481,
+							649,
+							672,
+							603,
+							673,
+							599,
+							482
+						],
+						"spans": [
+							{
+								"offset": 528,
+								"length": 8
+							}
+						]
+					},
+					{
+						"content": "COVID-19",
+						"boundingBox": [
+							581,
+							482,
+							590,
+							701,
+							545,
+							703,
+							536,
+							484
+						],
+						"spans": [
+							{
+								"offset": 537,
+								"length": 8
+							}
+						]
+					},
+					{
+						"content": "Moderna",
+						"boundingBox": [
+							682,
+							843,
+							683,
+							1133,
+							627,
+							1133,
+							625,
+							843
+						],
+						"spans": [
+							{
+								"offset": 546,
+								"length": 7
+							}
+						]
+					},
+					{
+						"content": "07/04/2021",
+						"boundingBox": [
+							705,
+							1491,
+							701,
+							1825,
+							632,
+							1824,
+							638,
+							1491
+						],
+						"spans": [
+							{
+								"offset": 554,
+								"length": 10
+							}
+						]
+					},
+					{
+						"content": "mml",
+						"boundingBox": [
+							618,
+							1479,
+							622,
+							1603,
+							578,
+							1604,
+							578,
+							1480
+						],
+						"spans": [
+							{
+								"offset": 565,
+								"length": 3
+							}
+						]
+					},
+					{
+						"content": "dd",
+						"boundingBox": [
+							630,
+							1609,
+							628,
+							1663,
+							578,
+							1662,
+							580,
+							1607
+						],
+						"spans": [
+							{
+								"offset": 569,
+								"length": 2
+							}
+						]
+					},
+					{
+						"content": "yy",
+						"boundingBox": [
+							620,
+							1732,
+							617,
+							1783,
+							576,
+							1783,
+							579,
+							1732
+						],
+						"spans": [
+							{
+								"offset": 572,
+								"length": 2
+							}
+						]
+					},
+					{
+						"content": "Contoso Pharma.",
+						"boundingBox": [
+							676,
+							1926,
+							704,
+							2469,
+							626,
+							2474,
+							591,
+							1931
+						],
+						"spans": [
+							{
+								"offset": 575,
+								"length": 15
+							}
+						]
+					},
+					{
+						"content": "C74689",
+						"boundingBox": [
+							592,
+							842,
+							599,
+							1105,
+							539,
+							1107,
+							533,
+							842
+						],
+						"spans": [
+							{
+								"offset": 591,
+								"length": 6
+							}
+						]
+					},
+					{
+						"content": "Other",
+						"boundingBox": [
+							451,
+							478,
+							454,
+							608,
+							412,
+							611,
+							407,
+							479
+						],
+						"spans": [
+							{
+								"offset": 598,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "Booster Modena",
+						"boundingBox": [
+							507,
+							781,
+							530,
+							1333,
+							468,
+							1336,
+							441,
+							784
+						],
+						"spans": [
+							{
+								"offset": 604,
+								"length": 14
+							}
+						]
+					},
+					{
+						"content": "12378",
+						"boundingBox": [
+							433,
+							901,
+							451,
+							1107,
+							396,
+							1110,
+							379,
+							903
+						],
+						"spans": [
+							{
+								"offset": 619,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "01",
+						"boundingBox": [
+							533,
+							1509,
+							537,
+							1571,
+							475,
+							1573,
+							471,
+							1512
+						],
+						"spans": [
+							{
+								"offset": 625,
+								"length": 2
+							}
+						]
+					},
+					{
+						"content": "/28/2022",
+						"boundingBox": [
+							533,
+							1582,
+							533,
+							1843,
+							480,
+							1843,
+							480,
+							1582
+						],
+						"spans": [
+							{
+								"offset": 628,
+								"length": 8
+							}
+						]
+					},
+					{
+						"content": "mm",
+						"boundingBox": [
+							458,
+							1480,
+							461,
+							1609,
+							419,
+							1611,
+							418,
+							1481
+						],
+						"spans": [
+							{
+								"offset": 637,
+								"length": 2
+							}
+						]
+					},
+					{
+						"content": "3",
+						"boundingBox": [
+							425,
+							1486,
+							460,
+							1492,
+							457,
+							1524,
+							422,
+							1518
+						],
+						"spans": [
+							{
+								"offset": 640,
+								"length": 1
+							}
+						]
+					},
+					{
+						"content": "dd",
+						"boundingBox": [
+							469,
+							1614,
+							467,
+							1669,
+							418,
+							1667,
+							420,
+							1613
+						],
+						"spans": [
+							{
+								"offset": 642,
+								"length": 2
+							}
+						]
+					},
+					{
+						"content": "yy",
+						"boundingBox": [
+							462,
+							1739,
+							461,
+							1793,
+							413,
+							1793,
+							414,
+							1739
+						],
+						"spans": [
+							{
+								"offset": 645,
+								"length": 2
+							}
+						]
+					},
+					{
+						"content": "Contoso Pharm.",
+						"boundingBox": [
+							520,
+							1927,
+							539,
+							2428,
+							455,
+							2432,
+							438,
+							1929
+						],
+						"spans": [
+							{
+								"offset": 648,
+								"length": 14
+							}
+						]
+					},
+					{
+						"content": "Other",
+						"boundingBox": [
+							304,
+							471,
+							310,
+							605,
+							266,
+							607,
+							261,
+							473
+						],
+						"spans": [
+							{
+								"offset": 663,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "mm dd",
+						"boundingBox": [
+							311,
+							1484,
+							323,
+							1690,
+							278,
+							1693,
+							272,
+							1486
+						],
+						"spans": [
+							{
+								"offset": 669,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "yy",
+						"boundingBox": [
+							317,
+							1740,
+							314,
+							1794,
+							265,
+							1791,
+							268,
+							1737
+						],
+						"spans": [
+							{
+								"offset": 675,
+								"length": 2
+							}
+						]
+					},
+					{
+						"content": "$25",
+						"boundingBox": [
+							418,
+							2906,
+							538,
+							2843,
+							562,
+							2886,
+							443,
+							2951
+						],
+						"spans": [
+							{
+								"offset": 678,
+								"length": 3
+							}
+						]
+					},
+					{
+						"content": "2500",
+						"boundingBox": [
+							228,
+							2889,
+							438,
+							2802,
+							460,
+							2852,
+							249,
+							2940
+						],
+						"spans": [
+							{
+								"offset": 682,
+								"length": 4
+							}
+						]
+					}
+				],
+				"spans": [
+					{
+						"offset": 0,
+						"length": 775
+					}
+				]
+			}
+		],
+		"tables": [
+			{
+				"rowCount": 7,
+				"columnCount": 4,
+				"cells": [
+					{
+						"kind": "columnHeader",
+						"rowIndex": 0,
+						"columnIndex": 0,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "Vaccine",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									1033,
+									463,
+									1042,
+									738,
+									870,
+									737,
+									861,
+									457
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 370,
+								"length": 7
+							}
+						]
+					},
+					{
+						"kind": "columnHeader",
+						"rowIndex": 0,
+						"columnIndex": 1,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "Product Name/Manufacturer Lot Number",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									1042,
+									738,
+									1061,
+									1436,
+									891,
+									1437,
+									870,
+									737
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 378,
+								"length": 36
+							}
+						]
+					},
+					{
+						"kind": "columnHeader",
+						"rowIndex": 0,
+						"columnIndex": 2,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "Date",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									1061,
+									1436,
+									1069,
+									1823,
+									900,
+									1830,
+									891,
+									1437
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 415,
+								"length": 4
+							}
+						]
+					},
+					{
+						"kind": "columnHeader",
+						"rowIndex": 0,
+						"columnIndex": 3,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "Healthcare Professional or Clinic Site",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									1069,
+									1823,
+									1085,
+									2510,
+									912,
+									2520,
+									900,
+									1830
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 420,
+								"length": 38
+							}
+						]
+					},
+					{
+						"rowIndex": 1,
+						"columnIndex": 0,
+						"rowSpan": 2,
+						"columnSpan": 1,
+						"content": "1\" Dose COVID-19",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									861,
+									457,
+									870,
+									737,
+									692,
+									733,
+									681,
+									451
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 459,
+								"length": 16
+							}
+						]
+					},
+					{
+						"rowIndex": 1,
+						"columnIndex": 1,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "Moderna",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									870,
+									737,
+									891,
+									1437,
+									804,
+									1438,
+									788,
+									734
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 476,
+								"length": 7
+							}
+						]
+					},
+					{
+						"rowIndex": 1,
+						"columnIndex": 2,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "06/05/2021",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									891,
+									1437,
+									900,
+									1830,
+									813,
+									1834,
+									804,
+									1438
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 484,
+								"length": 10
+							}
+						]
+					},
+					{
+						"rowIndex": 1,
+						"columnIndex": 3,
+						"rowSpan": 2,
+						"columnSpan": 1,
+						"content": "Contoso Pharma.",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									900,
+									1830,
+									912,
+									2520,
+									740,
+									2531,
+									726,
+									1836
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 495,
+								"length": 15
+							}
+						]
+					},
+					{
+						"rowIndex": 2,
+						"columnIndex": 1,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "AB1234",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									788,
+									734,
+									804,
+									1438,
+									717,
+									1440,
+									692,
+									733
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 511,
+								"length": 6
+							}
+						]
+					},
+					{
+						"rowIndex": 2,
+						"columnIndex": 2,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "mm/ dd yy",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									804,
+									1438,
+									813,
+									1834,
+									726,
+									1836,
+									717,
+									1440
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 518,
+								"length": 9
+							}
+						]
+					},
+					{
+						"rowIndex": 3,
+						"columnIndex": 0,
+						"rowSpan": 2,
+						"columnSpan": 1,
+						"content": "2nd Dose\nCOVID-19 :unselected:\n:unselected:",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									681,
+									451,
+									692,
+									733,
+									512,
+									729,
+									498,
+									445
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 528,
+								"length": 17
+							},
+							{
+								"offset": 739,
+								"length": 25
+							}
+						]
+					},
+					{
+						"rowIndex": 3,
+						"columnIndex": 1,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "Moderna",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									692,
+									733,
+									717,
+									1440,
+									630,
+									1441,
+									605,
+									730
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 546,
+								"length": 7
+							}
+						]
+					},
+					{
+						"rowIndex": 3,
+						"columnIndex": 2,
+						"rowSpan": 2,
+						"columnSpan": 1,
+						"content": "07/04/2021 mml dd yy",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									717,
+									1440,
+									726,
+									1836,
+									550,
+									1843,
+									539,
+									1443
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 554,
+								"length": 20
+							}
+						]
+					},
+					{
+						"rowIndex": 3,
+						"columnIndex": 3,
+						"rowSpan": 2,
+						"columnSpan": 1,
+						"content": "Contoso Pharma.",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									726,
+									1836,
+									740,
+									2531,
+									567,
+									2541,
+									550,
+									1843
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 575,
+								"length": 15
+							}
+						]
+					},
+					{
+						"rowIndex": 4,
+						"columnIndex": 1,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "C74689",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									605,
+									730,
+									630,
+									1441,
+									539,
+									1443,
+									512,
+									729
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 591,
+								"length": 6
+							}
+						]
+					},
+					{
+						"rowIndex": 5,
+						"columnIndex": 0,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "Other",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									498,
+									445,
+									512,
+									729,
+									369,
+									727,
+									355,
+									441
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 598,
+								"length": 5
+							}
+						]
+					},
+					{
+						"rowIndex": 5,
+						"columnIndex": 1,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "Booster Modena 12378",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									512,
+									729,
+									539,
+									1443,
+									397,
+									1445,
+									369,
+									727
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 604,
+								"length": 20
+							}
+						]
+					},
+					{
+						"rowIndex": 5,
+						"columnIndex": 2,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "01 /28/2022 mm 3 dd yy",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									539,
+									1443,
+									550,
+									1843,
+									408,
+									1848,
+									397,
+									1445
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 625,
+								"length": 22
+							}
+						]
+					},
+					{
+						"rowIndex": 5,
+						"columnIndex": 3,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "Contoso Pharm.",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									550,
+									1843,
+									567,
+									2541,
+									424,
+									2550,
+									408,
+									1848
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 648,
+								"length": 14
+							}
+						]
+					},
+					{
+						"rowIndex": 6,
+						"columnIndex": 0,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "Other",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									355,
+									441,
+									369,
+									727,
+									222,
+									723,
+									208,
+									434
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 663,
+								"length": 5
+							}
+						]
+					},
+					{
+						"rowIndex": 6,
+						"columnIndex": 1,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									369,
+									727,
+									397,
+									1445,
+									247,
+									1448,
+									222,
+									723
+								]
+							}
+						],
+						"spans": []
+					},
+					{
+						"rowIndex": 6,
+						"columnIndex": 2,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "mm dd\nyy :selected:",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									397,
+									1445,
+									408,
+									1848,
+									259,
+									1852,
+									247,
+									1448
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 669,
+								"length": 8
+							},
+							{
+								"offset": 765,
+								"length": 10
+							}
+						]
+					},
+					{
+						"rowIndex": 6,
+						"columnIndex": 3,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									408,
+									1848,
+									424,
+									2550,
+									279,
+									2559,
+									259,
+									1852
+								]
+							}
+						],
+						"spans": []
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"boundingBox": [
+							1045,
+							417,
+							1101,
+							2575,
+							258,
+							2599,
+							202,
+							441
+						]
+					}
+				],
+				"spans": [
+					{
+						"offset": 370,
+						"length": 307
+					},
+					{
+						"offset": 739,
+						"length": 36
+					}
+				]
+			}
+		],
+		"styles": [
+			{
+				"isHandwritten": true,
+				"confidence": 0.95,
+				"spans": [
+					{
+						"offset": 250,
+						"length": 5
+					},
+					{
+						"offset": 619,
+						"length": 8
+					}
+				]
+			},
+			{
+				"isHandwritten": true,
+				"confidence": 0.8,
+				"spans": [
+					{
+						"offset": 260,
+						"length": 2
+					}
+				]
+			},
+			{
+				"isHandwritten": true,
+				"confidence": 0.9,
+				"spans": [
+					{
+						"offset": 312,
+						"length": 4
+					}
+				]
+			},
+			{
+				"isHandwritten": true,
+				"confidence": 0.4,
+				"spans": [
+					{
+						"offset": 565,
+						"length": 3
+					}
+				]
+			},
+			{
+				"isHandwritten": true,
+				"confidence": 0.5,
+				"spans": [
+					{
+						"offset": 569,
+						"length": 2
+					}
+				]
+			}
+		]
+	}
+}

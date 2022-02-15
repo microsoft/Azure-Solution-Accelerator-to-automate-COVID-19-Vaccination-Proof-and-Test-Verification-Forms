@@ -1,0 +1,3858 @@
+{
+	"status": "succeeded",
+	"createdDateTime": "2022-02-01T22:51:51Z",
+	"lastUpdatedDateTime": "2022-02-01T22:51:55Z",
+	"analyzeResult": {
+		"apiVersion": "2021-09-30-preview",
+		"modelId": "prebuilt-layout",
+		"stringIndexType": "textElements",
+		"content": "COVID-19 Vaccination Record Card\nPlease keep this record card, which includes medical information\nCDE\nabout the vaccines you have received.\nPor favor, guarde esta tarjeta de registro, que incluye información\nmédica sobre las vacunas que ha recibido.\nSiau\nEddie\nP.\nLast Name\nFirst Name\nMI\n07/12/1990\n24912\nDate of birth\nPatient number (medical record or IIS record number)\nVaccine\nProduct Name/Manufacturer\nDate\nHealthcare Professional or\nClinic Site\nLot Number\n1ª Dose\nCOVID-19\nPfizer\n07/22/21\nLamna Healthcare\nCw 1289\nmm' dd ' yy\n2nd Dose\nCOVID-19\nPfizer\n08/20/21\nmm dd\nУУ\nLamna Healthcare\nCW2478\nOther\nBooster Pfizer\nF74691\n01/21/22\nmm\ndd\nУУ\nLamna Health care\nOther\nmm dd\nyy\n:unselected:\n:unselected:\n:unselected:\n:unselected:\n:selected:\n:selected:\n:unselected:\n:selected:\n:unselected:\n:selected:",
+		"pages": [
+			{
+				"pageNumber": 1,
+				"angle": 89.9237,
+				"width": 2448,
+				"height": 3264,
+				"unit": "pixel",
+				"words": [
+					{
+						"content": "COVID-19",
+						"boundingBox": [
+							2119,
+							207,
+							2117,
+							703,
+							2020,
+							708,
+							2024,
+							211
+						],
+						"confidence": 0.988,
+						"span": {
+							"offset": 0,
+							"length": 8
+						}
+					},
+					{
+						"content": "Vaccination",
+						"boundingBox": [
+							2117,
+							729,
+							2112,
+							1346,
+							2014,
+							1351,
+							2020,
+							733
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 9,
+							"length": 11
+						}
+					},
+					{
+						"content": "Record",
+						"boundingBox": [
+							2112,
+							1371,
+							2107,
+							1727,
+							2010,
+							1733,
+							2014,
+							1376
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 21,
+							"length": 6
+						}
+					},
+					{
+						"content": "Card",
+						"boundingBox": [
+							2107,
+							1759,
+							2103,
+							1994,
+							2008,
+							2000,
+							2010,
+							1765
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 28,
+							"length": 4
+						}
+					},
+					{
+						"content": "Please",
+						"boundingBox": [
+							1959,
+							210,
+							1959,
+							369,
+							1900,
+							368,
+							1900,
+							210
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 33,
+							"length": 6
+						}
+					},
+					{
+						"content": "keep",
+						"boundingBox": [
+							1959,
+							380,
+							1960,
+							512,
+							1900,
+							511,
+							1900,
+							380
+						],
+						"confidence": 0.991,
+						"span": {
+							"offset": 40,
+							"length": 4
+						}
+					},
+					{
+						"content": "this",
+						"boundingBox": [
+							1960,
+							523,
+							1960,
+							628,
+							1900,
+							627,
+							1900,
+							523
+						],
+						"confidence": 0.991,
+						"span": {
+							"offset": 45,
+							"length": 4
+						}
+					},
+					{
+						"content": "record",
+						"boundingBox": [
+							1960,
+							639,
+							1959,
+							817,
+							1899,
+							817,
+							1900,
+							639
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 50,
+							"length": 6
+						}
+					},
+					{
+						"content": "card,",
+						"boundingBox": [
+							1959,
+							828,
+							1958,
+							956,
+							1898,
+							956,
+							1899,
+							829
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 57,
+							"length": 5
+						}
+					},
+					{
+						"content": "which",
+						"boundingBox": [
+							1958,
+							967,
+							1957,
+							1134,
+							1897,
+							1134,
+							1898,
+							968
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 63,
+							"length": 5
+						}
+					},
+					{
+						"content": "includes",
+						"boundingBox": [
+							1957,
+							1145,
+							1954,
+							1369,
+							1895,
+							1370,
+							1897,
+							1146
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 69,
+							"length": 8
+						}
+					},
+					{
+						"content": "medical",
+						"boundingBox": [
+							1954,
+							1381,
+							1951,
+							1582,
+							1893,
+							1583,
+							1895,
+							1381
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 78,
+							"length": 7
+						}
+					},
+					{
+						"content": "information",
+						"boundingBox": [
+							1951,
+							1593,
+							1945,
+							1902,
+							1889,
+							1903,
+							1893,
+							1594
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 86,
+							"length": 11
+						}
+					},
+					{
+						"content": "CDE",
+						"boundingBox": [
+							2006,
+							2533,
+							2004,
+							2714,
+							1919,
+							2714,
+							1921,
+							2533
+						],
+						"confidence": 0.659,
+						"span": {
+							"offset": 98,
+							"length": 3
+						}
+					},
+					{
+						"content": "about",
+						"boundingBox": [
+							1881,
+							207,
+							1881,
+							359,
+							1824,
+							360,
+							1825,
+							208
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 102,
+							"length": 5
+						}
+					},
+					{
+						"content": "the",
+						"boundingBox": [
+							1881,
+							370,
+							1881,
+							465,
+							1824,
+							465,
+							1824,
+							371
+						],
+						"confidence": 0.998,
+						"span": {
+							"offset": 108,
+							"length": 3
+						}
+					},
+					{
+						"content": "vaccines",
+						"boundingBox": [
+							1881,
+							475,
+							1880,
+							707,
+							1824,
+							708,
+							1824,
+							476
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 112,
+							"length": 8
+						}
+					},
+					{
+						"content": "you",
+						"boundingBox": [
+							1880,
+							718,
+							1880,
+							820,
+							1824,
+							820,
+							1824,
+							719
+						],
+						"confidence": 0.998,
+						"span": {
+							"offset": 121,
+							"length": 3
+						}
+					},
+					{
+						"content": "have",
+						"boundingBox": [
+							1880,
+							834,
+							1879,
+							965,
+							1825,
+							965,
+							1824,
+							835
+						],
+						"confidence": 0.991,
+						"span": {
+							"offset": 125,
+							"length": 4
+						}
+					},
+					{
+						"content": "received.",
+						"boundingBox": [
+							1879,
+							975,
+							1878,
+							1225,
+							1827,
+							1226,
+							1825,
+							976
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 130,
+							"length": 9
+						}
+					},
+					{
+						"content": "Por",
+						"boundingBox": [
+							1766,
+							210,
+							1766,
+							287,
+							1706,
+							286,
+							1708,
+							210
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 140,
+							"length": 3
+						}
+					},
+					{
+						"content": "favor,",
+						"boundingBox": [
+							1766,
+							299,
+							1765,
+							451,
+							1704,
+							451,
+							1706,
+							298
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 144,
+							"length": 6
+						}
+					},
+					{
+						"content": "guarde",
+						"boundingBox": [
+							1765,
+							463,
+							1764,
+							656,
+							1701,
+							656,
+							1704,
+							463
+						],
+						"confidence": 0.949,
+						"span": {
+							"offset": 151,
+							"length": 6
+						}
+					},
+					{
+						"content": "esta",
+						"boundingBox": [
+							1764,
+							668,
+							1764,
+							780,
+							1700,
+							781,
+							1701,
+							668
+						],
+						"confidence": 0.991,
+						"span": {
+							"offset": 158,
+							"length": 4
+						}
+					},
+					{
+						"content": "tarjeta",
+						"boundingBox": [
+							1764,
+							792,
+							1763,
+							969,
+							1699,
+							970,
+							1700,
+							793
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 163,
+							"length": 7
+						}
+					},
+					{
+						"content": "de",
+						"boundingBox": [
+							1763,
+							981,
+							1762,
+							1049,
+							1699,
+							1050,
+							1699,
+							982
+						],
+						"confidence": 0.998,
+						"span": {
+							"offset": 171,
+							"length": 2
+						}
+					},
+					{
+						"content": "registro,",
+						"boundingBox": [
+							1762,
+							1061,
+							1762,
+							1282,
+							1699,
+							1283,
+							1699,
+							1062
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 174,
+							"length": 9
+						}
+					},
+					{
+						"content": "que",
+						"boundingBox": [
+							1762,
+							1294,
+							1761,
+							1395,
+							1699,
+							1396,
+							1699,
+							1295
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 184,
+							"length": 3
+						}
+					},
+					{
+						"content": "incluye",
+						"boundingBox": [
+							1761,
+							1407,
+							1761,
+							1587,
+							1700,
+							1589,
+							1699,
+							1408
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 188,
+							"length": 7
+						}
+					},
+					{
+						"content": "información",
+						"boundingBox": [
+							1761,
+							1599,
+							1760,
+							1917,
+							1703,
+							1918,
+							1700,
+							1601
+						],
+						"confidence": 0.988,
+						"span": {
+							"offset": 196,
+							"length": 11
+						}
+					},
+					{
+						"content": "médica",
+						"boundingBox": [
+							1687,
+							211,
+							1687,
+							400,
+							1629,
+							401,
+							1631,
+							212
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 208,
+							"length": 6
+						}
+					},
+					{
+						"content": "sobre",
+						"boundingBox": [
+							1687,
+							412,
+							1688,
+							562,
+							1628,
+							563,
+							1629,
+							413
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 215,
+							"length": 5
+						}
+					},
+					{
+						"content": "las",
+						"boundingBox": [
+							1688,
+							574,
+							1688,
+							651,
+							1628,
+							652,
+							1628,
+							575
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 221,
+							"length": 3
+						}
+					},
+					{
+						"content": "vacunas",
+						"boundingBox": [
+							1688,
+							663,
+							1689,
+							883,
+							1628,
+							884,
+							1628,
+							664
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 225,
+							"length": 7
+						}
+					},
+					{
+						"content": "que",
+						"boundingBox": [
+							1689,
+							895,
+							1689,
+							1003,
+							1629,
+							1003,
+							1628,
+							895
+						],
+						"confidence": 0.998,
+						"span": {
+							"offset": 233,
+							"length": 3
+						}
+					},
+					{
+						"content": "ha",
+						"boundingBox": [
+							1689,
+							1014,
+							1689,
+							1080,
+							1629,
+							1081,
+							1629,
+							1015
+						],
+						"confidence": 0.998,
+						"span": {
+							"offset": 237,
+							"length": 2
+						}
+					},
+					{
+						"content": "recibido.",
+						"boundingBox": [
+							1689,
+							1092,
+							1690,
+							1335,
+							1632,
+							1335,
+							1629,
+							1092
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 240,
+							"length": 9
+						}
+					},
+					{
+						"content": "Siau",
+						"boundingBox": [
+							1548,
+							512,
+							1547,
+							689,
+							1472,
+							689,
+							1473,
+							512
+						],
+						"confidence": 0.818,
+						"span": {
+							"offset": 250,
+							"length": 4
+						}
+					},
+					{
+						"content": "Eddie",
+						"boundingBox": [
+							1552,
+							1510,
+							1562,
+							1746,
+							1483,
+							1749,
+							1475,
+							1512
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 255,
+							"length": 5
+						}
+					},
+					{
+						"content": "P.",
+						"boundingBox": [
+							1576,
+							2495,
+							1577,
+							2549,
+							1472,
+							2551,
+							1471,
+							2495
+						],
+						"confidence": 0.967,
+						"span": {
+							"offset": 261,
+							"length": 2
+						}
+					},
+					{
+						"content": "Last",
+						"boundingBox": [
+							1402,
+							211,
+							1405,
+							308,
+							1357,
+							310,
+							1355,
+							213
+						],
+						"confidence": 0.991,
+						"span": {
+							"offset": 264,
+							"length": 4
+						}
+					},
+					{
+						"content": "Name",
+						"boundingBox": [
+							1405,
+							317,
+							1407,
+							470,
+							1359,
+							472,
+							1358,
+							319
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 269,
+							"length": 4
+						}
+					},
+					{
+						"content": "First",
+						"boundingBox": [
+							1415,
+							1451,
+							1415,
+							1540,
+							1366,
+							1539,
+							1366,
+							1450
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 274,
+							"length": 5
+						}
+					},
+					{
+						"content": "Name",
+						"boundingBox": [
+							1415,
+							1549,
+							1414,
+							1696,
+							1365,
+							1696,
+							1366,
+							1549
+						],
+						"confidence": 0.991,
+						"span": {
+							"offset": 280,
+							"length": 4
+						}
+					},
+					{
+						"content": "MI",
+						"boundingBox": [
+							1418,
+							2533,
+							1419,
+							2588,
+							1377,
+							2589,
+							1376,
+							2533
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 285,
+							"length": 2
+						}
+					},
+					{
+						"content": "07/12/1990",
+						"boundingBox": [
+							1265,
+							496,
+							1301,
+							1063,
+							1235,
+							1066,
+							1207,
+							497
+						],
+						"confidence": 0.788,
+						"span": {
+							"offset": 288,
+							"length": 10
+						}
+					},
+					{
+						"content": "24912",
+						"boundingBox": [
+							1302,
+							1608,
+							1305,
+							1911,
+							1226,
+							1908,
+							1228,
+							1613
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 299,
+							"length": 5
+						}
+					},
+					{
+						"content": "Date",
+						"boundingBox": [
+							1174,
+							214,
+							1177,
+							326,
+							1123,
+							328,
+							1120,
+							216
+						],
+						"confidence": 0.983,
+						"span": {
+							"offset": 305,
+							"length": 4
+						}
+					},
+					{
+						"content": "of",
+						"boundingBox": [
+							1177,
+							336,
+							1178,
+							392,
+							1126,
+							394,
+							1124,
+							338
+						],
+						"confidence": 0.999,
+						"span": {
+							"offset": 310,
+							"length": 2
+						}
+					},
+					{
+						"content": "birth",
+						"boundingBox": [
+							1179,
+							402,
+							1181,
+							528,
+							1129,
+							529,
+							1126,
+							404
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 313,
+							"length": 5
+						}
+					},
+					{
+						"content": "Patient",
+						"boundingBox": [
+							1187,
+							1455,
+							1190,
+							1610,
+							1143,
+							1611,
+							1142,
+							1456
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 319,
+							"length": 7
+						}
+					},
+					{
+						"content": "number",
+						"boundingBox": [
+							1190,
+							1619,
+							1194,
+							1812,
+							1144,
+							1814,
+							1143,
+							1620
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 327,
+							"length": 6
+						}
+					},
+					{
+						"content": "(medical",
+						"boundingBox": [
+							1194,
+							1822,
+							1197,
+							2022,
+							1146,
+							2023,
+							1144,
+							1823
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 334,
+							"length": 8
+						}
+					},
+					{
+						"content": "record",
+						"boundingBox": [
+							1197,
+							2031,
+							1198,
+							2173,
+							1147,
+							2175,
+							1146,
+							2033
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 343,
+							"length": 6
+						}
+					},
+					{
+						"content": "or",
+						"boundingBox": [
+							1198,
+							2183,
+							1199,
+							2228,
+							1148,
+							2229,
+							1148,
+							2184
+						],
+						"confidence": 0.998,
+						"span": {
+							"offset": 350,
+							"length": 2
+						}
+					},
+					{
+						"content": "IIS",
+						"boundingBox": [
+							1199,
+							2237,
+							1199,
+							2289,
+							1149,
+							2291,
+							1148,
+							2239
+						],
+						"confidence": 0.808,
+						"span": {
+							"offset": 353,
+							"length": 3
+						}
+					},
+					{
+						"content": "record",
+						"boundingBox": [
+							1200,
+							2299,
+							1201,
+							2437,
+							1151,
+							2439,
+							1149,
+							2300
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 357,
+							"length": 6
+						}
+					},
+					{
+						"content": "number)",
+						"boundingBox": [
+							1201,
+							2447,
+							1202,
+							2643,
+							1154,
+							2645,
+							1151,
+							2449
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 364,
+							"length": 7
+						}
+					},
+					{
+						"content": "Vaccine",
+						"boundingBox": [
+							963,
+							251,
+							962,
+							460,
+							915,
+							461,
+							910,
+							253
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 372,
+							"length": 7
+						}
+					},
+					{
+						"content": "Product",
+						"boundingBox": [
+							1023,
+							582,
+							1028,
+							803,
+							974,
+							805,
+							972,
+							583
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 380,
+							"length": 7
+						}
+					},
+					{
+						"content": "Name/Manufacturer",
+						"boundingBox": [
+							1028,
+							813,
+							1035,
+							1402,
+							986,
+							1405,
+							974,
+							815
+						],
+						"confidence": 0.938,
+						"span": {
+							"offset": 388,
+							"length": 17
+						}
+					},
+					{
+						"content": "Date",
+						"boundingBox": [
+							991,
+							1603,
+							990,
+							1728,
+							938,
+							1728,
+							939,
+							1603
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 406,
+							"length": 4
+						}
+					},
+					{
+						"content": "Healthcare",
+						"boundingBox": [
+							1030,
+							1941,
+							1036,
+							2223,
+							979,
+							2224,
+							977,
+							1941
+						],
+						"confidence": 0.988,
+						"span": {
+							"offset": 411,
+							"length": 10
+						}
+					},
+					{
+						"content": "Professional",
+						"boundingBox": [
+							1036,
+							2234,
+							1041,
+							2556,
+							983,
+							2559,
+							979,
+							2235
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 422,
+							"length": 12
+						}
+					},
+					{
+						"content": "or",
+						"boundingBox": [
+							1042,
+							2567,
+							1043,
+							2634,
+							985,
+							2637,
+							984,
+							2570
+						],
+						"confidence": 0.999,
+						"span": {
+							"offset": 435,
+							"length": 2
+						}
+					},
+					{
+						"content": "Clinic",
+						"boundingBox": [
+							958,
+							1941,
+							959,
+							2081,
+							904,
+							2083,
+							903,
+							1941
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 438,
+							"length": 6
+						}
+					},
+					{
+						"content": "Site",
+						"boundingBox": [
+							960,
+							2092,
+							961,
+							2200,
+							907,
+							2203,
+							905,
+							2094
+						],
+						"confidence": 0.991,
+						"span": {
+							"offset": 445,
+							"length": 4
+						}
+					},
+					{
+						"content": "Lot",
+						"boundingBox": [
+							916,
+							584,
+							917,
+							667,
+							862,
+							669,
+							860,
+							586
+						],
+						"confidence": 0.998,
+						"span": {
+							"offset": 450,
+							"length": 3
+						}
+					},
+					{
+						"content": "Number",
+						"boundingBox": [
+							917,
+							678,
+							921,
+							927,
+							866,
+							930,
+							862,
+							680
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 454,
+							"length": 6
+						}
+					},
+					{
+						"content": "1ª",
+						"boundingBox": [
+							785,
+							256,
+							785,
+							307,
+							729,
+							307,
+							730,
+							256
+						],
+						"confidence": 0.647,
+						"span": {
+							"offset": 461,
+							"length": 2
+						}
+					},
+					{
+						"content": "Dose",
+						"boundingBox": [
+							785,
+							317,
+							784,
+							455,
+							729,
+							456,
+							729,
+							318
+						],
+						"confidence": 0.99,
+						"span": {
+							"offset": 464,
+							"length": 4
+						}
+					},
+					{
+						"content": "COVID-19",
+						"boundingBox": [
+							708,
+							254,
+							713,
+							507,
+							659,
+							508,
+							653,
+							256
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 469,
+							"length": 8
+						}
+					},
+					{
+						"content": "Pfizer",
+						"boundingBox": [
+							824,
+							746,
+							813,
+							1018,
+							741,
+							1017,
+							750,
+							747
+						],
+						"confidence": 0.988,
+						"span": {
+							"offset": 478,
+							"length": 6
+						}
+					},
+					{
+						"content": "07/22/21",
+						"boundingBox": [
+							838,
+							1462,
+							836,
+							1868,
+							768,
+							1867,
+							772,
+							1460
+						],
+						"confidence": 0.867,
+						"span": {
+							"offset": 485,
+							"length": 8
+						}
+					},
+					{
+						"content": "Lamna",
+						"boundingBox": [
+							811,
+							2006,
+							826,
+							2252,
+							746,
+							2252,
+							751,
+							2007
+						],
+						"confidence": 0.89,
+						"span": {
+							"offset": 494,
+							"length": 5
+						}
+					},
+					{
+						"content": "Healthcare",
+						"boundingBox": [
+							828,
+							2302,
+							827,
+							2711,
+							757,
+							2711,
+							746,
+							2303
+						],
+						"confidence": 0.611,
+						"span": {
+							"offset": 500,
+							"length": 10
+						}
+					},
+					{
+						"content": "Cw",
+						"boundingBox": [
+							705,
+							658,
+							708,
+							742,
+							644,
+							744,
+							643,
+							660
+						],
+						"confidence": 0.963,
+						"span": {
+							"offset": 511,
+							"length": 2
+						}
+					},
+					{
+						"content": "1289",
+						"boundingBox": [
+							709,
+							786,
+							716,
+							976,
+							646,
+							978,
+							644,
+							789
+						],
+						"confidence": 0.983,
+						"span": {
+							"offset": 514,
+							"length": 4
+						}
+					},
+					{
+						"content": "mm'",
+						"boundingBox": [
+							734,
+							1478,
+							743,
+							1604,
+							693,
+							1605,
+							694,
+							1479
+						],
+						"confidence": 0.896,
+						"span": {
+							"offset": 519,
+							"length": 3
+						}
+					},
+					{
+						"content": "dd",
+						"boundingBox": [
+							744,
+							1620,
+							744,
+							1688,
+							691,
+							1689,
+							693,
+							1621
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 523,
+							"length": 2
+						}
+					},
+					{
+						"content": "'",
+						"boundingBox": [
+							743,
+							1707,
+							742,
+							1736,
+							689,
+							1738,
+							690,
+							1709
+						],
+						"confidence": 0.111,
+						"span": {
+							"offset": 526,
+							"length": 1
+						}
+					},
+					{
+						"content": "yy",
+						"boundingBox": [
+							740,
+							1762,
+							734,
+							1827,
+							684,
+							1828,
+							688,
+							1764
+						],
+						"confidence": 0.998,
+						"span": {
+							"offset": 528,
+							"length": 2
+						}
+					},
+					{
+						"content": "2nd",
+						"boundingBox": [
+							569,
+							255,
+							569,
+							324,
+							514,
+							324,
+							514,
+							254
+						],
+						"confidence": 0.891,
+						"span": {
+							"offset": 531,
+							"length": 3
+						}
+					},
+					{
+						"content": "Dose",
+						"boundingBox": [
+							569,
+							334,
+							569,
+							476,
+							514,
+							478,
+							514,
+							335
+						],
+						"confidence": 0.99,
+						"span": {
+							"offset": 535,
+							"length": 4
+						}
+					},
+					{
+						"content": "COVID-19",
+						"boundingBox": [
+							491,
+							252,
+							498,
+							510,
+							442,
+							512,
+							436,
+							254
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 540,
+							"length": 8
+						}
+					},
+					{
+						"content": "Pfizer",
+						"boundingBox": [
+							612,
+							708,
+							605,
+							993,
+							533,
+							994,
+							534,
+							711
+						],
+						"confidence": 0.737,
+						"span": {
+							"offset": 549,
+							"length": 6
+						}
+					},
+					{
+						"content": "08/20/21",
+						"boundingBox": [
+							625,
+							1462,
+							614,
+							1868,
+							547,
+							1866,
+							551,
+							1462
+						],
+						"confidence": 0.872,
+						"span": {
+							"offset": 556,
+							"length": 8
+						}
+					},
+					{
+						"content": "mm",
+						"boundingBox": [
+							526,
+							1481,
+							528,
+							1549,
+							482,
+							1550,
+							484,
+							1482
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 565,
+							"length": 2
+						}
+					},
+					{
+						"content": "dd",
+						"boundingBox": [
+							531,
+							1626,
+							534,
+							1691,
+							483,
+							1690,
+							482,
+							1626
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 568,
+							"length": 2
+						}
+					},
+					{
+						"content": "УУ",
+						"boundingBox": [
+							524,
+							1785,
+							523,
+							1845,
+							470,
+							1845,
+							471,
+							1785
+						],
+						"confidence": 0.854,
+						"span": {
+							"offset": 571,
+							"length": 2
+						}
+					},
+					{
+						"content": "Lamna",
+						"boundingBox": [
+							600,
+							1994,
+							618,
+							2272,
+							530,
+							2276,
+							514,
+							2001
+						],
+						"confidence": 0.817,
+						"span": {
+							"offset": 574,
+							"length": 5
+						}
+					},
+					{
+						"content": "Healthcare",
+						"boundingBox": [
+							620,
+							2327,
+							630,
+							2737,
+							562,
+							2737,
+							534,
+							2331
+						],
+						"confidence": 0.619,
+						"span": {
+							"offset": 580,
+							"length": 10
+						}
+					},
+					{
+						"content": "CW2478",
+						"boundingBox": [
+							481,
+							645,
+							499,
+							1052,
+							431,
+							1052,
+							420,
+							651
+						],
+						"confidence": 0.704,
+						"span": {
+							"offset": 591,
+							"length": 6
+						}
+					},
+					{
+						"content": "Other",
+						"boundingBox": [
+							339,
+							255,
+							340,
+							420,
+							286,
+							421,
+							286,
+							256
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 598,
+							"length": 5
+						}
+					},
+					{
+						"content": "Booster",
+						"boundingBox": [
+							383,
+							611,
+							402,
+							897,
+							334,
+							900,
+							321,
+							615
+						],
+						"confidence": 0.721,
+						"span": {
+							"offset": 604,
+							"length": 7
+						}
+					},
+					{
+						"content": "Pfizer",
+						"boundingBox": [
+							403,
+							924,
+							410,
+							1168,
+							344,
+							1170,
+							335,
+							927
+						],
+						"confidence": 0.932,
+						"span": {
+							"offset": 612,
+							"length": 6
+						}
+					},
+					{
+						"content": "F74691",
+						"boundingBox": [
+							300,
+							663,
+							321,
+							1001,
+							257,
+							1004,
+							240,
+							669
+						],
+						"confidence": 0.943,
+						"span": {
+							"offset": 619,
+							"length": 6
+						}
+					},
+					{
+						"content": "01/21/22",
+						"boundingBox": [
+							438,
+							1460,
+							435,
+							1879,
+							327,
+							1875,
+							330,
+							1460
+						],
+						"confidence": 0.982,
+						"span": {
+							"offset": 626,
+							"length": 8
+						}
+					},
+					{
+						"content": "mm",
+						"boundingBox": [
+							335,
+							1485,
+							337,
+							1551,
+							296,
+							1551,
+							297,
+							1485
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 635,
+							"length": 2
+						}
+					},
+					{
+						"content": "dd",
+						"boundingBox": [
+							352,
+							1643,
+							349,
+							1698,
+							295,
+							1694,
+							297,
+							1643
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 638,
+							"length": 2
+						}
+					},
+					{
+						"content": "УУ",
+						"boundingBox": [
+							332,
+							1791,
+							331,
+							1847,
+							282,
+							1846,
+							283,
+							1791
+						],
+						"confidence": 0.635,
+						"span": {
+							"offset": 641,
+							"length": 2
+						}
+					},
+					{
+						"content": "Lamna",
+						"boundingBox": [
+							402,
+							1954,
+							419,
+							2202,
+							356,
+							2204,
+							344,
+							1958
+						],
+						"confidence": 0.726,
+						"span": {
+							"offset": 644,
+							"length": 5
+						}
+					},
+					{
+						"content": "Health",
+						"boundingBox": [
+							422,
+							2265,
+							429,
+							2515,
+							369,
+							2515,
+							359,
+							2268
+						],
+						"confidence": 0.596,
+						"span": {
+							"offset": 650,
+							"length": 6
+						}
+					},
+					{
+						"content": "care",
+						"boundingBox": [
+							429,
+							2539,
+							427,
+							2695,
+							374,
+							2694,
+							370,
+							2539
+						],
+						"confidence": 0.666,
+						"span": {
+							"offset": 657,
+							"length": 4
+						}
+					},
+					{
+						"content": "Other",
+						"boundingBox": [
+							168,
+							258,
+							169,
+							420,
+							114,
+							422,
+							114,
+							259
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 662,
+							"length": 5
+						}
+					},
+					{
+						"content": "mm",
+						"boundingBox": [
+							165,
+							1483,
+							171,
+							1554,
+							129,
+							1555,
+							128,
+							1485
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 668,
+							"length": 2
+						}
+					},
+					{
+						"content": "dd",
+						"boundingBox": [
+							176,
+							1634,
+							180,
+							1696,
+							129,
+							1695,
+							129,
+							1634
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 671,
+							"length": 2
+						}
+					},
+					{
+						"content": "yy",
+						"boundingBox": [
+							169,
+							1792,
+							168,
+							1850,
+							114,
+							1849,
+							115,
+							1792
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 674,
+							"length": 2
+						}
+					}
+				],
+				"selectionMarks": [
+					{
+						"state": "unselected",
+						"boundingBox": [
+							2022,
+							474,
+							2121,
+							474,
+							2121,
+							547,
+							2022,
+							547
+						],
+						"confidence": 0.5,
+						"span": {
+							"offset": 677,
+							"length": 12
+						}
+					},
+					{
+						"state": "unselected",
+						"boundingBox": [
+							2014,
+							1953,
+							2090,
+							1953,
+							2090,
+							2016,
+							2014,
+							2016
+						],
+						"confidence": 0.223,
+						"span": {
+							"offset": 690,
+							"length": 12
+						}
+					},
+					{
+						"state": "unselected",
+						"boundingBox": [
+							739,
+							558,
+							821,
+							558,
+							821,
+							752,
+							739,
+							752
+						],
+						"confidence": 0.223,
+						"span": {
+							"offset": 703,
+							"length": 12
+						}
+					},
+					{
+						"state": "unselected",
+						"boundingBox": [
+							732,
+							331,
+							780,
+							331,
+							780,
+							370,
+							732,
+							370
+						],
+						"confidence": 0.718,
+						"span": {
+							"offset": 716,
+							"length": 12
+						}
+					},
+					{
+						"state": "selected",
+						"boundingBox": [
+							669,
+							1757,
+							756,
+							1757,
+							756,
+							1885,
+							669,
+							1885
+						],
+						"confidence": 0.5,
+						"span": {
+							"offset": 729,
+							"length": 10
+						}
+					},
+					{
+						"state": "selected",
+						"boundingBox": [
+							643,
+							571,
+							724,
+							571,
+							724,
+							749,
+							643,
+							749
+						],
+						"confidence": 0.223,
+						"span": {
+							"offset": 740,
+							"length": 10
+						}
+					},
+					{
+						"state": "unselected",
+						"boundingBox": [
+							532,
+							565,
+							610,
+							565,
+							610,
+							741,
+							532,
+							741
+						],
+						"confidence": 0.223,
+						"span": {
+							"offset": 751,
+							"length": 12
+						}
+					},
+					{
+						"state": "selected",
+						"boundingBox": [
+							453,
+							1752,
+							544,
+							1752,
+							544,
+							1877,
+							453,
+							1877
+						],
+						"confidence": 0.252,
+						"span": {
+							"offset": 764,
+							"length": 10
+						}
+					},
+					{
+						"state": "unselected",
+						"boundingBox": [
+							189,
+							1457,
+							267,
+							1457,
+							267,
+							1606,
+							189,
+							1606
+						],
+						"confidence": 0.3,
+						"span": {
+							"offset": 775,
+							"length": 12
+						}
+					},
+					{
+						"state": "selected",
+						"boundingBox": [
+							102,
+							1753,
+							187,
+							1753,
+							187,
+							1890,
+							102,
+							1890
+						],
+						"confidence": 0.223,
+						"span": {
+							"offset": 788,
+							"length": 10
+						}
+					}
+				],
+				"lines": [
+					{
+						"content": "COVID-19 Vaccination Record Card",
+						"boundingBox": [
+							2119,
+							207,
+							2105,
+							2023,
+							2008,
+							2022,
+							2025,
+							207
+						],
+						"spans": [
+							{
+								"offset": 0,
+								"length": 32
+							}
+						]
+					},
+					{
+						"content": "Please keep this record card, which includes medical information",
+						"boundingBox": [
+							1960,
+							210,
+							1951,
+							1911,
+							1889,
+							1911,
+							1901,
+							209
+						],
+						"spans": [
+							{
+								"offset": 33,
+								"length": 64
+							}
+						]
+					},
+					{
+						"content": "CDE",
+						"boundingBox": [
+							2005,
+							2533,
+							2004,
+							2753,
+							1919,
+							2755,
+							1922,
+							2534
+						],
+						"spans": [
+							{
+								"offset": 98,
+								"length": 3
+							}
+						]
+					},
+					{
+						"content": "about the vaccines you have received.",
+						"boundingBox": [
+							1881,
+							207,
+							1880,
+							1226,
+							1824,
+							1226,
+							1824,
+							207
+						],
+						"spans": [
+							{
+								"offset": 102,
+								"length": 37
+							}
+						]
+					},
+					{
+						"content": "Por favor, guarde esta tarjeta de registro, que incluye información",
+						"boundingBox": [
+							1766,
+							209,
+							1760,
+							1925,
+							1699,
+							1925,
+							1702,
+							209
+						],
+						"spans": [
+							{
+								"offset": 140,
+								"length": 67
+							}
+						]
+					},
+					{
+						"content": "médica sobre las vacunas que ha recibido.",
+						"boundingBox": [
+							1687,
+							210,
+							1689,
+							1337,
+							1629,
+							1337,
+							1628,
+							210
+						],
+						"spans": [
+							{
+								"offset": 208,
+								"length": 41
+							}
+						]
+					},
+					{
+						"content": "Siau",
+						"boundingBox": [
+							1547,
+							514,
+							1547,
+							698,
+							1472,
+							700,
+							1473,
+							512
+						],
+						"spans": [
+							{
+								"offset": 250,
+								"length": 4
+							}
+						]
+					},
+					{
+						"content": "Eddie",
+						"boundingBox": [
+							1552,
+							1509,
+							1562,
+							1754,
+							1483,
+							1757,
+							1475,
+							1512
+						],
+						"spans": [
+							{
+								"offset": 255,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "P.",
+						"boundingBox": [
+							1576,
+							2502,
+							1575,
+							2558,
+							1473,
+							2558,
+							1470,
+							2495
+						],
+						"spans": [
+							{
+								"offset": 261,
+								"length": 2
+							}
+						]
+					},
+					{
+						"content": "Last Name",
+						"boundingBox": [
+							1403,
+							210,
+							1407,
+							480,
+							1359,
+							480,
+							1355,
+							211
+						],
+						"spans": [
+							{
+								"offset": 264,
+								"length": 9
+							}
+						]
+					},
+					{
+						"content": "First Name",
+						"boundingBox": [
+							1415,
+							1449,
+							1414,
+							1704,
+							1365,
+							1703,
+							1366,
+							1449
+						],
+						"spans": [
+							{
+								"offset": 274,
+								"length": 10
+							}
+						]
+					},
+					{
+						"content": "MI",
+						"boundingBox": [
+							1418,
+							2533,
+							1419,
+							2588,
+							1377,
+							2589,
+							1376,
+							2534
+						],
+						"spans": [
+							{
+								"offset": 285,
+								"length": 2
+							}
+						]
+					},
+					{
+						"content": "07/12/1990",
+						"boundingBox": [
+							1283,
+							496,
+							1306,
+							1068,
+							1236,
+							1072,
+							1207,
+							496
+						],
+						"spans": [
+							{
+								"offset": 288,
+								"length": 10
+							}
+						]
+					},
+					{
+						"content": "24912",
+						"boundingBox": [
+							1307,
+							1607,
+							1307,
+							1934,
+							1226,
+							1934,
+							1227,
+							1607
+						],
+						"spans": [
+							{
+								"offset": 299,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "Date of birth",
+						"boundingBox": [
+							1173,
+							214,
+							1182,
+							535,
+							1128,
+							537,
+							1120,
+							215
+						],
+						"spans": [
+							{
+								"offset": 305,
+								"length": 13
+							}
+						]
+					},
+					{
+						"content": "Patient number (medical record or IIS record number)",
+						"boundingBox": [
+							1190,
+							1455,
+							1203,
+							2647,
+							1153,
+							2647,
+							1142,
+							1455
+						],
+						"spans": [
+							{
+								"offset": 319,
+								"length": 52
+							}
+						]
+					},
+					{
+						"content": "Vaccine",
+						"boundingBox": [
+							963,
+							250,
+							965,
+							476,
+							912,
+							476,
+							910,
+							251
+						],
+						"spans": [
+							{
+								"offset": 372,
+								"length": 7
+							}
+						]
+					},
+					{
+						"content": "Product Name/Manufacturer",
+						"boundingBox": [
+							1024,
+							581,
+							1036,
+							1403,
+							983,
+							1404,
+							972,
+							582
+						],
+						"spans": [
+							{
+								"offset": 380,
+								"length": 25
+							}
+						]
+					},
+					{
+						"content": "Date",
+						"boundingBox": [
+							990,
+							1605,
+							990,
+							1739,
+							938,
+							1740,
+							939,
+							1603
+						],
+						"spans": [
+							{
+								"offset": 406,
+								"length": 4
+							}
+						]
+					},
+					{
+						"content": "Healthcare Professional or",
+						"boundingBox": [
+							1032,
+							1940,
+							1042,
+							2637,
+							985,
+							2638,
+							977,
+							1940
+						],
+						"spans": [
+							{
+								"offset": 411,
+								"length": 26
+							}
+						]
+					},
+					{
+						"content": "Clinic Site",
+						"boundingBox": [
+							958,
+							1940,
+							961,
+							2212,
+							906,
+							2213,
+							903,
+							1941
+						],
+						"spans": [
+							{
+								"offset": 438,
+								"length": 11
+							}
+						]
+					},
+					{
+						"content": "Lot Number",
+						"boundingBox": [
+							915,
+							583,
+							920,
+							929,
+							865,
+							930,
+							860,
+							584
+						],
+						"spans": [
+							{
+								"offset": 450,
+								"length": 10
+							}
+						]
+					},
+					{
+						"content": "1ª Dose",
+						"boundingBox": [
+							785,
+							255,
+							783,
+							469,
+							729,
+							469,
+							730,
+							255
+						],
+						"spans": [
+							{
+								"offset": 461,
+								"length": 7
+							}
+						]
+					},
+					{
+						"content": "COVID-19",
+						"boundingBox": [
+							708,
+							253,
+							713,
+							519,
+							658,
+							520,
+							653,
+							254
+						],
+						"spans": [
+							{
+								"offset": 469,
+								"length": 8
+							}
+						]
+					},
+					{
+						"content": "Pfizer",
+						"boundingBox": [
+							825,
+							745,
+							817,
+							1031,
+							741,
+							1029,
+							751,
+							745
+						],
+						"spans": [
+							{
+								"offset": 478,
+								"length": 6
+							}
+						]
+					},
+					{
+						"content": "07/22/21",
+						"boundingBox": [
+							838,
+							1460,
+							836,
+							1871,
+							763,
+							1870,
+							765,
+							1460
+						],
+						"spans": [
+							{
+								"offset": 485,
+								"length": 8
+							}
+						]
+					},
+					{
+						"content": "Lamna Healthcare",
+						"boundingBox": [
+							824,
+							2006,
+							831,
+							2718,
+							752,
+							2719,
+							746,
+							2007
+						],
+						"spans": [
+							{
+								"offset": 494,
+								"length": 16
+							}
+						]
+					},
+					{
+						"content": "Cw 1289",
+						"boundingBox": [
+							709,
+							657,
+							716,
+							986,
+							646,
+							987,
+							643,
+							659
+						],
+						"spans": [
+							{
+								"offset": 511,
+								"length": 7
+							}
+						]
+					},
+					{
+						"content": "mm' dd ' yy",
+						"boundingBox": [
+							745,
+							1478,
+							741,
+							1837,
+							683,
+							1836,
+							690,
+							1478
+						],
+						"spans": [
+							{
+								"offset": 519,
+								"length": 11
+							}
+						]
+					},
+					{
+						"content": "2nd Dose",
+						"boundingBox": [
+							569,
+							254,
+							569,
+							489,
+							514,
+							489,
+							514,
+							254
+						],
+						"spans": [
+							{
+								"offset": 531,
+								"length": 8
+							}
+						]
+					},
+					{
+						"content": "COVID-19",
+						"boundingBox": [
+							492,
+							251,
+							498,
+							522,
+							442,
+							523,
+							436,
+							252
+						],
+						"spans": [
+							{
+								"offset": 540,
+								"length": 8
+							}
+						]
+					},
+					{
+						"content": "Pfizer",
+						"boundingBox": [
+							613,
+							708,
+							607,
+							1018,
+							533,
+							1017,
+							535,
+							708
+						],
+						"spans": [
+							{
+								"offset": 549,
+								"length": 6
+							}
+						]
+					},
+					{
+						"content": "08/20/21",
+						"boundingBox": [
+							624,
+							1461,
+							616,
+							1872,
+							547,
+							1870,
+							551,
+							1461
+						],
+						"spans": [
+							{
+								"offset": 556,
+								"length": 8
+							}
+						]
+					},
+					{
+						"content": "mm dd",
+						"boundingBox": [
+							530,
+							1481,
+							534,
+							1701,
+							484,
+							1702,
+							482,
+							1482
+						],
+						"spans": [
+							{
+								"offset": 565,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "УУ",
+						"boundingBox": [
+							523,
+							1786,
+							523,
+							1846,
+							470,
+							1846,
+							471,
+							1785
+						],
+						"spans": [
+							{
+								"offset": 571,
+								"length": 2
+							}
+						]
+					},
+					{
+						"content": "Lamna Healthcare",
+						"boundingBox": [
+							603,
+							1994,
+							631,
+							2745,
+							554,
+							2747,
+							514,
+							1998
+						],
+						"spans": [
+							{
+								"offset": 574,
+								"length": 16
+							}
+						]
+					},
+					{
+						"content": "CW2478",
+						"boundingBox": [
+							484,
+							645,
+							499,
+							1071,
+							432,
+							1072,
+							420,
+							647
+						],
+						"spans": [
+							{
+								"offset": 591,
+								"length": 6
+							}
+						]
+					},
+					{
+						"content": "Other",
+						"boundingBox": [
+							339,
+							254,
+							339,
+							422,
+							286,
+							422,
+							286,
+							254
+						],
+						"spans": [
+							{
+								"offset": 598,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "Booster Pfizer",
+						"boundingBox": [
+							389,
+							611,
+							411,
+							1187,
+							345,
+							1190,
+							321,
+							614
+						],
+						"spans": [
+							{
+								"offset": 604,
+								"length": 14
+							}
+						]
+					},
+					{
+						"content": "F74691",
+						"boundingBox": [
+							301,
+							663,
+							320,
+							1006,
+							257,
+							1009,
+							240,
+							666
+						],
+						"spans": [
+							{
+								"offset": 619,
+								"length": 6
+							}
+						]
+					},
+					{
+						"content": "01/21/22",
+						"boundingBox": [
+							438,
+							1459,
+							435,
+							1961,
+							325,
+							1960,
+							329,
+							1459
+						],
+						"spans": [
+							{
+								"offset": 626,
+								"length": 8
+							}
+						]
+					},
+					{
+						"content": "mm",
+						"boundingBox": [
+							339,
+							1484,
+							340,
+							1639,
+							295,
+							1639,
+							295,
+							1484
+						],
+						"spans": [
+							{
+								"offset": 635,
+								"length": 2
+							}
+						]
+					},
+					{
+						"content": "dd",
+						"boundingBox": [
+							352,
+							1643,
+							346,
+							1707,
+							295,
+							1704,
+							297,
+							1643
+						],
+						"spans": [
+							{
+								"offset": 638,
+								"length": 2
+							}
+						]
+					},
+					{
+						"content": "УУ",
+						"boundingBox": [
+							331,
+							1791,
+							331,
+							1849,
+							282,
+							1849,
+							283,
+							1791
+						],
+						"spans": [
+							{
+								"offset": 641,
+								"length": 2
+							}
+						]
+					},
+					{
+						"content": "Lamna Health care",
+						"boundingBox": [
+							410,
+							1953,
+							429,
+							2711,
+							372,
+							2712,
+							344,
+							1955
+						],
+						"spans": [
+							{
+								"offset": 644,
+								"length": 17
+							}
+						]
+					},
+					{
+						"content": "Other",
+						"boundingBox": [
+							169,
+							258,
+							169,
+							422,
+							114,
+							422,
+							114,
+							258
+						],
+						"spans": [
+							{
+								"offset": 662,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "mm dd",
+						"boundingBox": [
+							172,
+							1482,
+							181,
+							1716,
+							129,
+							1717,
+							128,
+							1484
+						],
+						"spans": [
+							{
+								"offset": 668,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "yy",
+						"boundingBox": [
+							169,
+							1793,
+							168,
+							1854,
+							114,
+							1852,
+							115,
+							1792
+						],
+						"spans": [
+							{
+								"offset": 674,
+								"length": 2
+							}
+						]
+					}
+				],
+				"spans": [
+					{
+						"offset": 0,
+						"length": 798
+					}
+				]
+			}
+		],
+		"tables": [
+			{
+				"rowCount": 8,
+				"columnCount": 4,
+				"cells": [
+					{
+						"kind": "columnHeader",
+						"rowIndex": 0,
+						"columnIndex": 0,
+						"rowSpan": 2,
+						"columnSpan": 1,
+						"content": "Vaccine",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									1047,
+									214,
+									1053,
+									553,
+									838,
+									553,
+									830,
+									216
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 372,
+								"length": 7
+							}
+						]
+					},
+					{
+						"kind": "columnHeader",
+						"rowIndex": 0,
+						"columnIndex": 1,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "Product Name/Manufacturer",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									1053,
+									553,
+									1067,
+									1430,
+									960,
+									1431,
+									943,
+									553
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 380,
+								"length": 25
+							}
+						]
+					},
+					{
+						"kind": "columnHeader",
+						"rowIndex": 0,
+						"columnIndex": 2,
+						"rowSpan": 2,
+						"columnSpan": 1,
+						"content": "Date",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									1067,
+									1430,
+									1071,
+									1913,
+									863,
+									1913,
+									860,
+									1433
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 406,
+								"length": 4
+							}
+						]
+					},
+					{
+						"kind": "columnHeader",
+						"rowIndex": 0,
+						"columnIndex": 3,
+						"rowSpan": 2,
+						"columnSpan": 1,
+						"content": "Healthcare Professional or Clinic Site",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									1071,
+									1913,
+									1080,
+									2764,
+									878,
+									2770,
+									863,
+									1913
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 411,
+								"length": 38
+							}
+						]
+					},
+					{
+						"kind": "columnHeader",
+						"rowIndex": 1,
+						"columnIndex": 1,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "Lot Number",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									943,
+									553,
+									960,
+									1431,
+									860,
+									1433,
+									838,
+									553
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 450,
+								"length": 10
+							}
+						]
+					},
+					{
+						"rowIndex": 2,
+						"columnIndex": 0,
+						"rowSpan": 2,
+						"columnSpan": 1,
+						"content": "1ª Dose\nCOVID-19 :unselected:",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									830,
+									216,
+									838,
+									553,
+									620,
+									553,
+									612,
+									217
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 461,
+								"length": 16
+							},
+							{
+								"offset": 716,
+								"length": 12
+							}
+						]
+					},
+					{
+						"rowIndex": 2,
+						"columnIndex": 1,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "Pfizer :unselected:",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									838,
+									553,
+									860,
+									1433,
+									752,
+									1434,
+									728,
+									553
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 478,
+								"length": 6
+							},
+							{
+								"offset": 703,
+								"length": 12
+							}
+						]
+					},
+					{
+						"rowIndex": 2,
+						"columnIndex": 2,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "07/22/21",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									860,
+									1433,
+									863,
+									1913,
+									761,
+									1916,
+									752,
+									1434
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 485,
+								"length": 8
+							}
+						]
+					},
+					{
+						"rowIndex": 2,
+						"columnIndex": 3,
+						"rowSpan": 2,
+						"columnSpan": 1,
+						"content": "Lamna Healthcare",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									863,
+									1913,
+									878,
+									2770,
+									673,
+									2775,
+									651,
+									1916
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 494,
+								"length": 16
+							}
+						]
+					},
+					{
+						"rowIndex": 3,
+						"columnIndex": 1,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "Cw 1289 :selected:",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									728,
+									553,
+									752,
+									1434,
+									645,
+									1434,
+									620,
+									553
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 511,
+								"length": 7
+							},
+							{
+								"offset": 740,
+								"length": 10
+							}
+						]
+					},
+					{
+						"rowIndex": 3,
+						"columnIndex": 2,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "mm' dd ' yy :selected:",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									752,
+									1434,
+									761,
+									1916,
+									651,
+									1916,
+									645,
+									1434
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 519,
+								"length": 11
+							},
+							{
+								"offset": 729,
+								"length": 10
+							}
+						]
+					},
+					{
+						"rowIndex": 4,
+						"columnIndex": 0,
+						"rowSpan": 2,
+						"columnSpan": 1,
+						"content": "2nd Dose COVID-19",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									612,
+									217,
+									620,
+									553,
+									405,
+									556,
+									396,
+									217
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 531,
+								"length": 17
+							}
+						]
+					},
+					{
+						"rowIndex": 4,
+						"columnIndex": 1,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "Pfizer :unselected:",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									620,
+									553,
+									645,
+									1434,
+									540,
+									1434,
+									515,
+									554
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 549,
+								"length": 6
+							},
+							{
+								"offset": 751,
+								"length": 12
+							}
+						]
+					},
+					{
+						"rowIndex": 4,
+						"columnIndex": 2,
+						"rowSpan": 2,
+						"columnSpan": 1,
+						"content": "08/20/21\nmm dd\nУУ :selected:",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									645,
+									1434,
+									651,
+									1916,
+									438,
+									1919,
+									432,
+									1434
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 556,
+								"length": 17
+							},
+							{
+								"offset": 764,
+								"length": 10
+							}
+						]
+					},
+					{
+						"rowIndex": 4,
+						"columnIndex": 3,
+						"rowSpan": 2,
+						"columnSpan": 1,
+						"content": "Lamna Healthcare",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									651,
+									1916,
+									673,
+									2775,
+									463,
+									2781,
+									438,
+									1919
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 574,
+								"length": 16
+							}
+						]
+					},
+					{
+						"rowIndex": 5,
+						"columnIndex": 1,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "CW2478",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									515,
+									554,
+									540,
+									1434,
+									432,
+									1434,
+									405,
+									556
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 591,
+								"length": 6
+							}
+						]
+					},
+					{
+						"rowIndex": 6,
+						"columnIndex": 0,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "Other",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									396,
+									217,
+									405,
+									556,
+									234,
+									557,
+									228,
+									220
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 598,
+								"length": 5
+							}
+						]
+					},
+					{
+						"rowIndex": 6,
+						"columnIndex": 1,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "Booster Pfizer F74691",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									405,
+									556,
+									432,
+									1434,
+									264,
+									1437,
+									234,
+									557
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 604,
+								"length": 21
+							}
+						]
+					},
+					{
+						"rowIndex": 6,
+						"columnIndex": 2,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "01/21/22 mm dd УУ",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									432,
+									1434,
+									438,
+									1919,
+									273,
+									1922,
+									264,
+									1437
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 626,
+								"length": 17
+							}
+						]
+					},
+					{
+						"rowIndex": 6,
+						"columnIndex": 3,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "Lamna Health care",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									438,
+									1919,
+									463,
+									2781,
+									297,
+									2784,
+									273,
+									1922
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 644,
+								"length": 17
+							}
+						]
+					},
+					{
+						"rowIndex": 7,
+						"columnIndex": 0,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "Other",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									228,
+									220,
+									234,
+									557,
+									61,
+									557,
+									55,
+									220
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 662,
+								"length": 5
+							}
+						]
+					},
+					{
+						"rowIndex": 7,
+						"columnIndex": 1,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									234,
+									557,
+									264,
+									1437,
+									96,
+									1437,
+									61,
+									557
+								]
+							}
+						],
+						"spans": []
+					},
+					{
+						"rowIndex": 7,
+						"columnIndex": 2,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "mm dd\nyy :unselected:\n:selected:",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									264,
+									1437,
+									273,
+									1922,
+									102,
+									1925,
+									96,
+									1437
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 668,
+								"length": 8
+							},
+							{
+								"offset": 775,
+								"length": 23
+							}
+						]
+					},
+					{
+						"rowIndex": 7,
+						"columnIndex": 3,
+						"rowSpan": 1,
+						"columnSpan": 1,
+						"content": "",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"boundingBox": [
+									273,
+									1922,
+									297,
+									2784,
+									129,
+									2789,
+									102,
+									1925
+								]
+							}
+						],
+						"spans": []
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"boundingBox": [
+							1043,
+							210,
+							1090,
+							2779,
+							104,
+							2797,
+							58,
+							227
+						]
+					}
+				],
+				"spans": [
+					{
+						"offset": 372,
+						"length": 304
+					},
+					{
+						"offset": 703,
+						"length": 95
+					}
+				]
+			}
+		],
+		"styles": [
+			{
+				"isHandwritten": true,
+				"confidence": 0.95,
+				"spans": [
+					{
+						"offset": 250,
+						"length": 4
+					},
+					{
+						"offset": 261,
+						"length": 2
+					},
+					{
+						"offset": 288,
+						"length": 10
+					},
+					{
+						"offset": 485,
+						"length": 8
+					},
+					{
+						"offset": 574,
+						"length": 16
+					},
+					{
+						"offset": 619,
+						"length": 6
+					}
+				]
+			},
+			{
+				"isHandwritten": true,
+				"confidence": 0.6,
+				"spans": [
+					{
+						"offset": 255,
+						"length": 5
+					}
+				]
+			},
+			{
+				"isHandwritten": true,
+				"confidence": 0.8,
+				"spans": [
+					{
+						"offset": 299,
+						"length": 5
+					}
+				]
+			},
+			{
+				"isHandwritten": true,
+				"confidence": 0.7,
+				"spans": [
+					{
+						"offset": 626,
+						"length": 8
+					}
+				]
+			}
+		]
+	}
+}

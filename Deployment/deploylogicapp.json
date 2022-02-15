@@ -1,0 +1,1871 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "suffixName": {
+            "type": "string",
+            "defaultValue": "z12",
+            "minLength": 3,
+            "maxLength": 10,
+            "metadata": {
+                "description": "Name the suffix between 3-10 characters with only characters and numbers"
+            }
+        },
+        "ADLSName": {
+            "type": "string",
+            "defaultValue": "xxx",
+            "minLength": 3,
+            "maxLength": 40,
+            "metadata": {
+                "description": "Name of your ADLS between 3-40 characters"
+            }
+        }, 
+        "Ocp-Apim-Subscription-Key": {
+            "type": "securestring",
+            "defaultValue": "",
+            "metadata": {
+                "description": "Form Recognizer Key"
+            }
+        },
+        "ComputerVisionKey": {
+            "type": "securestring",
+            "defaultValue": "",
+            "metadata": {
+                "description": "Computer Vision prediction key"
+            }
+        },
+        "ComputerVisionPredictions": {
+            "type": "string",
+            "defaultValue": "",
+            "metadata": {
+                "description": "Computer Vision predictions name"
+            }
+        },
+        "ProjectId": {
+            "type": "string",
+            "defaultValue": "",
+            "metadata": {
+                "description": "project id"
+            }
+        },
+        "SQLEndpoint": {
+            "type": "string",
+            "defaultValue": "",
+            "metadata": {
+                "description": "SQLendpoint name"
+            }
+        }, 
+        "FormsContainerSAS": {
+            "type": "securestring",
+            "defaultValue": "",
+            "metadata": {
+                "description": "ADLS SAS token for test forms container"
+            }
+        },
+        "VaccineCardsContainerSAS": {
+            "type": "securestring",
+            "defaultValue": "",
+            "metadata": {
+                "description": "ADLS SAS token for vaccine card container"
+            }
+        }      
+
+
+    },
+    "variables": {
+        "location": "[resourceGroup().location]",
+        "rgId": "[resourceGroup().id]",
+        "rgname": "[resourceGroup().name]",
+        "paramName": "[parameters('suffixName')]",
+        "uniqueName": "[substring(uniqueString(variables('rgId')),0,4)]",
+        "subscriptionId": "[subscription().subscriptionId]",
+
+        "logicapp": "[concat(variables('paramName'),variables('uniqueName'), 'testform')]",
+        "logicapp2": "[concat(variables('paramName'),variables('uniqueName'), 'vaccinationcard')]", 
+    
+        "blobconnection1": "azureblob-1", 
+        "outlookconnection1": "outlook-1", 
+        "blobconnection": "azureblob",
+        "outlookconnection": "outlook", 
+        "sqlconnection1":"sql-1", 
+        "sqlconnection":"sql"
+
+    },
+    "resources": [
+        {
+            "type": "Microsoft.Web/connections",
+            "apiVersion": "2016-06-01",
+            "name": "[variables('blobconnection')]",
+            "location": "[variables('location')]",
+            "kind": "V1",
+            "properties": {
+                "displayName": "ConnectADLS",
+                "statuses": [
+                    {
+                        "status": "Connected"
+                    }
+                ],
+                "customParameterValues": {},
+                "createdTime": "2021-11-03T22:36:08.4988727Z",
+                "changedTime": "2022-02-14T22:08:51.5519828Z",
+                "api": {
+                    "name": "[variables('blobconnection')]",
+                    "displayName": "Azure Blob Storage",
+                    "description": "Microsoft Azure Storage provides a massively scalable, durable, and highly available storage for data on the cloud, and serves as the data storage solution for modern applications. Connect to Blob Storage to perform various operations such as create, update, get and delete on blobs in your Azure Storage account.",
+                    "iconUri": "[concat('https://connectoricons-prod.azureedge.net/releases/v1.0.1550/1.0.1550.2686/', variables('blobconnection'), '/icon.png')]",
+                    "brandColor": "#804998",
+                    "id": "[concat('/subscriptions/', variables('subscriptionId'), '/providers/Microsoft.Web/locations/', variables('location'), '/managedApis/', variables('blobconnection'))]",
+                    "type": "Microsoft.Web/locations/managedApis"
+                },
+                "testLinks": [
+                    {
+                        "requestUri": "[concat('https://management.azure.com:443/subscriptions/', variables('subscriptionId'), '/resourceGroups/', variables('rgname'), '/providers/Microsoft.Web/connections/', variables('blobconnection'), '/extensions/proxy/testconnection?api-version=2016-06-01')]",
+                        "method": "get"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "Microsoft.Web/connections",
+            "apiVersion": "2016-06-01",
+            "name": "[variables('blobconnection1')]",
+            "location": "[variables('location')]",
+            "kind": "V1",
+            "properties": {
+                "displayName": "blobconnector2",
+                "statuses": [
+                    {
+                        "status": "Connected"
+                    }
+                ],
+                "customParameterValues": {},
+                "createdTime": "2022-01-24T17:49:54.6326348Z",
+                "changedTime": "2022-01-24T17:49:54.6326348Z",
+                "api": {
+                    "name": "azureblob",
+                    "displayName": "Azure Blob Storage",
+                    "description": "Microsoft Azure Storage provides a massively scalable, durable, and highly available storage for data on the cloud, and serves as the data storage solution for modern applications. Connect to Blob Storage to perform various operations such as create, update, get and delete on blobs in your Azure Storage account.",
+                    "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1551/1.0.1551.2693/azureblob/icon.png",
+                    "brandColor": "#804998",
+                    "id": "[concat('/subscriptions/', variables('subscriptionId'), '/providers/Microsoft.Web/locations/', variables('location'), '/managedApis/azureblob')]",
+                    "type": "Microsoft.Web/locations/managedApis"
+                },
+                "testLinks": [
+                    {
+                        "requestUri": "[concat('https://management.azure.com:443/subscriptions/', variables('subscriptionId'), '/resourceGroups/', variables('rgname'), '/providers/Microsoft.Web/connections/', variables('blobconnection1'), '/extensions/proxy/testconnection?api-version=2016-06-01')]",
+                        "method": "get"
+                    }
+                ]
+            }
+        },
+        
+        {
+            "type": "Microsoft.Web/connections",
+            "apiVersion": "2016-06-01",
+            "name": "[variables('outlookconnection')]",
+            "location": "[variables('location')]",
+            "kind": "V1",
+            "properties": {
+                "displayName": "Outlook.com",
+                "statuses": [
+                    {
+                        "status": "Connected"
+                    }
+                ],
+                "customParameterValues": {},
+                "nonSecretParameterValues": {},
+                "createdTime": "2021-11-03T18:50:37.0038115Z",
+                "changedTime": "2022-02-14T22:36:10.0427521Z",
+                "api": {
+                    "name": "[variables('outlookconnection')]",
+                    "displayName": "Outlook.com",
+                    "description": "Outlook.com connector allows you to manage your mail, calendars, and contacts. You can perform various actions such as send mail, schedule meetings, add contacts, etc.",
+                    "iconUri": "[concat('https://connectoricons-prod.azureedge.net/releases/v1.0.1546/1.0.1546.2667/', variables('outlookconnection'), '/icon.png')]",
+                    "brandColor": "#0078D4",
+                    "id": "[concat('/subscriptions/', variables('subscriptionId'), '/providers/Microsoft.Web/locations/', variables('location'), '/managedApis/', variables('outlookconnection'))]",
+                    "type": "Microsoft.Web/locations/managedApis"
+                },
+                "testLinks": [
+                    {
+                        "requestUri": "[concat('https://management.azure.com:443/subscriptions/', variables('subscriptionId'), '/resourceGroups/', variables('rgname'), '/providers/Microsoft.Web/connections/', variables('outlookconnection'), '/extensions/proxy/testconnection?api-version=2016-06-01')]",
+                        "method": "get"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "Microsoft.Web/connections",
+            "apiVersion": "2016-06-01",
+            "name": "[variables('outlookconnection1')]",
+            "location": "[variables('location')]",
+            "kind": "V1",
+            "properties": {
+                "displayName": "Outlook.com",
+                "statuses": [
+                    {
+                        "status": "Connected"
+                    }
+                ],
+                "customParameterValues": {},
+                "nonSecretParameterValues": {},
+                "createdTime": "2022-02-03T01:06:29.5486828Z",
+                "changedTime": "2022-02-14T22:23:08.9955824Z",
+                "api": {
+                    "name": "outlook",
+                    "displayName": "Outlook.com",
+                    "description": "Outlook.com connector allows you to manage your mail, calendars, and contacts. You can perform various actions such as send mail, schedule meetings, add contacts, etc.",
+                    "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1551/1.0.1551.2693/outlook/icon.png",
+                    "brandColor": "#0078D4",
+                    "id": "[concat('/subscriptions/', variables('subscriptionId'), '/providers/Microsoft.Web/locations/', variables('location'), '/managedApis/outlook')]",
+                    "type": "Microsoft.Web/locations/managedApis"
+                },
+                "testLinks": [
+                    {
+                        "requestUri": "[concat('https://management.azure.com:443/subscriptions/', variables('subscriptionId'), '/resourceGroups/', variables('rgname'), '/providers/Microsoft.Web/connections/', variables('outlookconnection1'), '/extensions/proxy/testconnection?api-version=2016-06-01')]",
+                        "method": "get"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "Microsoft.Web/connections",
+            "apiVersion": "2016-06-01",
+            "name": "[variables('sqlconnection')]",
+            "location": "[variables('location')]",
+            "kind": "V1",
+            "properties": {
+                "displayName": "[concat(variables('sqlconnection'), 'connector2')]",
+                "statuses": [
+                    {
+                        "status": "Connected"
+                    }
+                ],
+                "customParameterValues": {},
+                "createdTime": "2022-01-24T17:53:32.699477Z",
+                "changedTime": "2022-02-14T22:08:16.4936029Z",
+                "api": {
+                    "name": "[variables('sqlconnection')]",
+                    "displayName": "SQL Server",
+                    "description": "Microsoft SQL Server is a relational database management system developed by Microsoft. Connect to SQL Server to manage data. You can perform various actions such as create, update, get, and delete on rows in a table.",
+                    "iconUri": "[concat('https://connectoricons-prod.azureedge.net/laborbol/patches/1520/', variables('sqlconnection'), '-mi/1.0.1520.2574/', variables('sqlconnection'), '/icon.png')]",
+                    "brandColor": "#ba141a",
+                    "id": "[concat('/subscriptions/', variables('subscriptionId'), '/providers/Microsoft.Web/locations/', variables('location'), '/managedApis/', variables('sqlconnection'))]",
+                    "type": "Microsoft.Web/locations/managedApis"
+                },
+                "testLinks": [
+                    {
+                        "requestUri": "[concat('https://management.azure.com:443/subscriptions/', variables('subscriptionId'), '/resourceGroups/', variables('rgname'),'/providers/Microsoft.Web/connections/', variables('sqlconnection'), '/extensions/proxy/testconnection?api-version=2016-06-01')]",
+                        "method": "get"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "Microsoft.Web/connections",
+            "apiVersion": "2016-06-01",
+            "name": "[variables('sqlconnection1')]",
+            "location": "[variables('location')]",
+            "kind": "V1",
+            "properties": {
+                "displayName": "SQLconnection",
+                "statuses": [
+                    {
+                        "status": "Connected"
+                    }
+                ],
+                "customParameterValues": {},
+                "createdTime": "2022-02-03T00:02:41.0563959Z",
+                "changedTime": "2022-02-14T22:08:51.4263332Z",
+                "api": {
+                    "name": "sql",
+                    "displayName": "SQL Server",
+                    "description": "Microsoft SQL Server is a relational database management system developed by Microsoft. Connect to SQL Server to manage data. You can perform various actions such as create, update, get, and delete on rows in a table.",
+                    "iconUri": "https://connectoricons-prod.azureedge.net/laborbol/patches/1520/sql-mi/1.0.1520.2574/sql/icon.png",
+                    "brandColor": "#ba141a",
+                    "id": "[concat('/subscriptions/', variables('subscriptionId'), '/providers/Microsoft.Web/locations/', variables('location'), '/managedApis/sql')]",
+                    "type": "Microsoft.Web/locations/managedApis"
+                },
+                "testLinks": [
+                    {
+                        "requestUri": "[concat('https://management.azure.com:443/subscriptions/', variables('subscriptionId'), '/resourceGroups/', variables('rgname'), '/providers/Microsoft.Web/connections/', variables('sqlconnection1'), '/extensions/proxy/testconnection?api-version=2016-06-01')]",
+                        "method": "get"
+                    }
+                ]
+            }
+        },
+        
+        
+        
+        {
+            "type": "Microsoft.Logic/workflows",
+            "apiVersion": "2017-07-01",
+            "name": "[variables('logicapp')]",
+            "location": "[variables('location')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/connections', variables('blobconnection'))]",
+                "[resourceId('Microsoft.Web/connections', variables('outlookconnection'))]",
+                "[resourceId('Microsoft.Web/connections', variables('sqlconnection1'))]"
+            ],
+            "properties": {
+                "state": "Enabled",
+                "definition": {
+                    "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+                    "contentVersion": "1.0.0.0",
+                    "parameters": {
+                        "$connections": {
+                            "defaultValue": {},
+                            "type": "Object"
+                        }
+                    },
+                    "triggers": {
+                        "When_a_new_email_arrives_(V2)": {
+                            "splitOn": "@triggerBody()?['value']",
+                            "type": "ApiConnectionNotification",
+                            "inputs": {
+                                "fetch": {
+                                    "method": "get",
+                                    "pathTemplate": {
+                                        "template": "/v2/Mail/OnNewEmail"
+                                    },
+                                    "queries": {
+                                        "fetchOnlyWithAttachment": true,
+                                        "folderPath": "Inbox",
+                                        "importance": "Any",
+                                        "includeAttachments": true
+                                    }
+                                },
+                                "host": {
+                                    "connection": {
+                                        "name": "@parameters('$connections')['outlook']['connectionId']"
+                                    }
+                                },
+                                "subscribe": {
+                                    "body": {
+                                        "NotificationUrl": "@{listCallbackUrl()}"
+                                    },
+                                    "method": "post",
+                                    "pathTemplate": {
+                                        "template": "/MailSubscriptionPoke/$subscriptions"
+                                    },
+                                    "queries": {
+                                        "fetchOnlyWithAttachment": true,
+                                        "folderPath": "Inbox",
+                                        "importance": "Any"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "actions": {
+                        "Certify": {
+                            "runAfter": {
+                                "TestType": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "Certify",
+                                        "type": "boolean",
+                                        "value": "@contains(if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['EmployeeCertified'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['EmployeeCertified']['content'],'NA'),'selected')"
+                                    }
+                                ]
+                            }
+                        },
+                        "CreatedDate": {
+                            "runAfter": {
+                                "UserID": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "tsNow",
+                                        "type": "string",
+                                        "value": "@{utcNow()}"
+                                    }
+                                ]
+                            }
+                        },
+                        "Delay": {
+                            "runAfter": {
+                                "Initialize_and_Set_resultURL_Variable": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "Wait",
+                            "inputs": {
+                                "interval": {
+                                    "count": 10,
+                                    "unit": "Second"
+                                }
+                            }
+                        },
+                        "FirstName": {
+                            "runAfter": {
+                                "GUID": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "FirstName",
+                                        "type": "string",
+                                        "value": "@{if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['Firstname'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['Firstname']['content'],'NA')}"
+                                    }
+                                ]
+                            }
+                        },
+                        "For_each": {
+                            "foreach": "@triggerBody()?['Attachments']",
+                            "actions": {
+                                "Create_blob_(V2)": {
+                                    "runAfter": {},
+                                    "type": "ApiConnection",
+                                    "inputs": {
+                                        "body": "@base64ToBinary(items('For_each')?['ContentBytes'])",
+                                        "headers": {
+                                            "ReadFileMetadataFromServer": true
+                                        },
+                                        "host": {
+                                            "connection": {
+                                                "name": "@parameters('$connections')['azureblob']['connectionId']"
+                                            }
+                                        },
+                                        "method": "post",
+                                        "path": "[concat('/v2/datasets/@{encodeURIComponent(encodeURIComponent(''', parameters('ADLSName'),'''))}/files')]",
+                                        "queries": {
+                                            "folderPath": "/forms/raw/",
+                                            "name": "@{variables('UserID')}-@{variables('tsNow')}.pdf",
+                                            "queryParametersSingleEncoded": true
+                                        }
+                                    },
+                                    "runtimeConfiguration": {
+                                        "contentTransfer": {
+                                            "transferMode": "Chunked"
+                                        }
+                                    }
+                                }
+                            },
+                            "runAfter": {
+                                "UserNotes": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "Foreach"
+                        },
+                        "GUID": {
+                            "runAfter": {
+                                "HTTP2": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "guid",
+                                        "type": "string",
+                                        "value": "@{guid()}"
+                                    }
+                                ]
+                            }
+                        },
+                        "HTTP": {
+                            "runAfter": {
+                                "formscontainersas": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "Http",
+                            "inputs": {
+                                "body": {
+                                    "urlSource": "https://@{variables('Storageaccountname')}.blob.core.windows.net/@{variables('Containername')}/@{variables('UserID')}-@{variables('tsNow')}.pdf/?@{variables('formscontainersas')}"
+                                },
+                                "headers": {
+                                    "Ocp-Apim-Subscription-Key": "@variables('Ocp-Apim-Subscription-Key')",
+                                    "content-type": "application/json",
+                                    "host": "@{variables('Location')}.api.cognitive.microsoft.com"
+                                },
+                                "method": "POST",
+                                "uri": "https://@{variables('Location')}.api.cognitive.microsoft.com/formrecognizer/documentModels/@{variables('ModelName')}:analyze?api-version=2021-09-30-preview"
+                            }
+                        },
+                        "HTTP2": {
+                            "runAfter": {
+                                "Delay": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "Http",
+                            "inputs": {
+                                "headers": {
+                                    "Ocp-Apim-Subscription-Key": "@variables('Ocp-Apim-Subscription-Key')"
+                                },
+                                "method": "GET",
+                                "uri": "@variables('resultURL')"
+                            }
+                        },
+                        "Initialize_and_Set_resultURL_Variable": {
+                            "runAfter": {
+                                "HTTP": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "resultURL",
+                                        "type": "string",
+                                        "value": "@{outputs('HTTP')['headers']?['Operation-Location']}"
+                                    }
+                                ]
+                            }
+                        },
+                        "Insert_fields_into_dbo.Tests": {
+                            "runAfter": {
+                                "Insert_fields_into_dbo.Users": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "ApiConnection",
+                            "inputs": {
+                                "body": {
+                                    "query": "INSERT INTO dbo.Tests\nVALUES\n\t('@{variables('guid')}', @{variables('UserID')}, '@{variables('UserEmail')}', '@{variables('Firstname')}', '@{variables('Lastname')}', '@{variables('Worklocation')}', '@{variables('Title')}', '@{variables('TestDate')}', '@{variables('TestLocationName')}', '@{variables('TestAddress')}', '@{variables('TestType')}', '@{variables('Certify')}', '@{variables('Signature')}', '@{variables('SignedDate')}', '@{variables('UserNotes')}', '@{variables('tsNow')}', 'Email')"
+                                },
+                                "host": {
+                                    "connection": {
+                                        "name": "@parameters('$connections')['sql']['connectionId']"
+                                    }
+                                },
+                                "method": "post",
+                                "path": "[concat('/v2/datasets/@{encodeURIComponent(encodeURIComponent(''', parameters('SQLEndpoint'),'''))},@{encodeURIComponent(encodeURIComponent(''sqlpool1''))}/query/sql')]"
+                            }
+                        },
+                        "Insert_fields_into_dbo.Users": {
+                            "runAfter": {
+                                "SignedDate": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "ApiConnection",
+                            "inputs": {
+                                "body": {
+                                    "query": "INSERT INTO dbo.Users\nVALUES\n\t(@{variables('UserID')}, '@{variables('Firstname')}', '@{variables('Lastname')}', '@{variables('Title')}','@{variables('Worklocation')}','Other')"
+                                },
+                                "host": {
+                                    "connection": {
+                                        "name": "@parameters('$connections')['sql']['connectionId']"
+                                    }
+                                },
+                                "method": "post",
+                                "path": "[concat('/v2/datasets/@{encodeURIComponent(encodeURIComponent(''', parameters('SQLEndpoint'), '''))},@{encodeURIComponent(encodeURIComponent(''sqlpool1''))}/query/sql')]"
+                            }
+                        },
+                        "LastName": {
+                            "runAfter": {
+                                "FirstName": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "LastName",
+                                        "type": "string",
+                                        "value": "@{if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['Lastname'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['Lastname']['content'],'NA')}"
+                                    }
+                                ]
+                            }
+                        },
+                        "Signature": {
+                            "runAfter": {
+                                "Certify": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "Signature",
+                                        "type": "boolean",
+                                        "value": "@contains(if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['EmployeeSignature'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['EmployeeSignature']['valueSignature'],'Na'),'signed')"
+                                    }
+                                ]
+                            }
+                        },
+                        "SignedDate": {
+                            "runAfter": {
+                                "Signature": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "SignedDate",
+                                        "type": "string",
+                                        "value": "@{if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['SignedDate'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['SignedDate']['content'],'')}"
+                                    }
+                                ]
+                            }
+                        },
+                        "TestAddress": {
+                            "runAfter": {
+                                "TestLocationName": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "TestAddress",
+                                        "type": "string",
+                                        "value": "@{if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['AddressOfTestingLocation'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['AddressOfTestingLocation']['content'],'NA')}"
+                                    }
+                                ]
+                            }
+                        },
+                        "TestDate": {
+                            "runAfter": {
+                                "Title": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "TestDate",
+                                        "type": "string",
+                                        "value": "@{if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['Testdate'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['Testdate']['content'],'')}"
+                                    }
+                                ]
+                            }
+                        },
+                        "TestLocationName": {
+                            "runAfter": {
+                                "Testinglocation-AdatumCorporation": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "TestLocationName",
+                                        "type": "string",
+                                        "value": "@{if(equals(variables('ContosoPharmaceuticals'),'selected'),'Contoso Pharmaceuticals',if(equals(variables('AdatumCorporation'),'selected'),'Adatum Corporation',if(equals(variables('LamnaHealthcareCompany'),'selected'),'Lamna Healthcare Company','Other')))}"
+                                    }
+                                ]
+                            }
+                        },
+                        "TestType": {
+                            "runAfter": {
+                                "Testtype-Serology": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "TestType",
+                                        "type": "string",
+                                        "value": "@{if(equals(variables('Testtype-PCR'),'selected'),'PCR',if(equals(variables('Testtype-Rapid'),'Rapid'),'Adatum Corporation',if(equals(variables('Testtype-Serology'),'selected'),'Serology','Other')))}"
+                                    }
+                                ]
+                            }
+                        },
+                        "Testinglocation-AdatumCorporation": {
+                            "runAfter": {
+                                "Testinglocation-LamnaHealthcareCompany": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "AdatumCorporation",
+                                        "type": "string",
+                                        "value": "@{if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['Testinglocation-AdatumCorporation'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['Testinglocation-AdatumCorporation']['content'],'')}"
+                                    }
+                                ]
+                            }
+                        },
+                        "Testinglocation-ContosoPharmaceuticals": {
+                            "runAfter": {
+                                "TestDate": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "ContosoPharmaceuticals",
+                                        "type": "string",
+                                        "value": "@{if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['Testinglocation-ContosoPharmaceuticals'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['Testinglocation-ContosoPharmaceuticals']['content'],'')}"
+                                    }
+                                ]
+                            }
+                        },
+                        "Testinglocation-LamnaHealthcareCompany": {
+                            "runAfter": {
+                                "Testinglocation-ContosoPharmaceuticals": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "LamnaHealthcareCompany",
+                                        "type": "string",
+                                        "value": "@{if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['Testinglocation-LamnaHealthcareCompany'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['Testinglocation-LamnaHealthcareCompany']['content'],'')}"
+                                    }
+                                ]
+                            }
+                        },
+                        "Testtype-PCR": {
+                            "runAfter": {
+                                "TestAddress": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "Testtype-PCR",
+                                        "type": "string",
+                                        "value": "@{if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['Testtype-PCR'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['Testtype-PCR']['content'],'')}"
+                                    }
+                                ]
+                            }
+                        },
+                        "Testtype-Rapid": {
+                            "runAfter": {
+                                "Testtype-PCR": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "Testtype-Rapid",
+                                        "type": "string",
+                                        "value": "@{if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['Testtype-Rapid'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['Testtype-Rapid']['content'],'')}"
+                                    }
+                                ]
+                            }
+                        },
+                        "Testtype-Serology": {
+                            "runAfter": {
+                                "Testtype-Rapid": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "Testtype-Serology",
+                                        "type": "string",
+                                        "value": "@{if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['Testtype-Serology'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['Testtype-Serology']['content'],'')}"
+                                    }
+                                ]
+                            }
+                        },
+                        "Title": {
+                            "runAfter": {
+                                "WorkLocation": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "Title",
+                                        "type": "string",
+                                        "value": "@{if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['Title'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['Title']['content'],'NA')}"
+                                    }
+                                ]
+                            }
+                        },
+                        "UserEmail": {
+                            "runAfter": {},
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "UserEmail",
+                                        "type": "string",
+                                        "value": "@triggerBody()?['From']"
+                                    }
+                                ]
+                            }
+                        },
+                        "UserID": {
+                            "runAfter": {
+                                "UserEmail": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "UserID",
+                                        "type": "string",
+                                        "value": "@triggerBody()?['Subject']"
+                                    }
+                                ]
+                            }
+                        },
+                        "UserNotes": {
+                            "runAfter": {
+                                "CreatedDate": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "UserNotes",
+                                        "type": "string",
+                                        "value": "@triggerBody()?['BodyPreview']"
+                                    }
+                                ]
+                            }
+                        },
+                        "WorkLocation": {
+                            "runAfter": {
+                                "LastName": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "WorkLocation",
+                                        "type": "string",
+                                        "value": "@{if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['Worklocation'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['Worklocation']['content'],'NA')}"
+                                    }
+                                ]
+                            }
+                        },
+                        "[INPUT]_Container_Name": {
+                            "runAfter": {
+                                "[INPUT]_Storage_Account_Name": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "Containername",
+                                        "type": "string",
+                                        "value": "forms/raw"
+                                    }
+                                ]
+                            }
+                        },
+                        "[INPUT]_FR_access_Key": {
+                            "runAfter": {
+                                "[INPUT]_ModelName_of_FR_created": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "Ocp-Apim-Subscription-Key",
+                                        "type": "string",
+                                        "value": "[parameters('Ocp-Apim-Subscription-Key')]"
+                                    }
+                                ]
+                            }
+                        },
+                        "[INPUT]_Location_where_FR_was_created": {
+                            "runAfter": {
+                                "For_each": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "Location",
+                                        "type": "string",
+                                        "value": "[variables('location')]"
+                                    }
+                                ]
+                            }
+                        },
+                        "[INPUT]_ModelName_of_FR_created": {
+                            "runAfter": {
+                                "[INPUT]_Location_where_FR_was_created": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "ModelName",
+                                        "type": "string",
+                                        "value": "CovidSAmodel"
+                                    }
+                                ]
+                            }
+                        },
+                        "[INPUT]_Storage_Account_Name": {
+                            "runAfter": {
+                                "[INPUT]_FR_access_Key": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "Storageaccountname",
+                                        "type": "string",
+                                        "value": "[parameters('ADLSName')]"
+                                    }
+                                ]
+                            }
+                        },
+                        "formscontainersas": {
+                            "runAfter": {
+                                "[INPUT]_Container_Name": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "formscontainersas",
+                                        "type": "string",
+                                        "value": "[parameters('FormsContainerSAS')]"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "outputs": {}
+                },
+                "parameters": {
+                    "$connections": {
+                        "value": {
+                            "azureblob": {
+                                "connectionId": "[resourceId('Microsoft.Web/connections', variables('blobconnection'))]",
+                                "connectionName": "azureblob",
+                                "id": "[concat('/subscriptions/', variables('subscriptionId'), '/providers/Microsoft.Web/locations/', variables('location'), '/managedApis/azureblob')]"
+                            },
+                            "outlook": {
+                                "connectionId": "[resourceId('Microsoft.Web/connections', variables('outlookconnection'))]",
+                                "connectionName": "outlook",
+                                "id": "[concat('/subscriptions/', variables('subscriptionId'), '/providers/Microsoft.Web/locations/', variables('location'), '/managedApis/outlook')]"
+                            },
+                            "sql": {
+                                "connectionId": "[resourceId('Microsoft.Web/connections', variables('sqlconnection1'))]",
+                                "connectionName": "[variables('sqlconnection1')]",
+                                "id": "[concat('/subscriptions/', variables('subscriptionId'),'/providers/Microsoft.Web/locations/', variables('location'), '/managedApis/sql')]"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Logic/workflows",
+            "apiVersion": "2017-07-01",
+            "name": "[variables('logicapp2')]",
+            "location": "[variables('location')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/connections', variables('blobconnection1'))]",
+                "[resourceId('Microsoft.Web/connections', variables('outlookconnection1'))]",
+                "[resourceId('Microsoft.Web/connections', variables('sqlconnection'))]"
+            ],
+            "properties": {
+                "state": "Enabled",
+                "definition": {
+                    "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+                    "contentVersion": "1.0.0.0",
+                    "parameters": {
+                        "$connections": {
+                            "defaultValue": {},
+                            "type": "Object"
+                        }
+                    },
+                    "triggers": {
+                        "When_a_new_email_arrives_(V2)": {
+                            "splitOn": "@triggerBody()?['value']",
+                            "type": "ApiConnectionNotification",
+                            "inputs": {
+                                "fetch": {
+                                    "method": "get",
+                                    "pathTemplate": {
+                                        "template": "/v2/Mail/OnNewEmail"
+                                    },
+                                    "queries": {
+                                        "fetchOnlyWithAttachment": true,
+                                        "folderPath": "Inbox",
+                                        "importance": "Any",
+                                        "includeAttachments": true
+                                    }
+                                },
+                                "host": {
+                                    "connection": {
+                                        "name": "@parameters('$connections')['outlook']['connectionId']"
+                                    }
+                                },
+                                "subscribe": {
+                                    "body": {
+                                        "NotificationUrl": "@{listCallbackUrl()}"
+                                    },
+                                    "method": "post",
+                                    "pathTemplate": {
+                                        "template": "/MailSubscriptionPoke/$subscriptions"
+                                    },
+                                    "queries": {
+                                        "fetchOnlyWithAttachment": true,
+                                        "folderPath": "Inbox",
+                                        "importance": "Any"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "actions": {
+                        "CDCLogoPresent": {
+                            "runAfter": {
+                                "PatientNumber": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "CDCLogoPresent",
+                                        "type": "boolean",
+                                        "value": "@greater(body('HTTP3')['predictions'][0]['probability'],0.9)"
+                                    }
+                                ]
+                            }
+                        },
+                        "CreatedDate": {
+                            "runAfter": {
+                                "UserID": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "tsNow",
+                                        "type": "string",
+                                        "value": "@{utcNow()}"
+                                    }
+                                ]
+                            }
+                        },
+                        "DateOfBirth": {
+                            "runAfter": {
+                                "MiddleInitial": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "DateOfBirth",
+                                        "type": "string",
+                                        "value": "@{if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['DateOfBirth'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['DateOfBirth']['content'],'')}"
+                                    }
+                                ]
+                            }
+                        },
+                        "Delay": {
+                            "runAfter": {
+                                "resultURL_variable": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "Wait",
+                            "inputs": {
+                                "interval": {
+                                    "count": 10,
+                                    "unit": "Second"
+                                }
+                            }
+                        },
+                        "FirstDoseDate": {
+                            "runAfter": {
+                                "FirstDoseLotNumber": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "FirstDoseDate",
+                                        "type": "string",
+                                        "value": "@{if(contains(if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['FirstDoseDate'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['FirstDoseDate']['content'],'NA'),'/'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['FirstDoseDate']['content'],'12/31/2020')}"
+                                    }
+                                ]
+                            }
+                        },
+                        "FirstDoseLotNumber": {
+                            "runAfter": {
+                                "FirstDoseManufacturer": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "FirstDoseLotNumber",
+                                        "type": "string",
+                                        "value": "@{if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['FirstDoseLotNumber'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['FirstDoseLotNumber']['content'],'NA')}"
+                                    }
+                                ]
+                            }
+                        },
+                        "FirstDoseManufacturer": {
+                            "runAfter": {
+                                "CDCLogoPresent": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "FirstDoseManufacturer",
+                                        "type": "string",
+                                        "value": "@{if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['FirstDoseManufacturer'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['FirstDoseManufacturer']['content'],'NA')}"
+                                    }
+                                ]
+                            }
+                        },
+                        "FirstDoseSite": {
+                            "runAfter": {
+                                "FirstDoseDate": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "FirstDoseSite",
+                                        "type": "string",
+                                        "value": "@{if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['FirstDoseSite'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['FirstDoseSite']['content'],'NA')}"
+                                    }
+                                ]
+                            }
+                        },
+                        "Firstname": {
+                            "runAfter": {
+                                "Lastname": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "Firstname",
+                                        "type": "string",
+                                        "value": "@{if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['Firstname'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['Firstname']['content'],'NA')}"
+                                    }
+                                ]
+                            }
+                        },
+                        "For_each": {
+                            "foreach": "@triggerBody()?['Attachments']",
+                            "actions": {
+                                "Create_blob_(V2)": {
+                                    "runAfter": {},
+                                    "type": "ApiConnection",
+                                    "inputs": {
+                                        "body": "@base64ToBinary(items('For_each')?['ContentBytes'])",
+                                        "headers": {
+                                            "ReadFileMetadataFromServer": true
+                                        },
+                                        "host": {
+                                            "connection": {
+                                                "name": "@parameters('$connections')['azureblob_1']['connectionId']"
+                                            }
+                                        },
+                                        "method": "post",
+                                        "path": "/v2/datasets/@{encodeURIComponent(encodeURIComponent('AccountNameFromSettings'))}/files",
+                                        "queries": {
+                                            "folderPath": "/vaccinecards/raw/",
+                                            "name": "@{variables('UserID')}-@{variables('tsNow')}.pdf",
+                                            "queryParametersSingleEncoded": true
+                                        }
+                                    },
+                                    "runtimeConfiguration": {
+                                        "contentTransfer": {
+                                            "transferMode": "Chunked"
+                                        }
+                                    }
+                                }
+                            },
+                            "runAfter": {
+                                "GUID": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "Foreach"
+                        },
+                        "GUID": {
+                            "runAfter": {
+                                "UserNotes": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "guid",
+                                        "type": "string",
+                                        "value": "@{guid()}"
+                                    }
+                                ]
+                            }
+                        },
+                        "HTTP": {
+                            "runAfter": {
+                                "vaccinecardscontainersas": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "Http",
+                            "inputs": {
+                                "body": {
+                                    "urlSource": "https://@{variables('Storageaccountname')}.blob.core.windows.net/@{variables('Containername')}/@{variables('UserID')}-@{variables('tsNow')}.pdf/?@{variables('vaccinecardscontainersas')}"
+                                },
+                                "headers": {
+                                    "Ocp-Apim-Subscription-Key": "@variables('Ocp-Apim-Subscription-Key')",
+                                    "content-type": "application/json",
+                                    "host": "@{variables('Location')}.api.cognitive.microsoft.com"
+                                },
+                                "method": "POST",
+                                "uri": "https://@{variables('Location')}.api.cognitive.microsoft.com/formrecognizer/documentModels/@{variables('ModelName')}:analyze?api-version=2021-09-30-preview"
+                            }
+                        },
+                        "HTTP2": {
+                            "runAfter": {
+                                "Delay": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "Http",
+                            "inputs": {
+                                "headers": {
+                                    "Ocp-Apim-Subscription-Key": "@variables('Ocp-Apim-Subscription-Key')"
+                                },
+                                "method": "GET",
+                                "uri": "@variables('resultURL')"
+                            }
+                        },
+                        "HTTP3": {
+                            "runAfter": {
+                                "HTTP2": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "Http",
+                            "inputs": {
+                                "body": {
+                                    "url": "https://@{variables('Storageaccountname')}.blob.core.windows.net/@{variables('Containername')}/@{variables('UserID')}-@{variables('tsNow')}.pdf/?@{variables('vaccinecardscontainersas')}"
+                                },
+                                "headers": {
+                                    "Prediction-Key": "@variables('CVPredictionKey')",
+                                    "content-type": "application/json"
+                                },
+                                "method": "POST",
+                                "uri": "https://@{variables('CVresourceName')}.cognitiveservices.azure.com/customvision/v3.0/Prediction/@{variables('ProjectID')}/detect/iterations/@{variables('ModelNameCV')}/url"
+                            }
+                        },
+                        "Insert_fields_into_dbo.Vaccination": {
+                            "runAfter": {
+                                "OtherDose2Site": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "ApiConnection",
+                            "inputs": {
+                                "body": {
+                                    "query": "INSERT INTO dbo.Vaccination\nVALUES ('@{variables('guid')}', '@{variables('UserEmail')}', @{variables('UserID')}, '@{variables('LastName')}', '@{variables('Firstname')}', '@{variables('MiddleInitial')}', '@{variables('DateOfBirth')}', '@{variables('PatientNumber')}', '@{variables('CDCLogoPresent')}', '@{variables('FirstDoseManufacturer')}', '@{variables('FirstDoseLotNumber')}', '@{variables('FirstDoseDate')}', '@{variables('FirstDoseSite')}', '@{variables('SecondDoseManufacturer')}', '@{variables('SecondDoseLotNumber')}', '@{variables('SecondDoseDate')}', '@{variables('SecondDoseSite')}', '@{variables('OtherDose1Manufacturer')}', '@{variables('OtherDose1LotNumber')}', '@{variables('OtherDose1Date')}', '@{variables('OtherDose1Site')}', '@{variables('OtherDose2Manufacturer')}', '@{variables('OtherDose2LotNumber')}', '@{variables('OtherDose2Date')}', '@{variables('OtherDose2Site')}', '@{variables('UserNotes')}','@{variables('tsNow')}', 'Email')"
+                                },
+                                "host": {
+                                    "connection": {
+                                        "name": "@parameters('$connections')['sql_1']['connectionId']"
+                                    }
+                                },
+                                "method": "post",
+                                "path": "[concat('/v2/datasets/@{encodeURIComponent(encodeURIComponent(''', parameters('SQLEndpoint'), '''))},@{encodeURIComponent(encodeURIComponent(''sqlpool1''))}/query/sql')]"
+                            }
+                        },
+                        "Lastname": {
+                            "runAfter": {
+                                "HTTP3": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "LastName",
+                                        "type": "string",
+                                        "value": "@{if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['Lastname'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['Lastname']['content'],'NA')}"
+                                    }
+                                ]
+                            }
+                        },
+                        "MiddleInitial": {
+                            "runAfter": {
+                                "Firstname": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "MiddleInitial",
+                                        "type": "string",
+                                        "value": "@{if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['MiddleInitial'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['MiddleInitial']['content'],'NA')}"
+                                    }
+                                ]
+                            }
+                        },
+                        "OtherDose1Date": {
+                            "runAfter": {
+                                "OtherDose1LotNumber": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "OtherDose1Date",
+                                        "type": "string",
+                                        "value": "@{if(contains(if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['OtherDose1Date'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['OtherDose1Date']['content'],'NA'),'/'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['OtherDose1Date']['content'],'12/31/2020')}"
+                                    }
+                                ]
+                            }
+                        },
+                        "OtherDose1LotNumber": {
+                            "runAfter": {
+                                "OtherDose1Manufacturer": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "OtherDose1LotNumber",
+                                        "type": "string",
+                                        "value": "@{if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['OtherDose1LotNumber'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['OtherDose1LotNumber']['content'],'NA')}"
+                                    }
+                                ]
+                            }
+                        },
+                        "OtherDose1Manufacturer": {
+                            "runAfter": {
+                                "SecondDoseSite": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "OtherDose1Manufacturer",
+                                        "type": "string",
+                                        "value": "@{if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['OtherDose1Manufacturer'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['OtherDose1Manufacturer']['content'],'NA')}"
+                                    }
+                                ]
+                            }
+                        },
+                        "OtherDose1Site": {
+                            "runAfter": {
+                                "OtherDose1Date": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "OtherDose1Site",
+                                        "type": "string",
+                                        "value": "@{if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['OtherDose1Site'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['OtherDose1Site']['content'],'NA')}"
+                                    }
+                                ]
+                            }
+                        },
+                        "OtherDose2Date": {
+                            "runAfter": {
+                                "OtherDose2LotNumber": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "OtherDose2Date",
+                                        "type": "string",
+                                        "value": "@{if(contains(if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['OtherDose2Date'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['OtherDose2Date']['content'],'NA'),'/'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['OtherDose2Date']['content'],'12/31/2020')}"
+                                    }
+                                ]
+                            }
+                        },
+                        "OtherDose2LotNumber": {
+                            "runAfter": {
+                                "OtherDose2Manufacturer": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "OtherDose2LotNumber",
+                                        "type": "string",
+                                        "value": "@{if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['OtherDose2LotNumber'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['OtherDose2LotNumber']['content'],'NA')}"
+                                    }
+                                ]
+                            }
+                        },
+                        "OtherDose2Manufacturer": {
+                            "runAfter": {
+                                "OtherDose1Site": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "OtherDose2Manufacturer",
+                                        "type": "string",
+                                        "value": "@{if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['OtherDose2Manufacturer'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['OtherDose2Manufacturer']['content'],'NA')}"
+                                    }
+                                ]
+                            }
+                        },
+                        "OtherDose2Site": {
+                            "runAfter": {
+                                "OtherDose2Date": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "OtherDose2Site",
+                                        "type": "string",
+                                        "value": "@{if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['OtherDose2Site'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['OtherDose2Site']['content'],'NA')}"
+                                    }
+                                ]
+                            }
+                        },
+                        "PatientNumber": {
+                            "runAfter": {
+                                "DateOfBirth": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "PatientNumber",
+                                        "type": "string",
+                                        "value": "@{if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['PatientNumber'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['PatientNumber']['content'],'NA')}"
+                                    }
+                                ]
+                            }
+                        },
+                        "SecondDoseDate": {
+                            "runAfter": {
+                                "SecondDoseLotNumber": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "SecondDoseDate",
+                                        "type": "string",
+                                        "value": "@{if(contains(if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['SecondDoseDate'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['SecondDoseDate']['content'],'NA'),'/'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['SecondDoseDate']['content'],'12/31/2020')}"
+                                    }
+                                ]
+                            }
+                        },
+                        "SecondDoseLotNumber": {
+                            "runAfter": {
+                                "SecondDoseManufacturer": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "SecondDoseLotNumber",
+                                        "type": "string",
+                                        "value": "@{if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['SecondDoseLotNumber'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['SecondDoseLotNumber']['content'],'NA')}"
+                                    }
+                                ]
+                            }
+                        },
+                        "SecondDoseManufacturer": {
+                            "runAfter": {
+                                "FirstDoseSite": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "SecondDoseManufacturer",
+                                        "type": "string",
+                                        "value": "@{if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['SecondDoseManufacturer'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['SecondDoseManufacturer']['content'],'NA')}"
+                                    }
+                                ]
+                            }
+                        },
+                        "SecondDoseSite": {
+                            "runAfter": {
+                                "SecondDoseDate": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "SecondDoseSite",
+                                        "type": "string",
+                                        "value": "@{if(contains(body('HTTP2')['analyzeResult']['documents'][0]['fields']['SecondDoseSite'],'content'),body('HTTP2')['analyzeResult']['documents'][0]['fields']['SecondDoseSite']['content'],'NA')}"
+                                    }
+                                ]
+                            }
+                        },
+                        "UserEmail": {
+                            "runAfter": {},
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "UserEmail",
+                                        "type": "string",
+                                        "value": "@triggerBody()?['From']"
+                                    }
+                                ]
+                            }
+                        },
+                        "UserID": {
+                            "runAfter": {
+                                "UserEmail": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "UserID",
+                                        "type": "string",
+                                        "value": "@triggerBody()?['Subject']"
+                                    }
+                                ]
+                            }
+                        },
+                        "UserNotes": {
+                            "runAfter": {
+                                "CreatedDate": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "UserNotes",
+                                        "type": "string",
+                                        "value": "@triggerBody()?['BodyPreview']"
+                                    }
+                                ]
+                            }
+                        },
+                        "[INPUT]_Container_Name": {
+                            "runAfter": {
+                                "[INPUT]_Storage_Account_Name": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "Containername",
+                                        "type": "string",
+                                        "value": "vaccinecards/raw"
+                                    }
+                                ]
+                            }
+                        },
+                        "[INPUT]_Forms_Recognizer_access_Key": {
+                            "runAfter": {
+                                "[INPUT]_ModelName_of_Forms_Recognizer_created": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "Ocp-Apim-Subscription-Key",
+                                        "type": "string",
+                                        "value": "[parameters('Ocp-Apim-Subscription-Key')]"
+                                    }
+                                ]
+                            }
+                        },
+                        "[INPUT]_Location_where_Forms_Recognizer_was_created": {
+                            "runAfter": {
+                                "For_each": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "Location",
+                                        "type": "string",
+                                        "value": "[variables('location')]"
+                                    }
+                                ]
+                            }
+                        },
+                        "[INPUT]_ModelName_of_CustomVision_created": {
+                            "runAfter": {
+                                "[INPUT]_Resource_name_of_Custom_Vision_from_the_portal": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "ModelNameCV",
+                                        "type": "string",
+                                        "value": "customvisionvaccinationcard"
+                                    }
+                                ]
+                            }
+                        },
+                        "[INPUT]_ModelName_of_Forms_Recognizer_created": {
+                            "runAfter": {
+                                "[INPUT]_Location_where_Forms_Recognizer_was_created": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "ModelName",
+                                        "type": "string",
+                                        "value": "covidvaccinationcardsmodel"
+                                    }
+                                ]
+                            }
+                        },
+                        "[INPUT]_Prediction_Key": {
+                            "runAfter": {
+                                "[INPUT]_ProjectIDof_CustomVision_created": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "CVPredictionKey",
+                                        "type": "string",
+                                        "value": "[parameters('ComputerVisionKey')]"
+                                    }
+                                ]
+                            }
+                        },
+                        "[INPUT]_ProjectIDof_CustomVision_created": {
+                            "runAfter": {
+                                "[INPUT]_ModelName_of_CustomVision_created": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "ProjectID",
+                                        "type": "string",
+                                        "value": "[parameters('ProjectId')]"
+                                    }
+                                ]
+                            }
+                        },
+                        "[INPUT]_Resource_name_of_Custom_Vision_from_the_portal": {
+                            "runAfter": {
+                                "[INPUT]_Forms_Recognizer_access_Key": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "CVresourceName",
+                                        "type": "string",
+                                        "value": "[parameters('ComputerVisionPredictions')]"
+                                    }
+                                ]
+                            }
+                        },
+                        "[INPUT]_Storage_Account_Name": {
+                            "runAfter": {
+                                "[INPUT]_Prediction_Key": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "Storageaccountname",
+                                        "type": "string",
+                                        "value": "[parameters('ADLSName')]"
+                                    }
+                                ]
+                            }
+                        },
+                        "resultURL_variable": {
+                            "runAfter": {
+                                "HTTP": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "resultURL",
+                                        "type": "string",
+                                        "value": "@{outputs('HTTP')['headers']?['Operation-Location']}"
+                                    }
+                                ]
+                            }
+                        },
+                        "vaccinecardscontainersas": {
+                            "runAfter": {
+                                "[INPUT]_Container_Name": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "vaccinecardscontainersas",
+                                        "type": "string",
+                                        "value": "[parameters('VaccineCardsContainerSAS')]"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "outputs": {}
+                },
+                "parameters": {
+                    "$connections": {
+                        "value": {
+                            "azureblob_1": {
+                                "connectionId": "[resourceId('Microsoft.Web/connections', variables('blobconnection1'))]",
+                                "connectionName": "[variables('blobconnection1')]",
+                                "id": "[concat('/subscriptions/', variables('subscriptionId'), '/providers/Microsoft.Web/locations/', variables('location'), '/managedApis/azureblob')]"
+                            },
+                            "outlook": {
+                                "connectionId": "[resourceId('Microsoft.Web/connections', variables('outlookconnection1'))]",
+                                "connectionName": "[variables('outlookconnection1')]",
+                                "id": "[concat('/subscriptions/', variables('subscriptionId'), '/providers/Microsoft.Web/locations/', variables('location'), '/managedApis/outlook')]"
+                            },
+                            "sql_1": {
+                                "connectionId": "[resourceId('Microsoft.Web/connections', variables('sqlconnection'))]",
+                                "connectionName": "[variables('sqlconnection')]",
+                                "id": "[concat('/subscriptions/', variables('subscriptionId'), '/providers/Microsoft.Web/locations/', variables('location'), '/managedApis/sql')]"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        { 
+            "apiVersion": "2020-10-01",
+            "name": "pid-cde9ebb2-7587-5acb-9601-d0887a5a4fd2",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+                "mode": "Incremental",
+                "template": {
+                    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+                    "contentVersion": "1.0.0.0",
+                    "resources": []
+                }
+            }
+        }
+    ]
+}
