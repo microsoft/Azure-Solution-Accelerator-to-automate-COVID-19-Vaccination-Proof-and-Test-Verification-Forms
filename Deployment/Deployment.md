@@ -30,12 +30,13 @@ The Azure Data Lake Storage (ADLS) is used to receive and store the images (COVI
 
 2. In the menu pane on the left, under `Data storage`, select `Containers`.
   
-3. Select the "forms" container and add three directories - `failed`, `raw`, `validated`.
+3. Select the `forms` container and add three directories - `failed`, `raw`, `validated`.
 
 ![ADLS forms folders](./images/SA_formsfolders.png)
 
-3. Select the training container and add one directory - `forms`
-4. Select the results container and add two directories - `failed`, `validated`
+3. Select the training container and add two directories - `forms`, `vaccinecards`
+
+5. Select the results container and add two directories - `failed`, `validated`
 
 ## Step 4: Train Form Recognizer models
 
@@ -44,7 +45,7 @@ In this step you will train two custom Form Recognizer models for Covid Test for
 ### Step 4.1: Train model for Covid test forms
 
 1. Go to [Azure Portal](portal.azure.com) and select the Storage Account that was created as part of the deployment.
-2. Go to 'Training' container, and 'forms' folder and upload forms from folder [Data/FormsRecognizerLabelData/CovidTestForm](./Data/FormsRecognizerLabelData/CovidTestForm) folder. 
+2. Click on `Containers` on the left menu and click on `Training` container, and `forms` folder. Upload all files from  [Data/FormsRecognizerLabelData/CovidTestForm](./Data/FormsRecognizerLabelData/CovidTestForm) folder. 
 3. Go to [Form Recognizer Studio](https://formrecognizer.appliedai.azure.com/studio), select "Custom Form", select "+Create a project" to create a project for labeling. 
 4. Enter Project name: "CovidFormsProject" or any other project name of your choice.
 5. Enter Description:"Custom form recognizer model with sample Contoso forms" and click "Continue".
@@ -67,7 +68,7 @@ In this step you will train two custom Form Recognizer models for Covid Test for
 ### Step 4.2 Train model for vaccination cards. 
 
 1. Go to [Azure Portal](portal.azure.com) and select the Storage Account that was created as part of the Synapse deployment.
-2. Create `training` container, and `vaccinationcards` folder and upload forms from the cloned repository [Data/FormsRecognizerLabelData/VaccinationCardForm](./Data/FormsRecognizerLabelData/VaccinationCardForm) folder.
+2. Click on `Containers` on the left menu and click on `training` container, and click on `vaccinationcards` folder. Upload all files from [Data/FormsRecognizerLabelData/VaccinationCardForm](./Data/FormsRecognizerLabelData/VaccinationCardForm) folder.
 3. Go to [Form Recognizer Studio](https://formrecognizer.appliedai.azure.com/studio), select "Custom Form", select "+Create a project" and follow below steps to create a project for labeling. 
 4. Enter Project name: "FRVaccineSolutionAccelerator" or any specific project name user want to give.
 5. Enter Description: "This is a custom form recognizer model trained on sample Contoso forms to mandate employee testing weekly" and click "Continue".
@@ -85,7 +86,7 @@ In this step you will train two custom Form Recognizer models for Covid Test for
 ## Step 5: Train a Custom Vision Model
 In this step you will train a custom vision model to check the CDC logo on the vaccination card. 
 
-1. Go to [Azure Custom Vision Portal](customvision.ai) and click on "New Project".
+1. Go to [Azure Custom Vision Portal](https://www.customvision.ai/) and click on "New Project".
 ![Custom Vision](./images/CV_image1.png)
 2. Input the Project Information as below:
     * Name of Project: "vaccinationcardlogo"
@@ -162,14 +163,14 @@ Populate the variables accordingly.
 ![image12](./images/LA_image12.png "image12")
 
 7. **ComputerVisionPredictions**: The `model name` of the custom vision service.
-    * Navigate to the [Azure Custom Vision Portal](customvision.ai)
+    * Navigate to the [Azure Custom Vision Portal](https://www.customvision.ai/)
     * Select `Perfomance` click on `Iteration 1` 
     * Copy the `Publisheed as` value 
 
 ![image10](./images/LA_image10.png "image10")
 
 8. **Project Id**: The `ProjectID` of the custom vision model.
-    * Navigate to the [Azure Custom Vision Portal](customvision.ai)
+    * Navigate to the [Azure Custom Vision Portal](https://www.customvision.ai/)
     * Select the Settings (gear icon) in the top right 
     * Copy the Project Id 
 
