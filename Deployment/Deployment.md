@@ -46,7 +46,7 @@ In this step you will train two custom Form Recognizer models for Covid Test for
 
 1. Go to [Azure Portal](portal.azure.com) and select the Storage Account that was created as part of the deployment.
 2. Click on `Containers` on the left menu and click on `Training` container, and `forms` folder. Upload all files from  [Data/FormsRecognizerLabelData/CovidTestForm](./Data/FormsRecognizerLabelData/CovidTestForm) folder. 
-3. Go to [Form Recognizer Studio](https://formrecognizer.appliedai.azure.com/studio), select "Custom Form", select "+Create a project" to create a project for labeling. 
+3. Go to [Form Recognizer Studio](https://formrecognizer.appliedai.azure.com/studio), select "Custom Model", select "+Create a project" to create a project for labeling. 
 4. Enter Project name: "CovidFormsProject" or any other project name of your choice.
 5. Enter Description:"Custom form recognizer model with sample Contoso forms" and click "Continue".
 6. This step connects the form recognizer studio to form recognizer resource in your subscription. Select your Subscription, Resource Group, Form Recognizer resource which was created as part of deploying the resources and select the latest API Version. Click "Continue"
@@ -69,7 +69,7 @@ In this step you will train two custom Form Recognizer models for Covid Test for
 
 1. Go to [Azure Portal](portal.azure.com) and select the Storage Account that was created as part of the Synapse deployment.
 2. Click on `Containers` on the left menu and click on `training` container, and click on `vaccinationcards` folder. Upload all files from [Data/FormsRecognizerLabelData/VaccinationCardForm](./Data/FormsRecognizerLabelData/VaccinationCardForm) folder.
-3. Go to [Form Recognizer Studio](https://formrecognizer.appliedai.azure.com/studio), select "Custom Form", select "+Create a project" and follow below steps to create a project for labeling. 
+3. Go to [Form Recognizer Studio](https://formrecognizer.appliedai.azure.com/studio), select "Custom Model", select "+Create a project" and follow below steps to create a project for labeling. 
 4. Enter Project name: "FRVaccineSolutionAccelerator" or any specific project name user want to give.
 5. Enter Description: "This is a custom form recognizer model trained on sample Contoso forms to mandate employee testing weekly" and click "Continue".
 6. This step connects the form recognizer studio to form recognizer resource in your subscription. Select your Subscription, Resource Group, Form Recognizer resource which was created as part of deploying the resources and select the latest API Version. Click "Continue"
