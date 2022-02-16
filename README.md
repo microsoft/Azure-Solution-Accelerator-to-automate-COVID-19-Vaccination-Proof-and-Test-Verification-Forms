@@ -21,13 +21,15 @@ For additional training and support, please see:
 
 1. [Azure Form Recognizer](https://docs.microsoft.com/en-us/azure/applied-ai-services/form-recognizer/?branch=release-build-cogserv-forms-recognizer)
 2. [Azure Logic Apps](https://azure.microsoft.com/en-us/services/logic-apps/#overview)
-3. [Azure Blob Stoarge](https://docs.microsoft.com/en-in/azure/storage/blobs/storage-blobs-introduction)
+3. [Azure Blob Storage](https://docs.microsoft.com/en-in/azure/storage/blobs/storage-blobs-introduction)
 4. [Azure Cosmos DB](https://azure.microsoft.com/en-us/services/cosmos-db/)
 4. [Azure Synapse Analytics](https://azure.microsoft.com/en-us/services/synapse-analytics/) 
 5. [Power BI](https://docs.microsoft.com/en-us/power-bi/fundamentals/power-bi-overview)
 
 ## Getting Started
 Start by deploying the required resources to Azure. The button below will deploy Azure Form Recognizer, Cosmos DB, Azure Synapse Analytics and its associated Azure Data Lake Storage Account Gen2, SQL Pool and Spark Pool:
+
+> **NOTE**: Currently Custom Vision is not available in the following United States regions: `Central US`, `West Central US`, `West US`, `West US3`. Please select any other region when deploying this solution.
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmicrosoft%2FAzure-Solution-Accelerator-to-automate-COVID-19-Vaccination-Proof-and-Test-Verification-Forms%2Fmain%2FDeployment%2Fdeploy.json)
 

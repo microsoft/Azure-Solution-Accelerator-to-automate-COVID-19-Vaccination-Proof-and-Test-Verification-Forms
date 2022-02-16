@@ -284,9 +284,6 @@
                 "provisioningState": "Succeeded"
             }
         },
-
-
-
         {
             "type": "Microsoft.CognitiveServices/accounts",
             "apiVersion": "2021-04-30",
