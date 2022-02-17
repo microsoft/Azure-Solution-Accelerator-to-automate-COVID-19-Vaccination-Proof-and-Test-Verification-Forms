@@ -81,8 +81,6 @@ In this step you will train two custom Form Recognizer models for Covid Test for
 ![Form Recognizer Project](./images/FR_image2-1.png)
 7. This is the modelID which will be used in calling the form recognizer model from Logic App.
 
-<!-- * Go to the [Form Recognizer Model Deployment Guide](./FormsRecognizerModel.md) to train the models. -->
-
 ## Step 5: Train a Custom Vision Model
 In this step you will train a custom vision model to check the CDC logo on the vaccination card. 
 
@@ -109,8 +107,6 @@ In this step you will train a custom vision model to check the CDC logo on the v
 9. Once the model is published, the "prediction API" will be generated along with "Prediction URL" like below:
 ![Custom Vision Publish](./images/CV_image7.png)
 10. The "Prediction URL" and "Prediction API" will be used in calling the custom vision model from Logic App.
-
-<!-- * Go to the [Custom Vision Model Deployment Guide](./CustomVisionModel.md) to train the model and publish an interation. -->
 
 ## Step 6: Upload Assets and Run SQL Scripts
 1. Launch the Synapse workspace [Synapse Workspace](https://ms.web.azuresynapse.net/)
@@ -186,7 +182,7 @@ Populate the variables accordingly.
 For this step, we need to go to the storage account and inside the container generate a SAS
     * Navigate to the  `forms` container in your storage account in your resource group
     * Select the `shared access tokens` on the left
-    * Under `permissions` select `Read`, `Access` and `List`
+    * Under `permissions` select `Read`, `Add` and `List`
     * Select a reasonable amount of time before it expires. For the above image, we used a year from today (until 2023).
 
 ![image19](./images/LA_image19.png "image19")
@@ -202,6 +198,8 @@ Once the Logic Apps are deployed, go to the designer view of either the testform
 
 Configure the following 3 connectors:
 a. Email connector
+Follow the bellow image to sign in to the outlook account we want to monitor.
+> Note: This step assumes you've already created an outlook account that will receive only either the vaccine cards or the testing forms.
 
 ![image16](./images/LA_image16.png "image16")
 
@@ -215,8 +213,17 @@ C. SQL connector
 ![image18](./images/LA_image18.png "image18")
 
 Repeat the same process for the other logic app.
+Make sure you use a different email when configuring the email connector. 
 
-<!-- * Go to the [Logic App Deployment Guide](./LogicAppConfiguration.md) to set up the logic apps. -->
+
+### **Testing the Logic App**
+To test the Logic App, you can send an email with a sample form ([Sample Test Form](./Data/SampleTestForms/TestForms/Sampleformtest.pdf) or [Sample Vaccine Card](./Data/SampleTestForms/VaccinationCards/vaccinationcardtest.png)) as attachement to the the email you created in previous step.
+
+After sending the email, wait for few seconds and open Logic Apps interface and then click 'Run Trigger'. The Logic App should start working.
+
+e.g. send an email with vaccine cards to the email you created that receives the vaccine cards.
+
+> Note: The attachment should be less than 3MB in order for the Logic App to work.
 
 ## Step 8: Power BI Set Up 
 1. Open the [Power BI report](https://github.com/microsoft/Azure-Solution-Accelerator-to-automate-COVID-19-Vaccination-Proof-and-Test-Verification-Forms/tree/main/Deployment/PowerBI/TestingVaccineDashboard.pbix) in this repository

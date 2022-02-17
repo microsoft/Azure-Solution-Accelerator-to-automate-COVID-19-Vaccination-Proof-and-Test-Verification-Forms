@@ -1334,10 +1334,8 @@ INSERT INTO dbo.Vaccination VALUES ('CE1BAAAA-449B-00D3-5045-6DB494851AA6','Niha
 
 -- SQL Query to Delete 5% of Users testing from dbo.Tests.
 
-DELETE FROM dbo.Tests
-Where UserID > 10095
+DELETE FROM dbo.Tests Where UserID > 10095
 
 -- SQL Query to Delete 20% of Users testing from dbo.Tests.
 
-DELETE FROM dbo.Vaccination
-Where UserID > 10080
+DELETE FROM dbo.Vaccination Where UserID > 10080
