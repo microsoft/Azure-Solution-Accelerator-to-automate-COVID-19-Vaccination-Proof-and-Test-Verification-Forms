@@ -178,18 +178,17 @@ Populate the variables accordingly.
 
 ![image13](./images/LA_image13.png "image13")
 
-10. **FormsContainerSAS**: The SAS token for the `forms` container
-For this step, we need to go to the storage account and inside the container generate a SAS
-    * Navigate to the  `forms` container in your storage account in your resource group
-    * Select the `shared access tokens` on the left
-    * Under `permissions` select `Read`, `Add` and `List`
-    * Select a reasonable amount of time before it expires. For the above image, we used a year from today (until 2023).
 
+10. **FormsContainerSAS**: The SAS token for the `forms` container
+For this step, we need to go to the storage account and inside the container generate a SAS    
+* Navigate to the  `forms` container in your storage account in your resource group
+* Select the `shared access tokens` on the left
+* Under `permissions` select `Read`, `Add` and `List`
+* Select a reasonable amount of time before it expires. For the below image, we used a year from today (until 2023)* After we click "Generate SAS token and URL", let's just copy the SAS token.
 ![image19](./images/LA_image19.png "image19")
 
-
-11. **VaccineCardsContainerSAS**: The SAS token for the `vaccinecards` container
-    * Follow the previous step 
+11. **VaccineCardsContainerSAS**: The SAS token for the `vaccinecards` container    
+* Follow the previous step 
 
 ### **Configuring the Logic App**
 Once the Logic Apps are deployed, go to the designer view of either the testform logic app or the vaccination card logic app.
