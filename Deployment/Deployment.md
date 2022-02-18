@@ -7,7 +7,7 @@ Clone or download this repository and navigate to the project's root directory.
 ## Step 2: Security Access 
 ### Step 2.1: Add your IP address to Synapse firewall
 Before you can upload assests to the Synapse Workspace you will need to add your IP address:
-1. Go to the Synapse resouce you created in the previous step. 
+1. Go to the Azure Synapse Analytics resouce you created in the previous step. 
 2. Navigate to `Networking` under `Security` on the left hand side of the page.
 3. At the top of the screen click `+ Add client IP`
     ![Update Firewalls](./images/deploy-firewall.png)  
@@ -26,7 +26,7 @@ In order to perform the necessary actions in Synapse workspace, you will need to
 ## Step 3: Setting up Storage Account and Azure Data Lake Storage
 The Azure Data Lake Storage (ADLS) is used to receive and store the images (COVID Test attestation forms and Vaccination Cards). The Logic Apps will send images stored in ADLS to the Computer Vision (Forms Recognizer) model to extract fields.
 
-1. Go to the [Azure Portal](portal.azure.com) and select the Storage Account that was created as part of the Synapse deployment 
+1. Go to the [Azure Portal](portal.azure.com) and select the Storage Account that was created as part of the Azure Synapse deployment 
 
 2. In the menu pane on the left, under `Data storage`, select `Containers`.
   
@@ -55,19 +55,23 @@ In this step you will train two custom Form Recognizer models for Covid Test for
 ![image1](./images/FR_image1.png "image1")
  
 8. After the project is created, forms with OCR, Key-Value pair labels will appear like below
+
 ![image2](./images/FR_image2.png "image2")
  
 9. Select `Template` for Build Mode and click on "Train" to train the form recognizer model to extract the key-value pairs.
+> Be sure to the model Id is `CovidSAmodel` as this is used in later steps
+
 ![image3](./images/FR_image3.png "image3")
 
 10. Once Training is done, the model will be located in Models with confidence score of each field.
+
 ![image4](./images/FR_image4.png "image4")
  
 11. This is the modelID which will be used in calling the form recognizer model from Logic App.
 
 ### Step 4.2 Train model for vaccination cards. 
 
-1. Go to [Azure Portal](portal.azure.com) and select the Storage Account that was created as part of the Synapse deployment.
+1. Go to [Azure Portal](portal.azure.com) and select the Storage Account that was created as part of the Azure Synapse deployment.
 2. Click on `Containers` on the left menu and click on `training` container, and click on `vaccinationcards` folder. Upload all files from [Data/FormsRecognizerLabelData/VaccinationCardForm](./Data/FormsRecognizerLabelData/VaccinationCardForm) folder.
 3. Go to [Form Recognizer Studio](https://formrecognizer.appliedai.azure.com/studio), select "Custom Model", select "+Create a project" and follow below steps to create a project for labeling. 
 4. Enter Project name: "FRVaccineSolutionAccelerator" or any specific project name user want to give.
@@ -75,17 +79,25 @@ In this step you will train two custom Form Recognizer models for Covid Test for
 6. This step connects the form recognizer studio to form recognizer resource in your subscription. Select your Subscription, Resource Group, Form Recognizer resource which was created as part of deploying the resources and select the latest API Version. Click "Continue"
 7. This step connects the form recognizer studio to ADLS storage/container resource in your subscription to access the training data. Select subscription, Resource Group, storage account, container: "Training" and folder "forms"- which was created as part of the deployment. Click "Continue". Review Information and click "Create Project"
 8. After the project is created, forms with OCR, Key-Value pair labels will appear like below
+
 ![Form Recognizer Project](./images/FR_image1-1.png)
-5. Click on "Train" to train the form recognizer model to extract the key-value pairs.
-6. Once Training is done, the model will be located in Models with confidence score of each field.
+
+9. Click on "Train" to train the form recognizer model to extract the key-value pairs.
+> Be sure the model name is `covidvaccinationcardsmodel` as this is used in later steps
+
+10. Once Training is done, the model will be located in Models with confidence score of each field.
+
 ![Form Recognizer Project](./images/FR_image2-1.png)
+
 7. This is the modelID which will be used in calling the form recognizer model from Logic App.
 
 ## Step 5: Train a Custom Vision Model
 In this step you will train a custom vision model to check the CDC logo on the vaccination card. 
 
 1. Go to [Azure Custom Vision Portal](https://www.customvision.ai/) and click on "New Project".
+
 ![Custom Vision](./images/CV_image1.png)
+
 2. Input the Project Information as below:
     * Name of Project: "vaccinationcardlogo"
     * Description: "Custom Vision model to detect logo on Covid Vaccination Cards"
@@ -93,19 +105,31 @@ In this step you will train a custom vision model to check the CDC logo on the v
     * Project Types: Pick "Object Detection"
     * Domain: pick "General[A1]"
     * Click "Create Project"
+
 ![Custom Vision Project](./images/CV_image2.png)
+
 3. Click "Add Images" and upload the images from the cloned repository [Data/CustomVisionImages](./Data/CustomVisionImages). After Upload, the images will appear as below:
+
 ![Custom Vision Images](./images/CV_image3.png)
+
 4. Click on the first Picture and draw a bounding box around CDC logo and add tag "CDClogo" like below:
+
 ![Custom Vision Tagging](./images/CV_image4.png)
+
 5. Similarly tag all the pictures with CDClogo.
 6. Once the tagging is done, Click on Train. Choose "Advance Training" and set up 1 hour to start. Users can extend the time to improve the performance by choosing longer time to train.
+
 ![Custom Vision Tagging All](./images/CV_image5.png)
+
 7. Once the model training is done, the performance of model will be displayed with Precision and Recall like below. Click on Publish to publish the PredictionAPI.
+
 ![Custom Vision Prediction](./images/CV_image6.png)
+
 8. Put Model name: "customvisionvaccinationcard". Choose Prediction Resource as "covidtestsacustomvision-Prediction" which was created as part of deployment process.
 9. Once the model is published, the "prediction API" will be generated along with "Prediction URL" like below:
+
 ![Custom Vision Publish](./images/CV_image7.png)
+
 10. The "Prediction URL" and "Prediction API" will be used in calling the custom vision model from Logic App.
 
 ## Step 6: Upload Assets and Run SQL Scripts
@@ -124,7 +148,7 @@ We need to build two different Logic Apps.
 The first logic app we are going to build will help us ingest the Testing forms and process them.
 The second logic app we are going to build will help us ingest the Vaccine cards, process them and verify their vailidity.
 
-### **Deploy the Logic Apps**
+### Deploy the Logic Apps
 The button below will deploy Azure Logic App into the resource group you are using for this solution:
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmicrosoft%2FAzure-Solution-Accelerator-to-automate-COVID-19-Vaccination-Proof-and-Test-Verification-Forms%2Fmain%2FDeployment%2Fdeploylogicapp.json)
@@ -136,15 +160,15 @@ In order for the logic apps to work, we need to configure the following variable
 
 ![image14](./images/LA_image14.png "image14")
 
-Populate the variables accordingly.
+Populate the variables accordingly:
 
 1. **Resource group**: Use the `same resource group` where the previous ARM template was deployed.
 
-2. **Region**: This field will be auto-filled.
+2. **Region**: This field will be auto-filled
 
 3. **Suffix Name**: Insert a `suffix name` (e.g. Your initials)
 
-4. **ADLS Name**: The storage account name you are using for this solution.
+4. **ADLS Name**: Provide the `same Storage Account` name that was created as part of the Azure Synapse deployment in previous steps
 
 5. **Ocp-Apim-Subscription-Key**: The `forms recognizer access key`.
     * Navigagte to the Forms Recognizer resource in your resource group
@@ -178,19 +202,19 @@ Populate the variables accordingly.
 
 ![image13](./images/LA_image13.png "image13")
 
-
 10. **FormsContainerSAS**: The SAS token for the `forms` container
 For this step, we need to go to the storage account and inside the container generate a SAS    
 * Navigate to the  `forms` container in your storage account in your resource group
 * Select the `shared access tokens` on the left
 * Under `permissions` select `Read`, `Add` and `List`
 * Select a reasonable amount of time before it expires. For the below image, we used a year from today (until 2023)* After we click "Generate SAS token and URL", let's just copy the SAS token.
+
 ![image19](./images/LA_image19.png "image19")
 
 11. **VaccineCardsContainerSAS**: The SAS token for the `vaccinecards` container    
 * Follow the previous step 
 
-### **Configuring the Logic App**
+### Configuring the Logic App
 Once the Logic Apps are deployed, go to the designer view of either the testform logic app or the vaccination card logic app.
 
 ![image15](./images/LA_image15.png "image15")
@@ -203,22 +227,24 @@ Follow the bellow image to sign in to the outlook account we want to monitor.
 ![image16](./images/LA_image16.png "image16")
 
 b. Storage connector
+Scroll downt until you'll find the "For Each" box. Click the box and then click the "Create blob" box.
 
 ![image17](./images/LA_image17.png "image17")
 ![image17a](./images/LA_image17a.png "image17a")
 
 C. SQL connector
-
+Connect to the sql pool using Azure AD Integrated
 ![image18](./images/LA_image18.png "image18")
 
 Repeat the same process for the other logic app.
 Make sure you use a different email when configuring the email connector. 
 
-
-### **Testing the Logic App**
+### Testing the Logic App
 To test the Logic App, you can send an email with a sample form ([Sample Test Form](./Data/SampleTestForms/TestForms/Sampleformtest.pdf) or [Sample Vaccine Card](./Data/SampleTestForms/VaccinationCards/vaccinationcardtest.png)) as attachement to the the email you created in previous step.
 
-After sending the email, wait for few seconds and open Logic Apps interface and then click 'Run Trigger'. The Logic App should start working.
+> Note: For the subject, it is mandatory to use a random string of numbers. e.g. 12345, 23456, etc. as we set it up as user/employee id.
+
+After sending the email, wait for few seconds, and open Logic Apps interface and then click 'Run Trigger'. The Logic App should start working.
 
 e.g. send an email with vaccine cards to the email you created that receives the vaccine cards.
 
