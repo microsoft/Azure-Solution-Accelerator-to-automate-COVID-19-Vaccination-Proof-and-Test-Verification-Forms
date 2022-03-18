@@ -6,6 +6,7 @@ products:
 - azure-synapse-analytics
 - azure-form-recognizer
 - azure-logic-apps
+- azure-cosmos-db
 - power-bi
 ---
 
