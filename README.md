@@ -8,12 +8,11 @@ products:
 - azure-logic-apps
 - azure-cosmos-db
 - power-bi
----
-
-# Azure Solution Accelerator to automate COVID-19 Vaccination Proof and Test Verification Forms 
+--- 
 
 ![Covid Vaccination Verification Solution Accelerator](./Deployment/images/SATitle.PNG)
 
+# Azure Solution Accelerator to automate COVID-19 Vaccination Proof and Test Verification Forms
 As the world economy starts to open after Covid-19 restrictions, many employers have to follow regulatory requirements to ensure workplace safety through the vaccination and testing of employees before they can physically return to the workplace.
 The two most common requirements are:
 * Vaccination requirements
