@@ -1,3 +1,6 @@
+--Copyright (c) Microsoft Corporation.
+--Licensed under the MIT License.
+
 --SQL Statement to insert values into dbo.Calendar
 
 INSERT INTO dbo.Calendar VALUES (0,'01/01/2020',2020,1,1,202001,20200101,'January',1)
