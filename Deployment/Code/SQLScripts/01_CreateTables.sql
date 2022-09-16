@@ -1,3 +1,6 @@
+--Copyright (c) Microsoft Corporation.
+--Licensed under the MIT License.
+
 --SQL Statement to create Users Table
 CREATE TABLE dbo.Users (
     UserID int,

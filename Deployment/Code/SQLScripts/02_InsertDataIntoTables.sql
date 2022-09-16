@@ -1,3 +1,6 @@
+--Copyright (c) Microsoft Corporation.
+--Licensed under the MIT License.
+
 -- SQL Query to Insert Users in dbo.Users.
 
 INSERT INTO dbo.Users VALUES (10001, 'Daleen', 'du Plessis', 'Architect', 'San Francisco','Other')

@@ -1,3 +1,6 @@
+--Copyright (c) Microsoft Corporation.
+--Licensed under the MIT License.
+
 -- SQL script to create new vaccination unpivoted table from unpivoting the vaccination table
 
 CREATE TABLE dbo.VaccinationUnpvt (id varchar(255),UserEmail varchar(255),
